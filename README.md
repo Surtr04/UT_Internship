@@ -1,4 +1,14 @@
 UT_Internship
 =============
 
-UT - Internship
+Siga meter aqui cenas...
+
+
+Tasks
+
+- [ ] scripts de submissão
+- [ ] problema do alignof
+- [ ] problema da memória
+- [ ] falta de speedups no mic
+
+
