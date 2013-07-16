@@ -1,0 +1,63 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Getopt::Long;
+Getopt::Long::Configure('bundling');
+
+my $job_name;
+my $nodes;
+my $time;
+my $exec;
+my $num_threads;
+my $step;
+
+GetOptions(
+		'j:s' => \$job_name,		
+		't:s' => \$time,
+		'e:s' => \$exec,
+		'n:i' => \$num_threads,
+		's:i' => \$step,
+	);
+
+my $job = <<END; 
+#!/bin/bash
+#SBATCH -J     	
+#SBATCH -o  	
+#SBATCH -e
+#SBATCH -p normal-mic    	
+#SBATCH -n 1
+#SBATCH -N 1       	
+#SBATCH -t $time
+
+export MIC_OMP_NUM_THREADS=$num_threads
+
+./$exec
+
+END
+
+
+while ($num_threads <= 240) {
+
+	$job =~ s/#SBATCH\s+\-J.*/#SBATCH -J $job_name\.$num_threads/g;
+	
+	$job =~ s/#SBATCH\s+\-o.*/#SBATCH -o $job_name\.$num_threads\.o%j/g;
+	$job =~ s/#SBATCH\s+\-e.*/#SBATCH -o $job_name\.$num_threads\.e%j/g;
+
+	open F, ">","tmp";
+	print F $job;
+
+	qx{sbatch tmp};
+
+	close F;
+	unlink "tmp";
+
+	exit if not defined $step;
+	$num_threads+=$step;
+
+	$job =~ s/export\s+MIC_OMP_NUM_THREADS=.*/export MIC_OMP_NUM_THREADS=$num_threads/g;
+
+}
+
+
+1;
