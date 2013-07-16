@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#SBATCH -J gmetisMIC_THREADS_STEP #Job name
+#SBATCH -o gmetisMIC_THREADS_STEP.%j.out # stdout; %j expands to jobid
+#SBATCH -e gmetisMIC_THREADS_STEP.%j.err # stderr; skip to combine stdout and stderr
+#SBATCH -p development # queue
+#SBATCH -N 1 # Number of nodes, not cores (16 cores/node)
+#SBATCH -n 1 # Total number of tasks (if omitted, n=N)
+#SBATCH -t 01:00:00 # max time
+
+cd /work/02556/dpereira/trunk/build/default/apps/gmetis
+
+mkdir -p Results/MIC
+rm -rf Results/MIC/*
+
+export MIC_OMP_NUM_THREADS=THREADS
+export MIC_ENV_PREFIX=MIC
+
+./gmetis -t=THREADS ../../../../inputs/road/USA-road-d.W.gr PARTITIONS 2>> Results/MIC/gmetisMIC_PARTITIONS_THREADS

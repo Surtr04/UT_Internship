@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#SBATCH -J gmetisHOST_PARTITIONS_THREADS_STEP #Job name
+#SBATCH -o gmetisHOST_PARTITIONS_THREADS_STEP.%j # stdout; %j expands to jobid
+#SBATCH -p development # queue
+#SBATCH -N 1 # Number of nodes, not cores (16 cores/node)
+#SBATCH -n 1 # Total number of tasks (if omitted, n=N)
+#SBATCH -t 01:00:00 # max time
+
+cd /work/02556/dpereira/trunk/build/default/apps/gmetis
+
+./gmetis -t=THREADS ../../../../inputs/road/USA-road-d.W.gr PARTITIONS 2> Results/HOST/gmetisHOST_PARTITIONS_THREADS_STEP
