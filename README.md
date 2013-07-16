@@ -15,5 +15,5 @@ Tasks
 - [ ] GALOIS_DEBUG_TOPO para ver a topologia no mic
 - [ ] PageAlloc 2MB, meter menos -> 16k | 8k | 4k
 - [ ] Outra cena em mem.h e tambem noutro sitio?
-
-
+- [ ] Ver os parametros MeminfoPost e MeminfoPre para ver o número de paginas
+  (acho que é isso)
