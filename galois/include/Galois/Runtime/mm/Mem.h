@@ -49,7 +49,7 @@ namespace Runtime {
 //! Memory management functionality.
 namespace MM {
 
-const size_t smallPageSize = 4*1024;
+const size_t smallPageSize = 2*1024;
 const size_t pageSize = 2*1024*1024;
 void* pageAlloc();
 void  pageFree(void*);
