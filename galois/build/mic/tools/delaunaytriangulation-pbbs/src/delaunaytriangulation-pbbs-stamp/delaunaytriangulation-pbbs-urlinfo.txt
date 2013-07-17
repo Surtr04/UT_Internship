@@ -1,0 +1,3 @@
+repository='external project URL'
+module='http://www.cs.cmu.edu/~pbbs/benchmarks/delaunayTriangulation.tar'
+tag=''

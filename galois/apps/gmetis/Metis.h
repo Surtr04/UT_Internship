@@ -72,7 +72,7 @@ public:
 
   //call to switch data to refining
   void initRefine(unsigned part = 0, bool bound = false) {
-    data.rd = {part, part, bound};
+    data.rd = (refineData){part, part, bound};
   }
 
   int getWeight() const { return _weight; }

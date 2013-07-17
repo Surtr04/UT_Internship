@@ -1,0 +1,3 @@
+repository='external project URL'
+module='http://web.mit.edu/~neboat/www/code/bfs-icc-20120304.tar.gz'
+tag=''

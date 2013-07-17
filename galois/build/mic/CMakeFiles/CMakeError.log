@@ -1,0 +1,556 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2150995637/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2150995637.dir/build.make CMakeFiles/cmTryCompileExec2150995637.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2150995637.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc    -o CMakeFiles/cmTryCompileExec2150995637.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2150995637
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2150995637.dir/link.txt --verbose=1
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc         CMakeFiles/cmTryCompileExec2150995637.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2150995637 -rdynamic 
+CMakeFiles/cmTryCompileExec2150995637.dir/CheckSymbolExists.c.o: In function `main':
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:(.text+0x21): undefined reference to `pthread_create'
+gmake[1]: *** [cmTryCompileExec2150995637] Error 1
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2150995637/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec364121188/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec364121188.dir/build.make CMakeFiles/cmTryCompileExec364121188.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec364121188.dir/CheckFunctionExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec364121188.dir/CheckFunctionExists.c.o   -c /opt/apps/cmake/2.8.9/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec364121188
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec364121188.dir/link.txt --verbose=1
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc     -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec364121188.dir/CheckFunctionExists.c.o  -o cmTryCompileExec364121188 -rdynamic -lpthreads 
+ld: cannot find -lpthreads
+gmake[1]: *** [cmTryCompileExec364121188] Error 1
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec364121188/fast] Error 2
+
+
+Performing C++ SOURCE FILE Test CXX11_FLAG_DETECTED failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4005311861/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4005311861.dir/build.make CMakeFiles/cmTryCompileExec4005311861.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec4005311861.dir/src.cxx.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icpc    -wd68 -wd981 -wd383 -wd869 -wd2196 -wd279 -wd2504 -wd2943  -DCXX11_FLAG_DETECTED   -qlanglvl=extended0x -o CMakeFiles/cmTryCompileExec4005311861.dir/src.cxx.o -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx
+icpc: command line warning #10006: ignoring unknown option '-qlanglvl=extended0x'
+Linking CXX executable cmTryCompileExec4005311861
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4005311861.dir/link.txt --verbose=1
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icpc     -wd68 -wd981 -wd383 -wd869 -wd2196 -wd279 -wd2504 -wd2943  -DCXX11_FLAG_DETECTED    CMakeFiles/cmTryCompileExec4005311861.dir/src.cxx.o  -o cmTryCompileExec4005311861 -rdynamic 
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0;}
+Performing C++ SOURCE FILE Test HAVE_CXX11_UNIFORM_INT_DISTRIBUTION failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2398916235/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2398916235.dir/build.make CMakeFiles/cmTryCompileExec2398916235.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2398916235.dir/src.cxx.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icpc    -wd68 -wd981 -wd383 -wd869 -wd2196 -wd279 -wd2504 -wd2943  -DHAVE_CXX11_UNIFORM_INT_DISTRIBUTION -std=c++11   -o CMakeFiles/cmTryCompileExec2398916235.dir/src.cxx.o -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: namespace "std" has no member "uniform_int_distribution"
+    std::uniform_int_distribution<int> r(0, 6);
+         ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: type name is not allowed
+    std::uniform_int_distribution<int> r(0, 6);
+                                  ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: identifier "r" is undefined
+    std::uniform_int_distribution<int> r(0, 6);
+                                       ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(6): warning #1595: non-POD (Plain Old Data) class type passed through ellipsis
+    return r(gen);
+             ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx (code 2)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2398916235.dir/src.cxx.o] Error 2
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2398916235/fast] Error 2
+
+Source file was:
+
+#include <random>
+int main(){
+  std::mt19937 gen;
+  std::uniform_int_distribution<int> r(0, 6);
+  return r(gen);
+}
+
+Performing C++ SOURCE FILE Test HAVE_CXX11_UNIFORM_REAL_DISTRIBUTION failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2077993412/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2077993412.dir/build.make CMakeFiles/cmTryCompileExec2077993412.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec2077993412.dir/src.cxx.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icpc    -wd68 -wd981 -wd383 -wd869 -wd2196 -wd279 -wd2504 -wd2943  -DHAVE_CXX11_UNIFORM_REAL_DISTRIBUTION -std=c++11   -o CMakeFiles/cmTryCompileExec2077993412.dir/src.cxx.o -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: namespace "std" has no member "uniform_real_distribution"
+    std::uniform_real_distribution<float> r(0, 1);
+         ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: type name is not allowed
+    std::uniform_real_distribution<float> r(0, 1);
+                                   ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(5): error: identifier "r" is undefined
+    std::uniform_real_distribution<float> r(0, 1);
+                                          ^
+
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx(6): warning #1595: non-POD (Plain Old Data) class type passed through ellipsis
+    return r(gen) < 0.5 ? 0 : 1;
+             ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/src.cxx (code 2)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2077993412.dir/src.cxx.o] Error 2
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2077993412/fast] Error 2
+
+Source file was:
+
+#include <random>
+int main(){
+  std::mt19937 gen;
+  std::uniform_real_distribution<float> r(0, 1);
+  return r(gen) < 0.5 ? 0 : 1;
+}
+
+Determining if the system is big endian passed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3652608730/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3652608730.dir/build.make CMakeFiles/cmTryCompileExec3652608730.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3652608730.dir/TestEndianess.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g     -o CMakeFiles/cmTryCompileExec3652608730.dir/TestEndianess.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec3652608730
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3652608730.dir/link.txt --verbose=1
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc    -g      CMakeFiles/cmTryCompileExec3652608730.dir/TestEndianess.c.o  -o cmTryCompileExec3652608730 -rdynamic 
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file dl.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec507234955/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec507234955.dir/build.make CMakeFiles/cmTryCompileExec507234955.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec507234955.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec507234955.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "dl.h"
+  #include <dl.h>
+                 ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec507234955.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec507234955/fast] Error 2
+
+
+Determining if the include file dld.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1503950194/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1503950194.dir/build.make CMakeFiles/cmTryCompileExec1503950194.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1503950194.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1503950194.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "dld.h"
+  #include <dld.h>
+                  ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1503950194.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1503950194/fast] Error 2
+
+
+Determining if the include file malloc/malloc.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec209402418/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec209402418.dir/build.make CMakeFiles/cmTryCompileExec209402418.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec209402418.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec209402418.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "malloc/malloc.h"
+  #include <malloc/malloc.h>
+                            ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec209402418.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec209402418/fast] Error 2
+
+
+Determining if the include file ndir.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2895097764/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2895097764.dir/build.make CMakeFiles/cmTryCompileExec2895097764.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2895097764.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec2895097764.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "ndir.h"
+  #include <ndir.h>
+                   ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2895097764.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2895097764/fast] Error 2
+
+
+Determining if the include file sys/dl.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3017380653/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3017380653.dir/build.make CMakeFiles/cmTryCompileExec3017380653.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3017380653.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec3017380653.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "sys/dl.h"
+  #include <sys/dl.h>
+                     ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec3017380653.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3017380653/fast] Error 2
+
+
+Determining if the include file sys/ndir.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1137790050/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1137790050.dir/build.make CMakeFiles/cmTryCompileExec1137790050.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1137790050.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1137790050.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "sys/ndir.h"
+  #include <sys/ndir.h>
+                       ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1137790050.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1137790050/fast] Error 2
+
+
+Determining if the include file valgrind/valgrind.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec23647072/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec23647072.dir/build.make CMakeFiles/cmTryCompileExec23647072.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec23647072.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec23647072.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "valgrind/valgrind.h"
+  #include <valgrind/valgrind.h>
+                                ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec23647072.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec23647072/fast] Error 2
+
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec682919517/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec682919517.dir/build.make CMakeFiles/cmTryCompileExec682919517.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec682919517.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec682919517.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "windows.h"
+  #include <windows.h>
+                      ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec682919517.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec682919517/fast] Error 2
+
+
+Determining if the include file mach/mach.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4036264628/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4036264628.dir/build.make CMakeFiles/cmTryCompileExec4036264628.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4036264628.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec4036264628.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "mach/mach.h"
+  #include <mach/mach.h>
+                        ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec4036264628.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec4036264628/fast] Error 2
+
+
+Determining if the include file mach-o/dyld.h exists failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1679855912/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1679855912.dir/build.make CMakeFiles/cmTryCompileExec1679855912.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1679855912.dir/CheckIncludeFile.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1679855912.dir/CheckIncludeFile.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c(1): catastrophic error: cannot open source file "mach-o/dyld.h"
+  #include <mach-o/dyld.h>
+                          ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckIncludeFile.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1679855912.dir/CheckIncludeFile.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1679855912/fast] Error 2
+
+
+Determining if the isinf exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2683137488/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2683137488.dir/build.make CMakeFiles/cmTryCompileExec2683137488.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2683137488.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec2683137488.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c(2): catastrophic error: cannot open source file "cmath"
+  #include <cmath>
+                  ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec2683137488.dir/CheckSymbolExists.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec2683137488/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <cmath>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef isinf
+  return ((int*)(&isinf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the finite exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1625015159/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1625015159.dir/build.make CMakeFiles/cmTryCompileExec1625015159.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1625015159.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1625015159.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c(2): catastrophic error: cannot open source file "ieeefp.h"
+  #include <ieeefp.h>
+                     ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1625015159.dir/CheckSymbolExists.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1625015159/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ieeefp.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef finite
+  return ((int*)(&finite))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the isnan exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1945545645/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1945545645.dir/build.make CMakeFiles/cmTryCompileExec1945545645.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1945545645.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1945545645.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c(2): catastrophic error: cannot open source file "cmath"
+  #include <cmath>
+                  ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1945545645.dir/CheckSymbolExists.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1945545645/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <cmath>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef isnan
+  return ((int*)(&isnan))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the malloc_zone_statistics exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1623632298/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1623632298.dir/build.make CMakeFiles/cmTryCompileExec1623632298.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1623632298.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec1623632298.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c(2): catastrophic error: cannot open source file "malloc/malloc.h"
+  #include <malloc/malloc.h>
+                            ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c (code 4)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec1623632298.dir/CheckSymbolExists.c.o] Error 4
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec1623632298/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc/malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef malloc_zone_statistics
+  return ((int*)(&malloc_zone_statistics))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strerror_s exist failed with the following output:
+Change Dir: /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec4183207453/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4183207453.dir/build.make CMakeFiles/cmTryCompileExec4183207453.dir/build
+gmake[1]: Entering directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+/opt/apps/cmake/2.8.9/bin/cmake -E cmake_progress_report /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4183207453.dir/CheckSymbolExists.c.o
+/opt/apps/intel/13/composer_xe_2013.2.146/bin/intel64/icc   -g  -std=c++11   -o CMakeFiles/cmTryCompileExec4183207453.dir/CheckSymbolExists.c.o   -c /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+icc: command line warning #10370: option '-std=c++11' is not valid for C compilations
+/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c(8): error: identifier "strerror_s" is undefined
+    return ((int*)(&strerror_s))[argc];
+                    ^
+
+compilation aborted for /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c (code 2)
+gmake[1]: *** [CMakeFiles/cmTryCompileExec4183207453.dir/CheckSymbolExists.c.o] Error 2
+gmake[1]: Leaving directory `/home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec4183207453/fast] Error 2
+
+File /home1/02556/rbrito/UT_Internship/galois/build/mic/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_s
+  return ((int*)(&strerror_s))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

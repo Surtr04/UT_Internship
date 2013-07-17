@@ -23,7 +23,7 @@
  */
 
 #include "Metis.h"
-
+#include <numeric>
 #include <iomanip>
 
 void graphStat(GGraph* graph) {

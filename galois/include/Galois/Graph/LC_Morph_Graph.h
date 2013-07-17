@@ -150,7 +150,7 @@ public:
       local_edges->next = old;
       char* estart = newblock + sizeof(EdgeHolder);
       if ((uintptr_t)estart % sizeof(EITy)) //not aligned
-        estart += sizeof(EITy) - ((uintptr_t)estart % alignof(EITy));
+        estart += sizeof(EITy) - ((uintptr_t)estart % 8);
 
       local_edges->begin = (EITy*)estart;
       char* eend = newblock + Runtime::MM::pageSize;
