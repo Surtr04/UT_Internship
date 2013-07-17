@@ -1,3 +1,0 @@
-repository='external project URL'
-module='http://www.cse.psu.edu/~madduri/software/GTgraph/GTgraph.tar.gz'
-tag=''
