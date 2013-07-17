@@ -41,13 +41,13 @@ Galois::Runtime::PerBackend& Galois::Runtime::getPPSBackend() {
 
 //#define MORE_MEM_HACK
 #ifdef MORE_MEM_HACK
-const size_t allocSize = Galois::Runtime::MM::smallPageSize * 10;
+const size_t allocSize = Galois::Runtime::MM::pageSize * 10;
 inline void* alloc() {
   return malloc(allocSize);
 }
 
 #else
-const size_t allocSize = Galois::Runtime::MM::smallPageSize;
+const size_t allocSize = Galois::Runtime::MM::pageSize;
 inline void* alloc() {
   return Galois::Runtime::MM::pageAlloc();
 }

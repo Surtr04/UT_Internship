@@ -167,6 +167,12 @@ int computeCut(GGraph& g) {
 
 
 int main(int argc, char** argv) {
+  #ifdef __MIC__
+    std::cout << "Hello from MIC" << std::endl;
+  #else
+    std::cout << "Hello from HOST" << std::endl;
+  #endif
+  
   Galois::StatManager statManager;
   LonestarStart(argc, argv, name, desc, url);
 
