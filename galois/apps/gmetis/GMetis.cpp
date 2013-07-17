@@ -35,6 +35,7 @@
 #include "Galois/Statistic.h"
 //#include "GraphReader.h"
 #include "Lonestar/BoilerPlate.h"
+#define GALOIS_DEBUG_TOPO
 
 namespace cll = llvm::cl;
 
