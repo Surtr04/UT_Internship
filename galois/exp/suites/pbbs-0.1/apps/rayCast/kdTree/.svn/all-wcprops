@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree
+END
+kdTree.C
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/kdTree.C
+END
+sampleSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/sampleSort.h
+END
+ray.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/ray.h
+END
+kdTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/kdTree.h
+END
+rayTriangleIntersect.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/rayTriangleIntersect.h
+END
+dataGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/dataGen.h
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/quickSort.h
+END
+rayTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/rayTime.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/kdTree/CMakeLists.txt
+END

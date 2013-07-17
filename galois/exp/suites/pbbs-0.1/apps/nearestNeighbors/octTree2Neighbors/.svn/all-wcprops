@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors
+END
+neighborsTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors/neighborsTime.C
+END
+nearestNeighbors.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors/nearestNeighbors.h
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors/quickSort.h
+END
+octTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors/octTree.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/octTree2Neighbors/CMakeLists.txt
+END

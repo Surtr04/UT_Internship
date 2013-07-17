@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13265/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData
+END
+randLocalGraph.C
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/randLocalGraph.C
+END
+graphUtils.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/graphUtils.C
+END
+addWeights.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/addWeights.C
+END
+rMatGraph.C
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/rMatGraph.C
+END
+gridGraph.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/gridGraph.C
+END
+dataGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/dataGen.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/13265/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/graphData/CMakeLists.txt
+END

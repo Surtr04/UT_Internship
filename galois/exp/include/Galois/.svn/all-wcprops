@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13735/projects/GaloisCpp/trunk/exp/include/Galois
+END
+LigraExecutor.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13307/projects/GaloisCpp/trunk/exp/include/Galois/LigraExecutor.h
+END
+Markable.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/12957/projects/GaloisCpp/trunk/exp/include/Galois/Markable.h
+END
+DomainSpecificExecutors.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/13271/projects/GaloisCpp/trunk/exp/include/Galois/DomainSpecificExecutors.h
+END
+GraphLabExecutor.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13551/projects/GaloisCpp/trunk/exp/include/Galois/GraphLabExecutor.h
+END
+GaloisUnsafe.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13637/projects/GaloisCpp/trunk/exp/include/Galois/GaloisUnsafe.h
+END
+LigraGraphChiExecutor.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/13307/projects/GaloisCpp/trunk/exp/include/Galois/LigraGraphChiExecutor.h
+END
+PrioritySchedulers.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/include/Galois/PrioritySchedulers.h
+END
+GraphChiExecutor.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13339/projects/GaloisCpp/trunk/exp/include/Galois/GraphChiExecutor.h
+END
+Queue.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/exp/include/Galois/Queue.h
+END
+DoAllWrap.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/12285/projects/GaloisCpp/trunk/exp/include/Galois/DoAllWrap.h
+END
+PriorityScheduling.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/include/Galois/PriorityScheduling.h
+END

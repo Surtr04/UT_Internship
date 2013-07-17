@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/13740/projects/GaloisCpp/trunk/exp/inputs/cholesky
+END
+matrix1.txt.filled
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/matrix1.txt.filled
+END
+matrix1.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/matrix1.txt
+END
+very-sparse.txt.dep
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13740/projects/GaloisCpp/trunk/exp/inputs/cholesky/very-sparse.txt.dep
+END
+very-sparse.txt.choleskyedges
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/very-sparse.txt.choleskyedges
+END
+matrix1.txt.dep
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13740/projects/GaloisCpp/trunk/exp/inputs/cholesky/matrix1.txt.dep
+END
+matrix1.txt.choleskyedges
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/matrix1.txt.choleskyedges
+END
+very-sparse.txt.filled
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/very-sparse.txt.filled
+END
+very-sparse.txt
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13726/projects/GaloisCpp/trunk/exp/inputs/cholesky/very-sparse.txt
+END

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/8776/projects/GaloisCpp/trunk/tools/generators/desNetlistGen
+END
+testKoggeStone.pl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/testKoggeStone.pl
+END
+tryOut.pl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/tryOut.pl
+END
+netlistlib.pl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/8776/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/netlistlib.pl
+END
+grpXorNandArrayGen.pl
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/grpXorNandArrayGen.pl
+END
+grpAdderGen.pl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/grpAdderGen.pl
+END
+forloop.m4
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/forloop.m4
+END
+devicelib.pl
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/devicelib.pl
+END
+genTreeMult.pl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/8776/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/genTreeMult.pl
+END
+genAdderRC.pl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/genAdderRC.pl
+END
+genKoggeStone.pl
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/8776/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/genKoggeStone.pl
+END
+genCSA.pl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/genCSA.pl
+END
+adder_Nbit.m4
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/adder_Nbit.m4
+END
+testTreeMult.pl
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/testTreeMult.pl
+END
+xorNandArrayGen.pl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/xorNandArrayGen.pl
+END
+adder_1bit.m4
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/adder_1bit.m4
+END
+testAdderRC.pl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/7235/projects/GaloisCpp/trunk/tools/generators/desNetlistGen/testAdderRC.pl
+END

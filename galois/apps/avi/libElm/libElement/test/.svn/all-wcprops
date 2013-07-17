@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test
+END
+testP12DElement-modelOutput
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DElement-modelOutput
+END
+testP12DElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DElement.cpp
+END
+testP13DElement.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP13DElement.cpp
+END
+testP12DTrace-modelOutput
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DTrace-modelOutput
+END
+testP12DElementBoundaryTraces-modelOutput
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DElementBoundaryTraces-modelOutput
+END
+testP12DTrace.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DTrace.cpp
+END
+testP12DElementBoundaryTraces.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP12DElementBoundaryTraces.cpp
+END
+testP13DTrace.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP13DTrace.cpp
+END
+testP13DElementBoundaryTraces.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/test/testP13DElementBoundaryTraces.cpp
+END

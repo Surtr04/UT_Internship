@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/suites
+END
+download_external.sh
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/download_external.sh
+END
+parsec-2.1.patch
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/parsec-2.1.patch
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/suites/CMakeLists.txt
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/common
+END
+neighborsCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/common/neighborsCheck.C
+END
+neighborsTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/common/neighborsTime.C
+END
+octTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nearestNeighbors/common/octTree.h
+END

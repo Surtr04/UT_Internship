@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis
+END
+Metric.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/13799/projects/GaloisCpp/trunk/apps/gmetis/Metric.cpp
+END
+Metis.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis/Metis.h
+END
+Partitioning.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis/Partitioning.cpp
+END
+Coarsening.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis/Coarsening.cpp
+END
+GMetis.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis/GMetis.cpp
+END
+Refine.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/13820/projects/GaloisCpp/trunk/apps/gmetis/Refine.cpp
+END
+GraphReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13799/projects/GaloisCpp/trunk/apps/gmetis/GraphReader.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/9954/projects/GaloisCpp/trunk/apps/gmetis/CMakeLists.txt
+END

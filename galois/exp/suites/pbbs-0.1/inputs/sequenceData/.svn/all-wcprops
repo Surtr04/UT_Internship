@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData
+END
+trigramSeq.C
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/trigramSeq.C
+END
+sequenceData.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/sequenceData.h
+END
+dataGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/dataGen.h
+END
+trigrams.C
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/trigrams.C
+END
+almostSortedSeq.C
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/almostSortedSeq.C
+END
+exptSeq.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/exptSeq.C
+END
+randomSeq.C
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/randomSeq.C
+END
+addDataSeq.C
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/addDataSeq.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/CMakeLists.txt
+END
+trigramString.C
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/trigramString.C
+END
+parallelDefs
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/sequenceData/parallelDefs
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/iss/!svn/ver/13734/projects/GaloisCpp/trunk/apps/boruvka
+END
+UnionFind.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/9946/projects/GaloisCpp/trunk/apps/boruvka/UnionFind.h
+END
+Boruvka.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/13734/projects/GaloisCpp/trunk/apps/boruvka/Boruvka.cpp
+END
+BoruvkaMerge.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/13589/projects/GaloisCpp/trunk/apps/boruvka/BoruvkaMerge.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/12686/projects/GaloisCpp/trunk/apps/boruvka/CMakeLists.txt
+END

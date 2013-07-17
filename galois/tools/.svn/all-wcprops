@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/repos/iss/!svn/ver/13810/projects/GaloisCpp/trunk/tools
+END
+snap.patch
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/snap.patch
+END
+hi_pr.patch
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/hi_pr.patch
+END
+delaunayrefinement-pbbs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/delaunayrefinement-pbbs.patch
+END
+cats-gens.patch
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/cats-gens.patch
+END
+triangle.patch
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/triangle.patch
+END
+delaunaytriangulation-pbbs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/delaunaytriangulation-pbbs.patch
+END
+bfs-schardl.patch
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/9557/projects/GaloisCpp/trunk/tools/bfs-schardl.patch
+END
+SSCA2.patch
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/SSCA2.patch
+END
+GTgraph-rmat.patch
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/9434/projects/GaloisCpp/trunk/tools/GTgraph-rmat.patch
+END
+independentset-pbbs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/independentset-pbbs.patch
+END
+bfs-pbbs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/bfs-pbbs.patch
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/13338/projects/GaloisCpp/trunk/tools/CMakeLists.txt
+END
+kruskal-pbbs.patch
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/12704/projects/GaloisCpp/trunk/tools/kruskal-pbbs.patch
+END

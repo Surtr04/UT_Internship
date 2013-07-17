@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/common
+END
+sortCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/common/sortCheck.C
+END
+sortTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/common/sortTime.C
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/common/quickSort.h
+END
+randPerm.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/common/randPerm.h
+END

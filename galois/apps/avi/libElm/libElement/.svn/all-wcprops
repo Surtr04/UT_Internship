@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libElm/libElement
+END
+Element.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9432/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/Element.h
+END
+ElementBoundaryTrace.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/ElementBoundaryTrace.h
+END
+P1nDElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/P1nDElement.h
+END
+P12DElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/P12DElement.h
+END
+P13DElement.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libElm/libElement/P13DElement.h
+END

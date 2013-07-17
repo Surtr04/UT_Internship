@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/cmake/Toolchain
+END
+ppc64-bgq-linux-clang.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/cmake/Toolchain/ppc64-bgq-linux-clang.cmake
+END
+ppc64-bgq-linux-tryrunresults.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/13676/projects/GaloisCpp/trunk/cmake/Toolchain/ppc64-bgq-linux-tryrunresults.cmake
+END
+ppc64-bgq-linux-xlc.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/cmake/Toolchain/ppc64-bgq-linux-xlc.cmake
+END

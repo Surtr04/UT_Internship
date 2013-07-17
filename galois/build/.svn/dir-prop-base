@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 73
+apps
+CMakeFiles
+src
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+Doxyfile
+
+END

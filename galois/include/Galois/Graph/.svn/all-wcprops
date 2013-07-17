@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/13812/projects/GaloisCpp/trunk/include/Galois/Graph
+END
+LC_Linear_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/13741/projects/GaloisCpp/trunk/include/Galois/Graph/LC_Linear_Graph.h
+END
+LC_InOut_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/Graph/LC_InOut_Graph.h
+END
+SpatialTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13059/projects/GaloisCpp/trunk/include/Galois/Graph/SpatialTree.h
+END
+Util.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/Graph/Util.h
+END
+LC_Numa_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/Graph/LC_Numa_Graph.h
+END
+LCGraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13589/projects/GaloisCpp/trunk/include/Galois/Graph/LCGraph.h
+END
+FileGraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Graph/FileGraph.h
+END
+Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13797/projects/GaloisCpp/trunk/include/Galois/Graph/Graph.h
+END
+LC_InlineEdge_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Graph/LC_InlineEdge_Graph.h
+END
+memScalGraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13589/projects/GaloisCpp/trunk/include/Galois/Graph/memScalGraph.h
+END
+LC_Morph_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13812/projects/GaloisCpp/trunk/include/Galois/Graph/LC_Morph_Graph.h
+END
+Details.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13741/projects/GaloisCpp/trunk/include/Galois/Graph/Details.h
+END
+LC_CSR_Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Graph/LC_CSR_Graph.h
+END
+TypeTraits.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13269/projects/GaloisCpp/trunk/include/Galois/Graph/TypeTraits.h
+END

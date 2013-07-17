@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST
+END
+unionFind.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST/unionFind.h
+END
+STTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST/STTime.C
+END
+ST.C
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST/ST.C
+END
+ST.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST/ST.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/spanningTree/newST/CMakeLists.txt
+END

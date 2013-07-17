@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/Runtime
+END
+Termination.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13291/projects/GaloisCpp/trunk/include/Galois/Runtime/Termination.h
+END
+DoAll.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13466/projects/GaloisCpp/trunk/include/Galois/Runtime/DoAll.h
+END
+Range.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13106/projects/GaloisCpp/trunk/include/Galois/Runtime/Range.h
+END
+MethodFlags.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/12819/projects/GaloisCpp/trunk/include/Galois/Runtime/MethodFlags.h
+END
+ForEachTraits.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/13435/projects/GaloisCpp/trunk/include/Galois/Runtime/ForEachTraits.h
+END
+ParallelWork.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13797/projects/GaloisCpp/trunk/include/Galois/Runtime/ParallelWork.h
+END
+ThreadPool.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ThreadPool.h
+END
+PerThreadStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/12762/projects/GaloisCpp/trunk/include/Galois/Runtime/PerThreadStorage.h
+END
+LCordered.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/Runtime/LCordered.h
+END
+UserContextAccess.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/12818/projects/GaloisCpp/trunk/include/Galois/Runtime/UserContextAccess.h
+END
+DeterministicWork.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/Runtime/DeterministicWork.h
+END
+Sampling.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/include/Galois/Runtime/Sampling.h
+END
+Support.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13599/projects/GaloisCpp/trunk/include/Galois/Runtime/Support.h
+END
+PerThreadWorkList.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/12958/projects/GaloisCpp/trunk/include/Galois/Runtime/PerThreadWorkList.h
+END
+Context.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/Runtime/Context.h
+END
+QueuingLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/include/Galois/Runtime/QueuingLock.h
+END
+Barrier.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13584/projects/GaloisCpp/trunk/include/Galois/Runtime/Barrier.h
+END
+ActiveThreads.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/13592/projects/GaloisCpp/trunk/include/Galois/Runtime/ActiveThreads.h
+END
+OrderedWork.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13548/projects/GaloisCpp/trunk/include/Galois/Runtime/OrderedWork.h
+END

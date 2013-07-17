@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/maximalMatching/ndMatching
+END
+matching.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/maximalMatching/ndMatching/matching.h
+END
+matchingTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/maximalMatching/ndMatching/matchingTime.C
+END
+matching.C
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/maximalMatching/ndMatching/matching.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/maximalMatching/ndMatching/CMakeLists.txt
+END

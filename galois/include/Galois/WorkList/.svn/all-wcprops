@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/13808/projects/GaloisCpp/trunk/include/Galois/WorkList
+END
+WLCompileCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/13637/projects/GaloisCpp/trunk/include/Galois/WorkList/WLCompileCheck.h
+END
+Lifo.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/Lifo.h
+END
+GFifo.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/GFifo.h
+END
+LocalQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/LocalQueue.h
+END
+WorkListHelpers.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13637/projects/GaloisCpp/trunk/include/Galois/WorkList/WorkListHelpers.h
+END
+ExternRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/ExternRef.h
+END
+BulkSynchronous.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/BulkSynchronous.h
+END
+OwnerComputes.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/OwnerComputes.h
+END
+WorkList.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13808/projects/GaloisCpp/trunk/include/Galois/WorkList/WorkList.h
+END
+OrderedList.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13808/projects/GaloisCpp/trunk/include/Galois/WorkList/OrderedList.h
+END
+Chunked.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/WorkList/Chunked.h
+END
+AltChunked.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/AltChunked.h
+END
+Fifo.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/WorkList/Fifo.h
+END
+StableIterator.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/13769/projects/GaloisCpp/trunk/include/Galois/WorkList/StableIterator.h
+END
+Obim.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/WorkList/Obim.h
+END

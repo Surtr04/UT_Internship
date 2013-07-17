@@ -1,0 +1,77 @@
+10
+
+dir
+13823
+https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch
+https://svn.ices.utexas.edu/repos/iss
+
+
+
+2012-07-24T22:01:19.639485Z
+10704
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+522c16a8-e32f-0410-b4cc-8071c0b41197
+
+g
+dir
+
+common
+dir
+
+serialBFS
+dir
+
+ndBFS
+dir
+
+CMakeLists.txt
+file
+
+
+
+
+2013-07-17T16:29:44.000000Z
+970e7a7f8140090231b377bcc8346456
+2012-07-24T22:01:19.639485Z
+10704
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+323
+
+deterministicBFS
+dir
+

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/deterministicBFS
+END
+BFS.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/deterministicBFS/BFS.h
+END
+BFSTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/deterministicBFS/BFSTime.C
+END
+BFS.C
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/deterministicBFS/BFS.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/deterministicBFS/CMakeLists.txt
+END

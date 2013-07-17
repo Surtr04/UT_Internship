@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/iss/!svn/ver/13735/projects/GaloisCpp/trunk/exp/test
+END
+skiplist.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/test/skiplist.cpp
+END
+pairingheap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/test/pairingheap.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/13735/projects/GaloisCpp/trunk/exp/test/CMakeLists.txt
+END

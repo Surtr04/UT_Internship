@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal
+END
+sampleSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/sampleSort.h
+END
+unionFind.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/unionFind.h
+END
+MSTTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/MSTTime.C
+END
+MST.C
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/MST.C
+END
+MST.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/MST.h
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/quickSort.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/CMakeLists.txt
+END
+serialSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/parallelKruskal/serialSort.h
+END

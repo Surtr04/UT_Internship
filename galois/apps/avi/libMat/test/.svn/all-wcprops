@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libMat/test
+END
+testLinearElastic.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libMat/test/testLinearElastic.cpp
+END
+testNeoHookean.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libMat/test/testNeoHookean.cpp
+END

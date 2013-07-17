@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older
+END
+backend.pl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/backend.pl
+END
+prune_headers_function.pl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/prune_headers_function.pl
+END
+vtune_sssp.pl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/vtune_sssp.pl
+END
+prune_headers_line.pl
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/prune_headers_line.pl
+END
+report.pl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/report.pl
+END
+report_vtune.pl
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/report_vtune.pl
+END
+run_sssp.pl
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/run_sssp.pl
+END
+run_boruvka.pl
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/run_boruvka.pl
+END
+run_clustering.pl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/run_clustering.pl
+END
+run_delaunayrefinement.pl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/11723/projects/GaloisCpp/trunk/exp/scripts/older/run_delaunayrefinement.pl
+END

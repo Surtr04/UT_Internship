@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/iss/!svn/ver/12337/projects/GaloisCpp/trunk/inputs/meshes
+END
+r10k.1.ele
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/7134/projects/GaloisCpp/trunk/inputs/meshes/r10k.1.ele
+END
+r10k.1.node
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/7134/projects/GaloisCpp/trunk/inputs/meshes/r10k.1.node
+END
+r10k.node
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/7134/projects/GaloisCpp/trunk/inputs/meshes/r10k.node
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/12337/projects/GaloisCpp/trunk/inputs/meshes/CMakeLists.txt
+END
+r10k.1.poly
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/7134/projects/GaloisCpp/trunk/inputs/meshes/r10k.1.poly
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/include/Galois/WorkList
+END
+WorkListExperimental.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/include/Galois/WorkList/WorkListExperimental.h
+END
+WorkListAlt.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/include/Galois/WorkList/WorkListAlt.h
+END
+WorkListDebug.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/exp/include/Galois/WorkList/WorkListDebug.h
+END

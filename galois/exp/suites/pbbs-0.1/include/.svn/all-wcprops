@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include
+END
+graphIO.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/graphIO.h
+END
+speculative_for.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/speculative_for.h
+END
+blockRadixSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/blockRadixSort.h
+END
+geometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/geometry.h
+END
+parallel.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9948/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/parallel.h
+END
+gettime.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/10382/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/gettime.h
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/utils.h
+END
+sequenceIO.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/sequenceIO.h
+END
+graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/graph.h
+END
+deterministicHash.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/deterministicHash.h
+END
+IO.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/IO.h
+END
+sequence.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/sequence.h
+END
+transpose.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/transpose.h
+END
+parseCommandLine.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/parseCommandLine.h
+END
+graphUtils.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/graphUtils.h
+END
+geometryIO.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/include/geometryIO.h
+END

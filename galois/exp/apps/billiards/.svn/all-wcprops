@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13669/projects/GaloisCpp/trunk/exp/apps/billiards
+END
+Vec2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/Vec2.cpp
+END
+dependTest.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/exp/apps/billiards/dependTest.cpp
+END
+Collision.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/Collision.h
+END
+CollidingObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/CollidingObject.h
+END
+Vec2.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/Vec2.h
+END
+dependTest.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/exp/apps/billiards/dependTest.h
+END
+BilliardsSerialPQ.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsSerialPQ.cpp
+END
+BilliardsPartOrdSerial.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPartOrdSerial.h
+END
+BilliardsPartOrd.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPartOrd.h
+END
+BilliardsSerialLog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13042/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsSerialLog.cpp
+END
+Cushion.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/exp/apps/billiards/Cushion.cpp
+END
+Billiards.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13581/projects/GaloisCpp/trunk/exp/apps/billiards/Billiards.h
+END
+BilliardsSerialLog.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsSerialLog.h
+END
+Cushion.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/exp/apps/billiards/Cushion.h
+END
+Ball.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13042/projects/GaloisCpp/trunk/exp/apps/billiards/Ball.h
+END
+Event.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13042/projects/GaloisCpp/trunk/exp/apps/billiards/Event.cpp
+END
+BilliardsPOsortedVec.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPOsortedVec.cpp
+END
+BilliardsPOsortedSerial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPOsortedSerial.cpp
+END
+BilliardsPOsorted.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPOsorted.cpp
+END
+Event.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13042/projects/GaloisCpp/trunk/exp/apps/billiards/Event.h
+END
+FPutils.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/exp/apps/billiards/FPutils.cpp
+END
+Table.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/Table.cpp
+END
+BilliardsPOunsortedSerial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/13669/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPOunsortedSerial.cpp
+END
+BilliardsPOunsorted.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsPOunsorted.cpp
+END
+BilliardsFromLog.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13084/projects/GaloisCpp/trunk/exp/apps/billiards/BilliardsFromLog.cpp
+END
+FPutils.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13651/projects/GaloisCpp/trunk/exp/apps/billiards/FPutils.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13098/projects/GaloisCpp/trunk/exp/apps/billiards/CMakeLists.txt
+END
+Table.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/Table.h
+END
+SimLogger.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/SimLogger.h
+END

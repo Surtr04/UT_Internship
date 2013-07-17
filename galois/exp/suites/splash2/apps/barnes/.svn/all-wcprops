@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes
+END
+code.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/code.h
+END
+grav.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/grav.c
+END
+load.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/load.c
+END
+getparam.c
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/getparam.c
+END
+vectmath.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/vectmath.h
+END
+code_io.c
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/code_io.c
+END
+README.barnes
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/README.barnes
+END
+defs.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/defs.h
+END
+stdinc.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/stdinc.h
+END
+code.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/code.c
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/CMakeLists.txt
+END
+makefile
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/makefile
+END
+util.c
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/splash2/apps/barnes/util.c
+END

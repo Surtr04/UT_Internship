@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/common
+END
+BFS.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/common/BFS.h
+END
+BFSCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/common/BFSCheck.C
+END
+BFSTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/common/BFSTime.C
+END

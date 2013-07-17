@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 6
+build
+
+K 13
+svn:mergeinfo
+V 120
+/projects/GaloisCpp/branches/distributed:12035,12641,12644,12750,13450,13773
+/projects/GaloisCpp/branches/numa:9238-9290
+END

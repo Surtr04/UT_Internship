@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayRefine/common
+END
+topologyFromTri.C
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayRefine/common/topologyFromTri.C
+END
+refineTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayRefine/common/refineTime.C
+END
+refine.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayRefine/common/refine.h
+END

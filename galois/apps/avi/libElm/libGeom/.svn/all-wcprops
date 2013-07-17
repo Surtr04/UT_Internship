@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom
+END
+Tetrahedron.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/Tetrahedron.cpp
+END
+Tetrahedron.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/Tetrahedron.h
+END
+Segment.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/11128/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/Segment.h
+END
+ElementGeometry.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/ElementGeometry.h
+END
+Triangle.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/10699/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/Triangle.h
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/test
+END
+pc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/repos/iss/!svn/ver/12670/projects/GaloisCpp/trunk/test/pc.cpp
+END
+bandwidth.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/test/bandwidth.cpp
+END
+gdeque.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/12372/projects/GaloisCpp/trunk/test/gdeque.cpp
+END
+twoleveliteratora.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13735/projects/GaloisCpp/trunk/test/twoleveliteratora.cpp
+END
+empty-member-lcgraph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/13589/projects/GaloisCpp/trunk/test/empty-member-lcgraph.cpp
+END
+flatmap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/test/flatmap.cpp
+END
+sched.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/test/sched.cpp
+END
+worklists-compile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/test/worklists-compile.cpp
+END
+static.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/test/static.cpp
+END
+sort.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/test/sort.cpp
+END
+loopoverhead.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/13637/projects/GaloisCpp/trunk/test/loopoverhead.cpp
+END
+graph-compile.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/13059/projects/GaloisCpp/trunk/test/graph-compile.cpp
+END
+lock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/iss/!svn/ver/13608/projects/GaloisCpp/trunk/test/lock.cpp
+END
+acquire.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/test/acquire.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/test/CMakeLists.txt
+END

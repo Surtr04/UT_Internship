@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/quickSort
+END
+sortTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/quickSort/sortTime.C
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/quickSort/quickSort.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/10261/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/comparisonSort/quickSort/CMakeLists.txt
+END

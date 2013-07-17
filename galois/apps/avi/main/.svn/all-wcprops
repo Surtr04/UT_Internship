@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/apps/avi/main
+END
+AVIodgOrdered.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/11549/projects/GaloisCpp/trunk/apps/avi/main/AVIodgOrdered.cpp
+END
+AVIodgExplicit.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13059/projects/GaloisCpp/trunk/apps/avi/main/AVIodgExplicit.h
+END
+AVIodgExplicitNoLock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/12124/projects/GaloisCpp/trunk/apps/avi/main/AVIodgExplicitNoLock.cpp
+END
+AVIodgOrdered.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/apps/avi/main/AVIodgOrdered.h
+END
+GlobalVec.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/main/GlobalVec.h
+END
+AVIorderedSerial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/11114/projects/GaloisCpp/trunk/apps/avi/main/AVIorderedSerial.cpp
+END
+AVIodgExplicitNoLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13059/projects/GaloisCpp/trunk/apps/avi/main/AVIodgExplicitNoLock.h
+END
+AVIodgExplicit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/12124/projects/GaloisCpp/trunk/apps/avi/main/AVIodgExplicit.cpp
+END
+AVIabstractMain.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/13581/projects/GaloisCpp/trunk/apps/avi/main/AVIabstractMain.h
+END
+LocalVec.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/main/LocalVec.h
+END

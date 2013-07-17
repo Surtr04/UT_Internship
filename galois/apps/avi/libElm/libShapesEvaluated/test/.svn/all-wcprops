@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test
+END
+testLinearSE-model_output
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testLinearSE-model_output
+END
+testLinearSE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testLinearSE.cpp
+END
+testBasisFunctionsProvided-model_output
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testBasisFunctionsProvided-model_output
+END
+testQuadraticSE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testQuadraticSE.cpp
+END
+testBasisFunctionsProvided.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testBasisFunctionsProvided.cpp
+END
+testLinear3DSE.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/test/testLinear3DSE.cpp
+END

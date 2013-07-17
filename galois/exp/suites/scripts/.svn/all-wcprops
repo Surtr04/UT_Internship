@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/scripts
+END
+parse_vtune.py
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/scripts/parse_vtune.py
+END
+run_suite.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/scripts/run_suite.py
+END
+run_vtune
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/12061/projects/GaloisCpp/trunk/exp/suites/scripts/run_vtune
+END
+dmp-c++
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/10505/projects/GaloisCpp/trunk/exp/suites/scripts/dmp-c++
+END
+countatomics
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/10704/projects/GaloisCpp/trunk/exp/suites/scripts/countatomics
+END
+run_bench.py
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/10394/projects/GaloisCpp/trunk/exp/suites/scripts/run_bench.py
+END

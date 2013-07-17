@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer
+END
+config.csv
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/config.csv
+END
+demo.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/demo.js
+END
+Viewer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/Viewer.cpp
+END
+Scene.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13084/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/Scene.h
+END
+viewer.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/viewer.html
+END
+main.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/main.cpp
+END
+Viewer.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/Viewer.h
+END
+balls.csv
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/balls.csv
+END
+simLogPar.csv
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/simLogPar.csv
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/CMakeLists.txt
+END
+Scene.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13084/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/Scene.cpp
+END
+simLogSer.csv
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/13666/projects/GaloisCpp/trunk/exp/apps/billiards/viewer/simLogSer.csv
+END

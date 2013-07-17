@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/matching
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/11136/projects/GaloisCpp/trunk/apps/matching/CMakeLists.txt
+END
+bipartite-mcm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/matching/bipartite-mcm.cpp
+END

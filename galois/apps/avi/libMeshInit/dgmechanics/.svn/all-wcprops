@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics
+END
+MeshInit.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics/MeshInit.cpp
+END
+TetLinearCoordConn.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics/TetLinearCoordConn.h
+END
+TriLinearCoordConn.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/11152/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics/TriLinearCoordConn.h
+END
+MeshInit.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics/MeshInit.h
+END
+CoordConn.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/7652/projects/GaloisCpp/trunk/apps/avi/libMeshInit/dgmechanics/CoordConn.h
+END

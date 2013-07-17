@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13435/projects/GaloisCpp/trunk/apps/des/unordered
+END
+DESunordered.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/11796/projects/GaloisCpp/trunk/apps/des/unordered/DESunordered.cpp
+END
+DESunorderedBase.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12371/projects/GaloisCpp/trunk/apps/des/unordered/DESunorderedBase.h
+END
+DESunorderedSerial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/11796/projects/GaloisCpp/trunk/apps/des/unordered/DESunorderedSerial.cpp
+END
+SimObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13435/projects/GaloisCpp/trunk/apps/des/unordered/SimObject.h
+END
+DESunordered.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13435/projects/GaloisCpp/trunk/apps/des/unordered/DESunordered.h
+END
+DESunorderedSerial.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/12371/projects/GaloisCpp/trunk/apps/des/unordered/DESunorderedSerial.h
+END

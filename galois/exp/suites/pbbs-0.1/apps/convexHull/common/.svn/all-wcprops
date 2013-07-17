@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common
+END
+sampleSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common/sampleSort.h
+END
+hullCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common/hullCheck.C
+END
+hullTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common/hullTime.C
+END
+hull.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common/hull.h
+END
+quickSort.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/common/quickSort.h
+END

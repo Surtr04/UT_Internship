@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/serialHull
+END
+hullTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/serialHull/hullTime.C
+END
+serialHull.C
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/serialHull/serialHull.C
+END
+hull.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/serialHull/hull.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/convexHull/serialHull/CMakeLists.txt
+END

@@ -1,0 +1,86 @@
+10
+
+dir
+13823
+https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp
+https://svn.ices.utexas.edu/repos/iss
+
+
+
+2013-07-16T18:27:04.585307Z
+13819
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+522c16a8-e32f-0410-b4cc-8071c0b41197
+
+test
+dir
+
+inputs
+dir
+
+apps
+dir
+
+include
+dir
+
+lib
+dir
+
+scripts
+dir
+
+src
+dir
+
+suites
+dir
+
+CMakeLists.txt
+file
+
+
+
+
+2013-07-17T16:29:48.000000Z
+6cc128c3984cbdb8451885b67557f2e7
+2013-06-03T20:16:29.560813Z
+13670
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+130
+

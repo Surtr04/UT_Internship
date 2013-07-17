@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/sssp
+END
+SSSPall.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/sssp/SSSPall.cpp
+END
+SSSPall.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/9451/projects/GaloisCpp/trunk/apps/sssp/SSSPall.h
+END
+SSSP.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/sssp/SSSP.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/13649/projects/GaloisCpp/trunk/apps/sssp/CMakeLists.txt
+END
+SSSP.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/13543/projects/GaloisCpp/trunk/apps/sssp/SSSP.h
+END

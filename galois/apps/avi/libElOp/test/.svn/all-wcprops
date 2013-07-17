@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElOp/test
+END
+testDiagonalMassForSW.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElOp/test/testDiagonalMassForSW.cpp
+END
+testStressWork.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElOp/test/testStressWork.cpp
+END
+testAssemble-modelOutput
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElOp/test/testAssemble-modelOutput
+END
+testAssemble.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElOp/test/testAssemble.cpp
+END

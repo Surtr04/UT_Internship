@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ll
+END
+ThreadRWlock.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/12825/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/ThreadRWlock.h
+END
+PaddedLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/PaddedLock.h
+END
+StaticInstance.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/13592/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/StaticInstance.h
+END
+PtrLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/PtrLock.h
+END
+gio.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/gio.h
+END
+CacheLineStorage.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/CacheLineStorage.h
+END
+CompilerSpecific.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/CompilerSpecific.h
+END
+HWTopo.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13548/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/HWTopo.h
+END
+TID.h
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/12819/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/TID.h
+END
+SimpleLock.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/SimpleLock.h
+END
+EnvCheck.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/13435/projects/GaloisCpp/trunk/include/Galois/Runtime/ll/EnvCheck.h
+END

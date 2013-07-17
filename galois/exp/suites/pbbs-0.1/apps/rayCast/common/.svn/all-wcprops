@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/common
+END
+ray.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/common/ray.h
+END
+rayCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/common/rayCheck.C
+END
+rayTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/rayCast/common/rayTime.C
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/ndBFS
+END
+BFS.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/ndBFS/BFS.h
+END
+BFSTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/ndBFS/BFSTime.C
+END
+BFS.C
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/ndBFS/BFS.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/breadthFirstSearch/ndBFS/CMakeLists.txt
+END

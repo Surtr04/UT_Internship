@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/iss/!svn/ver/12704/projects/GaloisCpp/trunk/tools/comparisons
+END
+independentset.sh
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/comparisons/independentset.sh
+END
+bfs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/12686/projects/GaloisCpp/trunk/tools/comparisons/bfs.sh
+END
+SSCA2.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/9410/projects/GaloisCpp/trunk/tools/comparisons/SSCA2.sh
+END
+kruskal.sh
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/12704/projects/GaloisCpp/trunk/tools/comparisons/kruskal.sh
+END
+hi_pr.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/10497/projects/GaloisCpp/trunk/tools/comparisons/hi_pr.sh
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/12704/projects/GaloisCpp/trunk/tools/comparisons/CMakeLists.txt
+END
+triangle.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/11362/projects/GaloisCpp/trunk/tools/comparisons/triangle.sh
+END

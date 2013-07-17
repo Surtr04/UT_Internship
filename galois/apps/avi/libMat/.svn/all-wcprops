@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/apps/avi/libMat
+END
+LinearElasticMaterial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libMat/LinearElasticMaterial.cpp
+END
+Material.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/10386/projects/GaloisCpp/trunk/apps/avi/libMat/Material.cpp
+END
+Material.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/apps/avi/libMat/Material.h
+END
+NeoHookean.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/12360/projects/GaloisCpp/trunk/apps/avi/libMat/NeoHookean.cpp
+END

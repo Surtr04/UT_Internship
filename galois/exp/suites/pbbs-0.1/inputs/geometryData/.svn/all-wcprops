@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData
+END
+uniform.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/uniform.C
+END
+plummer.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/plummer.C
+END
+addRays.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/addRays.C
+END
+dataGen.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/dataGen.h
+END
+triangles.C
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/triangles.C
+END
+geometryData.h
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/geometryData.h
+END
+toNodes.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/toNodes.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/inputs/geometryData/CMakeLists.txt
+END

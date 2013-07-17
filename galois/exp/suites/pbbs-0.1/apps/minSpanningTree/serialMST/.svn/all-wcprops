@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/serialMST
+END
+MSTTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/serialMST/MSTTime.C
+END
+serialMST.C
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/serialMST/serialMST.C
+END
+MST.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/serialMST/MST.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/minSpanningTree/serialMST/CMakeLists.txt
+END

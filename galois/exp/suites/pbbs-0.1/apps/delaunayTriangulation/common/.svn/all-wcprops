@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common
+END
+topologyFromTri.C
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/topologyFromTri.C
+END
+delaunayTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/delaunayTime.C
+END
+delaunay.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/delaunay.h
+END
+nearestNeighbors.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/nearestNeighbors.h
+END
+delaunayDefs.h
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/delaunayDefs.h
+END
+octTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/common/octTree.h
+END

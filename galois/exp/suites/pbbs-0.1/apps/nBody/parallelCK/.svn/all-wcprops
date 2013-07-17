@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK
+END
+spherical.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/spherical.h
+END
+testPotential.C
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/testPotential.C
+END
+nbody.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/nbody.h
+END
+nbodyTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/nbodyTime.C
+END
+octTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/octTree.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/CMakeLists.txt
+END
+CK.C
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/parallelCK/CK.C
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/11128/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated
+END
+ShapesEvaluated.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/ShapesEvaluated.cpp
+END
+BasisFunctions.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/BasisFunctions.h
+END
+QuadratureP3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/QuadratureP3.cpp
+END
+ShapesEvaluated.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/11128/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/ShapesEvaluated.h
+END
+QuadratureP3.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/QuadratureP3.h
+END
+ShapesEvaluatedP13D.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/ShapesEvaluatedP13D.cpp
+END
+BasisFunctions.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/BasisFunctions.cpp
+END
+ShapesEvaluatedP13D.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/ShapesEvaluatedP13D.h
+END
+BasisFunctionsProvided.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/iss/!svn/ver/7392/projects/GaloisCpp/trunk/apps/avi/libElm/libShapesEvaluated/BasisFunctionsProvided.h
+END

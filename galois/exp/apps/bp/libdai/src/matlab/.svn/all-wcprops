@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab
+END
+dai_potstrength.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab/dai_potstrength.cpp
+END
+matlab.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab/matlab.cpp
+END
+dai_writefg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab/dai_writefg.cpp
+END
+dai_readfg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab/dai_readfg.cpp
+END
+dai.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/src/matlab/dai.cpp
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/test
+END
+testTetrahedron.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/test/testTetrahedron.cpp
+END
+testSegment.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/test/testSegment.cpp
+END
+testTriangle.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/7262/projects/GaloisCpp/trunk/apps/avi/libElm/libGeom/test/testTriangle.cpp
+END

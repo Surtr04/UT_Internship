@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/apps/delaunaytriangulation
+END
+Element.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/10141/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Element.h
+END
+Point.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/12819/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Point.h
+END
+Tuple.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/9240/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Tuple.h
+END
+QuadTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12383/projects/GaloisCpp/trunk/apps/delaunaytriangulation/QuadTree.h
+END
+DelaunayTriangulationDet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/delaunaytriangulation/DelaunayTriangulationDet.cpp
+END
+Verifier.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/11390/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Verifier.h
+END
+DelaunayTriangulation.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/apps/delaunaytriangulation/DelaunayTriangulation.cpp
+END
+Cavity.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/13670/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Cavity.h
+END
+Graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Graph.h
+END
+Element.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/11634/projects/GaloisCpp/trunk/apps/delaunaytriangulation/Element.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/13650/projects/GaloisCpp/trunk/apps/delaunaytriangulation/CMakeLists.txt
+END

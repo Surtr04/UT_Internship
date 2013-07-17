@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/iss/!svn/ver/9948/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/g/nd1
+END
+topology.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/g/nd1/topology.h
+END
+delaunay.C
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/iss/!svn/ver/9948/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/g/nd1/delaunay.C
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/delaunayTriangulation/g/nd1/CMakeLists.txt
+END

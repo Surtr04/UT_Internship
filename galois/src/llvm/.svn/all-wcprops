@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/src/llvm
+END
+Allocator.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/Allocator.cpp
+END
+StringRef.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/StringRef.cpp
+END
+StringMap.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/StringMap.cpp
+END
+APFloat.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/APFloat.cpp
+END
+CommandLine.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8567/projects/GaloisCpp/trunk/src/llvm/CommandLine.cpp
+END
+Twine.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/iss/!svn/ver/8558/projects/GaloisCpp/trunk/src/llvm/Twine.cpp
+END
+SmallPtrSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/SmallPtrSet.cpp
+END
+APInt.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/iss/!svn/ver/8545/projects/GaloisCpp/trunk/src/llvm/APInt.cpp
+END
+SmallVector.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8537/projects/GaloisCpp/trunk/src/llvm/SmallVector.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/src/llvm/CMakeLists.txt
+END

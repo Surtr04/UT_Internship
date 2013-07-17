@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/iss/!svn/ver/13809/projects/GaloisCpp/trunk/scripts
+END
+rcat.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/12701/projects/GaloisCpp/trunk/scripts/rcat.py
+END
+report.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/iss/!svn/ver/13451/projects/GaloisCpp/trunk/scripts/report.py
+END
+quick_plot.pl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/10696/projects/GaloisCpp/trunk/scripts/quick_plot.pl
+END
+run_small.sh
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/13266/projects/GaloisCpp/trunk/scripts/run_small.sh
+END
+find_ifdefs.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/10208/projects/GaloisCpp/trunk/scripts/find_ifdefs.sh
+END
+report.R
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/11508/projects/GaloisCpp/trunk/scripts/report.R
+END
+run.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/iss/!svn/ver/13809/projects/GaloisCpp/trunk/scripts/run.py
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/9340/projects/GaloisCpp/trunk/scripts/CMakeLists.txt
+END
+make_dist.sh.in
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/iss/!svn/ver/9257/projects/GaloisCpp/trunk/scripts/make_dist.sh.in
+END
+run_web_figures.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13589/projects/GaloisCpp/trunk/scripts/run_web_figures.sh
+END

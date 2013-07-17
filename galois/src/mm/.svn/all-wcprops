@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/iss/!svn/ver/13774/projects/GaloisCpp/trunk/src/mm
+END
+Mem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/iss/!svn/ver/13774/projects/GaloisCpp/trunk/src/mm/Mem.cpp
+END
+NumaMem.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13650/projects/GaloisCpp/trunk/src/mm/NumaMem.cpp
+END
+PageAlloc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/src/mm/PageAlloc.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/13709/projects/GaloisCpp/trunk/src/mm/CMakeLists.txt
+END

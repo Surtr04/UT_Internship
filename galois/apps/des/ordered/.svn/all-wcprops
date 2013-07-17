@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/iss/!svn/ver/12383/projects/GaloisCpp/trunk/apps/des/ordered
+END
+DESordered.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/DESordered.cpp
+END
+DESorderedHand.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/12383/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedHand.h
+END
+DESorderedSerial.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedSerial.cpp
+END
+SimObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/12032/projects/GaloisCpp/trunk/apps/des/ordered/SimObject.h
+END
+DESordered.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/12371/projects/GaloisCpp/trunk/apps/des/ordered/DESordered.h
+END
+DESorderedSerial.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/12371/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedSerial.h
+END
+TypeHelper.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/TypeHelper.h
+END
+DESorderedHandSet.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedHandSet.cpp
+END
+DESorderedHand.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedHand.cpp
+END
+DESorderedHandNB.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/11813/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedHandNB.cpp
+END
+DESorderedHandSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/12383/projects/GaloisCpp/trunk/apps/des/ordered/DESorderedHandSet.h
+END

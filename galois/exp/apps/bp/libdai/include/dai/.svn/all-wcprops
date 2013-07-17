@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/12825/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai
+END
+decmap.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/decmap.h
+END
+properties.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/properties.h
+END
+trwbp.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/trwbp.h
+END
+factorgraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/9476/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/factorgraph.h
+END
+mf.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/mf.h
+END
+bbp.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bbp.h
+END
+cbp.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9976/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/cbp.h
+END
+enum.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/11108/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/enum.h
+END
+varset.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/varset.h
+END
+bp_dual.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bp_dual.h
+END
+io.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/io.h
+END
+index.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/index.h
+END
+fbp.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/fbp.h
+END
+jtree.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/jtree.h
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/util.h
+END
+mr.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/mr.h
+END
+factor.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/factor.h
+END
+daialg.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9476/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/daialg.h
+END
+evidence.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/evidence.h
+END
+smallset.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/smallset.h
+END
+treeep.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/treeep.h
+END
+dag.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/dag.h
+END
+bipgraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bipgraph.h
+END
+lc.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/lc.h
+END
+graph.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/graph.h
+END
+bp.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/12825/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bp.h
+END
+exactinf.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/exactinf.h
+END
+prob.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/prob.h
+END
+hak.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/hak.h
+END
+clustergraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/clustergraph.h
+END
+regiongraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/regiongraph.h
+END
+doc.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/doc.h
+END
+exceptions.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/exceptions.h
+END
+weightedgraph.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/12054/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/weightedgraph.h
+END
+emalg.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/emalg.h
+END
+gibbs.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/gibbs.h
+END
+alldai.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/alldai.h
+END
+var.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9250/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/var.h
+END

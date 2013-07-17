@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/common
+END
+nbody.h
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/common/nbody.h
+END
+nbodyCheck.C
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/common/nbodyCheck.C
+END
+nbodyTime.C
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/iss/!svn/ver/9970/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/common/nbodyTime.C
+END
+octTree.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/iss/!svn/ver/9947/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps/nBody/common/octTree.h
+END

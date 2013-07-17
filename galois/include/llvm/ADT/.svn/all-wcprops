@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT
+END
+ilist_node.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/ilist_node.h
+END
+SmallVector.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/8529/projects/GaloisCpp/trunk/include/llvm/ADT/SmallVector.h
+END
+StringExtras.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/StringExtras.h
+END
+APSInt.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/APSInt.h
+END
+SmallString.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/8530/projects/GaloisCpp/trunk/include/llvm/ADT/SmallString.h
+END
+StringRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/8530/projects/GaloisCpp/trunk/include/llvm/ADT/StringRef.h
+END
+StringMap.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/8530/projects/GaloisCpp/trunk/include/llvm/ADT/StringMap.h
+END
+DenseMapInfo.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/DenseMapInfo.h
+END
+SmallPtrSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/8530/projects/GaloisCpp/trunk/include/llvm/ADT/SmallPtrSet.h
+END
+ArrayRef.h
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/ArrayRef.h
+END
+APInt.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/APInt.h
+END
+ilist.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/ilist.h
+END
+Twine.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/Twine.h
+END
+APFloat.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/8546/projects/GaloisCpp/trunk/include/llvm/ADT/APFloat.h
+END
+OwningPtr.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/iss/!svn/ver/8530/projects/GaloisCpp/trunk/include/llvm/ADT/OwningPtr.h
+END

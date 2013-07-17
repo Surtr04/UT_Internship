@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/iss/!svn/ver/13622/projects/GaloisCpp/trunk/exp/apps/bfs_wf
+END
+BFSserialFIFO.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/bfs_wf/BFSserialFIFO.cpp
+END
+BFSwavefrontLock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/bfs_wf/BFSwavefrontLock.cpp
+END
+bfs.h
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/iss/!svn/ver/13622/projects/GaloisCpp/trunk/exp/apps/bfs_wf/bfs.h
+END
+BFSwavefrontCoupled.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/bfs_wf/BFSwavefrontCoupled.cpp
+END
+fifoBFS.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/11555/projects/GaloisCpp/trunk/exp/apps/bfs_wf/fifoBFS.h
+END
+BFSserialWavefront.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/bfs_wf/BFSserialWavefront.cpp
+END
+WavefrontBFS.h
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/13622/projects/GaloisCpp/trunk/exp/apps/bfs_wf/WavefrontBFS.h
+END
+BFSwavefrontNolock.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/iss/!svn/ver/9989/projects/GaloisCpp/trunk/exp/apps/bfs_wf/BFSwavefrontNolock.cpp
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/iss/!svn/ver/11555/projects/GaloisCpp/trunk/exp/apps/bfs_wf/CMakeLists.txt
+END
