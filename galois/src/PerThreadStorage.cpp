@@ -47,8 +47,7 @@ inline void* alloc() {
 }
 
 #else
-const size_t allocSize = Galois::Runtime::MM::smallP..
-ageSize;
+const size_t allocSize = Galois::Runtime::MM::smallPageSize;
 inline void* alloc() {
   return Galois::Runtime::MM::pageAlloc();
 }
