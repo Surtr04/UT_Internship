@@ -35,6 +35,7 @@
 #include "Galois/Statistic.h"
 //#include "GraphReader.h"
 #include "Lonestar/BoilerPlate.h"
+#define GALOIS_DEBUG_TOPO
 
 namespace cll = llvm::cl;
 
@@ -189,6 +190,7 @@ int main(int argc, char** argv) {
 
   Galois::do_all_local(*graph, parallelInitMorphGraph(*graph));
 
+{
   unsigned numEdges = 0;
   std::map<unsigned, unsigned> hist;
   for (auto ii = graph->begin(), ee = graph->end(); ii != ee; ++ii) {
@@ -198,13 +200,19 @@ int main(int argc, char** argv) {
   }
 
   std::cout << "Nodes " << std::distance(graph->begin(), graph->end()) << "| Edges " << numEdges << ' ' << edgeCount2(*graph)<<std::endl;
+
+}
  // for (auto pp = hist.begin(), ep = hist.end(); pp != ep; ++pp)
   //std::cout << pp->first << " : " << pp->second << "\n";
 
 //printGraphBeg(*graph);
 
   Galois::reportPageAlloc("MeminfoPre");
+<<<<<<< HEAD
   //Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 5);
+=======
+  Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 3);
+>>>>>>> c87726fc2870832187ca2d4a5593b6ac702d120b
 
   Partition(&metisGraph, numPartitions);
 
