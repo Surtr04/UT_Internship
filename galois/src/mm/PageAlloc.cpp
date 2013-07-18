@@ -78,7 +78,7 @@ void* allocFromOS() {
   void* ptr = 0;
 #ifdef MAP_HUGETLB
   //First try huge
-  ptr = mmap(0, Galois::Runtime::MM::pageSize, _PROT, _MAP_HUGE_POP, -1, 0);
+  //ptr = mmap(0, Galois::Runtime::MM::pageSize, _PROT, _MAP_HUGE_POP, -1, 0);
 #endif
 
   //FIXME: improve failure case to ensure pageSize alignment
