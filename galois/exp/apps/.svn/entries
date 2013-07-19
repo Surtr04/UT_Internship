@@ -1,14 +1,14 @@
 10
 
 dir
-13823
+13833
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-06-20T21:57:44.652050Z
-13740
+2013-07-18T22:14:15.586126Z
+13832
 noah
 
 
@@ -26,10 +26,10 @@ noah
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-cholesky
+betweennesscentrality
 dir
 
-betweennesscentrality
+cholesky
 dir
 
 bh_odg
@@ -38,13 +38,13 @@ dir
 pmst
 dir
 
-pagerank
+triangles
 dir
 
 sssp
 dir
 
-triangles
+pagerank
 dir
 
 bc-inner
@@ -65,10 +65,10 @@ dir
 buchberger
 dir
 
-linear
+bfs
 dir
 
-bfs
+linear
 dir
 
 sloan
