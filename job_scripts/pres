@@ -57,7 +57,7 @@ foreach my $k (keys $results) {
 
 	open my $fh, ">:encoding(utf8)", "results_p$k.csv" or die "results_p$k.csv: $!";
 
-	foreach my $k2 (keys $results->{$k}) {
+	foreach my $k2 (sort {$a <=> $b} keys $results->{$k}) {
 
 		$csv->print($fh,$results->{$k}->{$k2});
 
@@ -68,5 +68,3 @@ foreach my $k (keys $results) {
 
 __END__
 
-
-thread 1 thread 2 
