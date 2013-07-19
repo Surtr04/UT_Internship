@@ -212,7 +212,11 @@ int main(int argc, char** argv) {
 //printGraphBeg(*graph);
 
   Galois::reportPageAlloc("MeminfoPre");
+<<<<<<< HEAD
+  //Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 5);
+=======
   Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 3);
+>>>>>>> c87726fc2870832187ca2d4a5593b6ac702d120b
 
   Partition(&metisGraph, numPartitions);
 
