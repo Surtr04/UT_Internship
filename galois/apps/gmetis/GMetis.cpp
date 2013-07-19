@@ -81,6 +81,7 @@ void Partition(MetisGraph* metisGraph, unsigned nparts) {
   MetisGraph* mcg = coarsen(metisGraph, coarsenTo);
   T.stop();
   std::cout << "Time coarsen:  "<<T.get()<< " Size of final graph: " <<  mcg->getNumNodes()<<'\n';
+  std::cerr << "Time coarsen:  " << T.get() << '\n';
    
   Galois::StatTimer T2("Partition");
   T2.start();
@@ -95,6 +96,7 @@ void Partition(MetisGraph* metisGraph, unsigned nparts) {
 
   std::vector<partInfo> initParts = parts;
   std::cout << "Time clustering:  "<<T2.get()<<'\n';
+  std::cerr << "Time clustering:  " << T2.get() << '\n';
   Galois::StatTimer T3("Refine");
   T3.start();
   refinementMode refM =refineMode;
@@ -107,8 +109,10 @@ void Partition(MetisGraph* metisGraph, unsigned nparts) {
   std::cout << "Refined dist\n";
   printPartStats(parts);
   std::cout << "Time refinement:  "<<T3.get()<<"\n\n";
+  std::cerr << "Time refinement:  " << T3.get() << "\n";
 
   std::cout << "\nTime:  " << TM.get() << '\n';
+  std::cerr << "Time:  " << TM.get() << '\n';
   return;
 }
 
@@ -208,6 +212,7 @@ int main(int argc, char** argv) {
 //printGraphBeg(*graph);
 
   Galois::reportPageAlloc("MeminfoPre");
+  //Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 5);
   Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 3);
 
   Partition(&metisGraph, numPartitions);
