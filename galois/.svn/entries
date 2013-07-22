@@ -1,15 +1,15 @@
 10
 
 dir
-13823
+13833
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-07-16T19:07:48.056950Z
-13820
-lenharth
+2013-07-18T22:16:58.234722Z
+13833
+noah
 has-props
 
 
@@ -38,10 +38,10 @@ dir
 include
 dir
 
-src
+scripts
 dir
 
-scripts
+src
 dir
 
 Doxyfile.in
