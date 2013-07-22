@@ -21,7 +21,7 @@ INPUT=/work/02556/dpereira/Inputs/USA-road-d.W.gr
 
 export MIC_ENV_PREFIX=MIC
 
-cd /work/02556/dpereira/PerformanceTests/MIC
+cd /work/02556/dpereira/Measurements
 
 mkdir -p Measurements
 mkdir -p Logs
