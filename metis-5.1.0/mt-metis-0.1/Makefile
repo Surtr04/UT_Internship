@@ -1,4 +1,4 @@
-CC = /opt/apps/ossw/applications/gcc/gcc-4.8/sl6/bin/gcc
+CC = /usr/bin/gcc
 RM = rm -rvf
 
 DEBUGOPTS = -g3 -O0 -DDEBUG
@@ -13,7 +13,7 @@ else
   endif
 endif
 
-METISROOT=".."
+METISROOT="metis"
 METISINC="$(METISROOT)/include"
 METISSOURCE="$(METISROOT)/libmetis"
 METISBIN="$(METISROOT)/build/Linux-x86_64"
