@@ -113,14 +113,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home1/02556/rbrito/UT_Internship/metis-5.1.0/CMakeFiles /home1/02556/rbrito/UT_Internship/metis-5.1.0/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(CMAKE_COMMAND) -E cmake_progress_start /home1/02556/rbrito/UT_Internship/metis-5.1.0/CMakeFiles /home1/02556/rbrito/UT_Internship/metis-5.1.0/include/CMakeFiles/progress.marks
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(MAKE) -f CMakeFiles/Makefile2 include/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home1/02556/rbrito/UT_Internship/metis-5.1.0/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(MAKE) -f CMakeFiles/Makefile2 include/clean
 .PHONY : clean
 
 # The main clean target
@@ -129,109 +129,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(MAKE) -f CMakeFiles/Makefile2 include/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named metis
-
-# Build rule for target.
-metis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 metis
-.PHONY : metis
-
-# fast build rule for target.
-metis/fast:
-	$(MAKE) -f libmetis/CMakeFiles/metis.dir/build.make libmetis/CMakeFiles/metis.dir/build
-.PHONY : metis/fast
-
-#=============================================================================
-# Target rules for targets named cmpfillin
-
-# Build rule for target.
-cmpfillin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmpfillin
-.PHONY : cmpfillin
-
-# fast build rule for target.
-cmpfillin/fast:
-	$(MAKE) -f programs/CMakeFiles/cmpfillin.dir/build.make programs/CMakeFiles/cmpfillin.dir/build
-.PHONY : cmpfillin/fast
-
-#=============================================================================
-# Target rules for targets named gpmetis
-
-# Build rule for target.
-gpmetis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gpmetis
-.PHONY : gpmetis
-
-# fast build rule for target.
-gpmetis/fast:
-	$(MAKE) -f programs/CMakeFiles/gpmetis.dir/build.make programs/CMakeFiles/gpmetis.dir/build
-.PHONY : gpmetis/fast
-
-#=============================================================================
-# Target rules for targets named graphchk
-
-# Build rule for target.
-graphchk: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 graphchk
-.PHONY : graphchk
-
-# fast build rule for target.
-graphchk/fast:
-	$(MAKE) -f programs/CMakeFiles/graphchk.dir/build.make programs/CMakeFiles/graphchk.dir/build
-.PHONY : graphchk/fast
-
-#=============================================================================
-# Target rules for targets named m2gmetis
-
-# Build rule for target.
-m2gmetis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 m2gmetis
-.PHONY : m2gmetis
-
-# fast build rule for target.
-m2gmetis/fast:
-	$(MAKE) -f programs/CMakeFiles/m2gmetis.dir/build.make programs/CMakeFiles/m2gmetis.dir/build
-.PHONY : m2gmetis/fast
-
-#=============================================================================
-# Target rules for targets named mpmetis
-
-# Build rule for target.
-mpmetis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mpmetis
-.PHONY : mpmetis
-
-# fast build rule for target.
-mpmetis/fast:
-	$(MAKE) -f programs/CMakeFiles/mpmetis.dir/build.make programs/CMakeFiles/mpmetis.dir/build
-.PHONY : mpmetis/fast
-
-#=============================================================================
-# Target rules for targets named ndmetis
-
-# Build rule for target.
-ndmetis: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ndmetis
-.PHONY : ndmetis
-
-# fast build rule for target.
-ndmetis/fast:
-	$(MAKE) -f programs/CMakeFiles/ndmetis.dir/build.make programs/CMakeFiles/ndmetis.dir/build
-.PHONY : ndmetis/fast
 
 # Help Target
 help:
@@ -245,13 +154,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... metis"
-	@echo "... cmpfillin"
-	@echo "... gpmetis"
-	@echo "... graphchk"
-	@echo "... m2gmetis"
-	@echo "... mpmetis"
-	@echo "... ndmetis"
 .PHONY : help
 
 
@@ -263,6 +165,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home1/02556/rbrito/UT_Internship/metis-5.1.0 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -13,7 +13,7 @@ else
   endif
 endif
 
-METISROOT="metis"
+METISROOT=".."
 METISINC="$(METISROOT)/include"
 METISSOURCE="$(METISROOT)/libmetis"
 METISBIN="$(METISROOT)/build/Linux-x86_64"

@@ -1,3 +1,4 @@
+#include "includes.h"
 /**
  * @file coarsen.c
  * @brief Coarsening functions
