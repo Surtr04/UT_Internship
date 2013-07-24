@@ -10,7 +10,7 @@
 MAXSTEP=1
 TBEGIN=103
 TEND=150
-TNEXT=1
+TNEXT=2
 
 PART1=16
 PART2=128
@@ -26,14 +26,14 @@ cd /work/02556/dpereira/Measurements
 mkdir -p Measurements
 mkdir -p Logs
 
-<< PART1
+<< STEP1
 for (( step = 0; step < $MAXSTEP; step++ )); do
     for (( threads = $TBEGIN; threads <= $TEND; threads+=$TNEXT )); do
       export MIC_OMP_NUM_THREADS=$threads
       $METIS -t=$threads $INPUT $PART1 2> Measurements/gmetis\_$PART1\_$threads > Logs/gmetis\_$PART1\_$threads 
     done
 done
-PART1
+STEP1
 
 for (( step = 0; step < $MAXSTEP; step++ )); do
     for (( threads = $TBEGIN; threads <= $TEND; threads+=$TNEXT )); do
@@ -42,12 +42,12 @@ for (( step = 0; step < $MAXSTEP; step++ )); do
     done
 done
 
-<< PART3
+<< STEP3
 for (( step = 0; step < $MAXSTEP; step++ )); do
     for (( threads = $TBEGIN; threads <= $TEND; threads+=$TNEXT )); do
       export MIC_OMP_NUM_THREADS=$threads
       $METIS -t=$threads $INPUT $PART3 2> Measurements/gmetis\_$PART3\_$threads > Logs/gmetis\_$PART3\_$threads 
     done
 done
-PART3
+STEP3
 
