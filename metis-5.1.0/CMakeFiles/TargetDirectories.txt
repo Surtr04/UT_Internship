@@ -1,7 +1,0 @@
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/cmpfillin.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/gpmetis.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/graphchk.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/m2gmetis.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/libmetis/CMakeFiles/metis.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/mpmetis.dir
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/programs/CMakeFiles/ndmetis.dir

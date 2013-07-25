@@ -1,8 +1,0 @@
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/include/metis.h
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/lib/libmetis.a
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/gpmetis
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/ndmetis
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/mpmetis
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/m2gmetis
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/graphchk
-/home1/02556/rbrito/UT_Internship/metis-5.1.0/build/Linux-x86_64/bin/cmpfillin
