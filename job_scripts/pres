@@ -22,10 +22,10 @@ foreach my $file (@files) {
 
 		while (<F>) {
 			push(@{$results->{$partition}->{$thread}},$thread);
-			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time:\s+(\d+)/;
-			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time coarsen:\s+(\d+).*/;
-			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time clustering:\s+(\d+).*/;
-			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time refinement:\s+(\d+).*/;
+			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time:\s+(\d+.*\d*)/;
+			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time coarsen:\s+(\d+.*\d*).*/;
+			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time clustering:\s+(\d+.*\d*).*/;
+			push(@{$results->{$partition}->{$thread}},$1) if $_ =~ m/Time refinement:\s+(\d+.*\d*).*/;
 			# $results->{$partition}->{$thread}->{total} = $1 if $_ =~ m/Time:\s+(\d+)/;
 			# $results->{$partition}->{$thread}->{coarsen} = $1 if $_ =~ m/Time coarsen:\s+(\d+).*/;
 			# $results->{$partition}->{$thread}->{clustering} = $1 if $_ =~ m/Time clustering:\s+(\d+).*/;
