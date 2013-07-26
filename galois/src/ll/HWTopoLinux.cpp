@@ -244,17 +244,6 @@ struct AutoLinuxPolicy {
 	      virtmap.push_back(i);
     }
 
-    /*
-    std::vector<cpuinfo> valsAux;
-    std::vector<int> virtmapAux;
-    for( unsigned i = 0; i < virtmap.size(); i += 4) {
-      valsAux.push_back(vals[virtmap[i]]); 
-      virtmapAux.push_back(virtmap[i]);
-    }
-    vals = valsAux;
-    virtmap = virtmapAux;
-    */
-
     if (EnvCheck("GALOIS_DEBUG_TOPO"))
       printRawConfiguration(vals);
 
@@ -266,21 +255,12 @@ struct AutoLinuxPolicy {
     int maxrawpackage = generateRawPackageData(vals);
     generatePackageData(vals);
     
-    /*std::cout << "maxrawpackage: " << maxrawpackage << std::endl;
-    std::cout << "numPackages: " << numPackages << std::endl;
-    std::cout << "numPackagesRaw: " << numPackagesRaw << std::endl;
-   */
-    //Sort by package to get package-dense mapping
-    /*for( int i = 0; i < (int)virtmap.size(); ++i){
-      std::cout << "virtmap: " << i << " value: " << virtmap[i] << std::endl; 
-    }*/
-
     // o sort serve para agrupar packages (neste caso cores)
     std::sort(virtmap.begin(), virtmap.end(), DensePackageLessThan(vals));
 
     generateHyperthreads(vals);
 
-
+    //std::sort(virtmap.begin(), virtmap.end(), DensePackageLessThan(vals));
     //Finally renumber for virtual processor numbers
     /*for( int i = 0; i < (int)virtmap.size(); ++i){
       std::cout << "virtmap: " << i << " value: " << virtmap[i] << std::endl; 
@@ -379,10 +359,9 @@ struct AutoLinuxPolicy {
         *it++ = *ii;
     }*/
   
-    hyperthreadN--;
     for (int i = 0; i < hyperthreadN; i++) {
-      for( std::vector<int>::iterator ii = virtmap.begin(), ei = virtmap.end(); ii < ei; ii++) {
-        if(mask[*ii])
+      for( std::vector<int>::iterator ii = virtmap.begin() + i, ei = virtmap.end(); ii < ei; ii += hyperthreadN) {
+        if(!mask[*ii])
           *it++ = *ii;
       }
     }
