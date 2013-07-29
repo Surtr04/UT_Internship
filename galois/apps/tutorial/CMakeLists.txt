@@ -1,6 +1,4 @@
-    cmake_minimum_required(VERSION 2.8)
 app(hello-world HelloWorld.cpp)
 app(torus Torus.cpp)
 app(torus-improved TorusImproved.cpp)
 app(sssp-simple SSSPsimple.cpp)
-app(convert convert.cpp)

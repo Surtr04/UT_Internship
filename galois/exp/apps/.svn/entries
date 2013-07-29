@@ -1,15 +1,15 @@
 10
 
 dir
-13833
+13894
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-07-18T22:14:15.586126Z
-13832
-noah
+2013-07-29T17:23:08.123788Z
+13893
+lenharth
 
 
 
@@ -26,10 +26,10 @@ noah
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-betweennesscentrality
+cholesky
 dir
 
-cholesky
+betweennesscentrality
 dir
 
 bh_odg
@@ -38,16 +38,19 @@ dir
 pmst
 dir
 
-triangles
+pagerank
 dir
 
 sssp
 dir
 
-pagerank
+triangles
 dir
 
 bc-inner
+dir
+
+meshsingularities
 dir
 
 bp
@@ -71,10 +74,13 @@ dir
 linear
 dir
 
-sloan
+visualize
 dir
 
 kruskal
+dir
+
+sloan
 dir
 
 CMakeLists.txt
@@ -83,11 +89,11 @@ file
 
 
 
-2013-07-17T16:29:28.000000Z
-285ad0785d058b3bac8b6f65a64c52cc
-2013-06-18T22:41:08.229340Z
-13726
-noah
+2013-07-29T20:43:05.000000Z
+112391156638b49f55fb1ac76decd339
+2013-07-29T15:39:53.553606Z
+13892
+lenharth
 
 
 
@@ -109,5 +115,5 @@ noah
 
 
 
-455
+519
 

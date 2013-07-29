@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/apps/kruskal
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/apps/kruskal
 END
 KruskalParallel.h
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/apps/kruskal/KruskalParallel.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/apps/kruskal/KruskalParallel.h
 END
 Kruskal.h
 K 25

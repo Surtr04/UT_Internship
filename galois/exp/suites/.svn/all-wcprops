@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/suites
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/suites
 END
 download_external.sh
 K 25
@@ -19,5 +19,5 @@ CMakeLists.txt
 K 25
 svn:wc:ra_dav:version-url
 V 76
-/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/exp/suites/CMakeLists.txt
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/suites/CMakeLists.txt
 END

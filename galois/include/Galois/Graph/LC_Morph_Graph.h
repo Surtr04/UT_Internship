@@ -150,7 +150,7 @@ public:
       local_edges->next = old;
       char* estart = newblock + sizeof(EdgeHolder);
       if ((uintptr_t)estart % sizeof(EITy)) //not aligned
-        estart += sizeof(EITy) - ((uintptr_t)estart % 8);
+        estart += sizeof(EITy) - ((uintptr_t)estart % alignof(EITy));
 
       local_edges->begin = (EITy*)estart;
       char* eend = newblock + Runtime::MM::pageSize;
@@ -246,7 +246,7 @@ public:
     std::atomic<unsigned> nEdges(0), nNodes(0);
     Galois::do_all(graph.begin(), graph.end(), CreateNodes(this, tracking, graph, nNodes));
     Galois::do_all(graph.begin(), graph.end(), CreateEdges(this, tracking, graph, nEdges));
-    std::cout << "Created Graph with " << nNodes << " nodes and " << nEdges << " edges\n";
+    //std::cout << "Created Graph with " << nNodes << " nodes and " << nEdges << " edges\n";
 
   }
 

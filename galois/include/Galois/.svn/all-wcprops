@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/repos/iss/!svn/ver/13812/projects/GaloisCpp/trunk/include/Galois
+/repos/iss/!svn/ver/13887/projects/GaloisCpp/trunk/include/Galois
 END
 UnionFind.h
 K 25
@@ -37,7 +37,7 @@ LazyObject.h
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/LazyObject.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/LazyObject.h
 END
 Statistic.h
 K 25
@@ -49,7 +49,7 @@ TypeTraits.h
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/TypeTraits.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/TypeTraits.h
 END
 FixedSizeRing.h
 K 25
@@ -97,7 +97,7 @@ UserContext.h
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/UserContext.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/UserContext.h
 END
 FlatMap.h
 K 25
@@ -139,7 +139,7 @@ Endian.h
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/repos/iss/!svn/ver/12819/projects/GaloisCpp/trunk/include/Galois/Endian.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Endian.h
 END
 gslist.h
 K 25
@@ -157,7 +157,7 @@ config.h.in
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/repos/iss/!svn/ver/13731/projects/GaloisCpp/trunk/include/Galois/config.h.in
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/config.h.in
 END
 gdeque.h
 K 25

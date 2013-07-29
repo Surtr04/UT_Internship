@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/repos/iss/!svn/ver/12383/projects/GaloisCpp/trunk/apps/des/ordered
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/apps/des/ordered
 END
 DESordered.cpp
 K 25
@@ -31,7 +31,7 @@ DESordered.h
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/repos/iss/!svn/ver/12371/projects/GaloisCpp/trunk/apps/des/ordered/DESordered.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/apps/des/ordered/DESordered.h
 END
 DESorderedSerial.h
 K 25

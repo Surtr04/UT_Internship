@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/repos/iss/!svn/ver/13833/projects/GaloisCpp/trunk
+/repos/iss/!svn/ver/13893/projects/GaloisCpp/trunk
 END
 Doxyfile.in
 K 25
@@ -25,5 +25,5 @@ CMakeLists.txt
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/repos/iss/!svn/ver/13734/projects/GaloisCpp/trunk/CMakeLists.txt
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/CMakeLists.txt
 END
