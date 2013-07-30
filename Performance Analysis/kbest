@@ -1,0 +1,92 @@
+#!/usr/bin/env perl
+
+
+use strict;
+use warnings;
+use Spreadsheet::Read;
+use Data::Dumper;
+use Text::CSV;
+
+my $sht = shift;
+
+my $book  = ReadData ("gmetis.ods");
+my $sheet = $book->[$book->[0]->{sheet}->{$sht}];
+
+my $vrange = 244;
+my $hrange = 6;
+
+my $first = "B3";
+$first =~ m/(\w+)(\d+)/g;
+
+my $col = ord($1) - 64;
+my $row = $2;
+
+my $step = 1;
+my $count = 5;
+
+my $results = {};
+
+my $i = $row;
+my $v = $col; 
+my $iter = 0;
+my $cell;
+my $tnum;
+
+
+
+while ($iter < $count) {
+	while ($i < ($vrange + $row)) {
+		while($v < ($hrange + $col)) {
+			$cell = cr2cell($v,$i);
+			$tnum = $sheet->{$cell} if ($v eq $col);
+			push( @{$results->{$tnum}->{$iter}}, $sheet->{$cell}) unless ($v eq $col);			
+			$v++;
+		}		
+		$v = $col;
+		$i++;
+	}
+	$i = $row;
+	$col += $step + $hrange;
+	$v = $col;  	
+	$iter++;
+}
+
+
+my $final = {};
+my $min = 2**64;
+my $k_aux; 
+
+
+foreach my $t (keys $results) {
+	foreach my $k (keys $results->{$t}) {		
+		if ($results->{$t}->{$k}[0] < $min) {
+			$k_aux = $k;
+		}
+	}
+
+	$final->{$t} = $results->{$t}->{$k_aux};
+
+}
+
+print Dumper $final;
+
+ if(-d "results") {
+ 	chdir "results";
+ }
+ else {
+ 	mkdir "results";
+ 	chdir "results";
+ }
+
+my $csv = Text::CSV->new ( { binary => 1 } ) or die "Cannot use CSV: ".Text::CSV->error_diag ();
+$csv->eol ("\r\n");
+$csv->column_names('total', 'coarsen', 'clustering', 'refinement'); 
+
+open my $fh, ">:encoding(utf8)", "best_$sht.csv" or die "best_$sht.csv: $!";
+
+foreach my $k (sort {$a <=> $b} keys $final) {
+
+	$csv->print($fh,$final->{$k});
+}
+
+1;
