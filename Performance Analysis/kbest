@@ -53,11 +53,12 @@ while ($iter < $count) {
 
 
 my $final = {};
-my $min = 2**64;
+my $min;
 my $k_aux; 
 
 
 foreach my $t (keys $results) {
+	$min = 2**64;
 	foreach my $k (keys $results->{$t}) {		
 		if ($results->{$t}->{$k}[0] < $min) {
 			$k_aux = $k;
