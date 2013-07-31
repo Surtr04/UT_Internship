@@ -57,14 +57,15 @@ my $min;
 my $k_aux; 
 
 
-foreach my $t (keys $results) {
+foreach my $t (sort {$a <=> $b} keys $results) {
 	$min = 2**64;
-	foreach my $k (keys $results->{$t}) {		
+	foreach my $k (sort {$a <=> $b} keys $results->{$t}) {		
 		if ($results->{$t}->{$k}[0] < $min) {
+			$min = $results->{$t}->{$k}[0];
 			$k_aux = $k;
 		}
 	}
-
+	if ($t == 2) {print $k_aux;}
 	$final->{$t} = $results->{$t}->{$k_aux};
 
 }
