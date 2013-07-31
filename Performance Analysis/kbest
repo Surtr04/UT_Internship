@@ -68,8 +68,8 @@ foreach my $t (keys $results) {
 	$final->{$t} = $results->{$t}->{$k_aux};
 
 }
-
-print Dumper $final;
+print Dumper $results;
+#print Dumper $final;
 
  if(-d "results") {
  	chdir "results";
