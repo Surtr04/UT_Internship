@@ -1,7 +1,7 @@
 10
 
 dir
-13894
+13903
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps/billiards
 https://svn.ices.utexas.edu/repos/iss
 
@@ -25,40 +25,6 @@ ddn
 
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
-
-Vec2.cpp
-file
-
-
-
-
-2013-07-29T20:43:03.000000Z
-bd093a0a59ab6441103c930df7cb4049
-2012-05-23T20:20:04.307160Z
-9989
-ahassaan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1713
 
 dependTest.cpp
 file
@@ -94,14 +60,14 @@ ddn
 
 67
 
-Collision.h
+Vec2.cpp
 file
 
 
 
 
 2013-07-29T20:43:03.000000Z
-c0c6684a8e982e9d17853db9683c4361
+bd093a0a59ab6441103c930df7cb4049
 2012-05-23T20:20:04.307160Z
 9989
 ahassaan
@@ -126,7 +92,7 @@ ahassaan
 
 
 
-14687
+1713
 
 CollidingObject.h
 file
@@ -162,14 +128,14 @@ ahassaan
 
 1931
 
-Vec2.h
+Collision.h
 file
 
 
 
 
 2013-07-29T20:43:03.000000Z
-fd46e589ce2af529552a590442eca868
+c0c6684a8e982e9d17853db9683c4361
 2012-05-23T20:20:04.307160Z
 9989
 ahassaan
@@ -194,7 +160,7 @@ ahassaan
 
 
 
-3139
+14687
 
 dependTest.h
 file
@@ -230,14 +196,14 @@ ddn
 
 5104
 
-BilliardsSerialPQ.cpp
+Vec2.h
 file
 
 
 
 
 2013-07-29T20:43:03.000000Z
-9619def0250071169d555da7035f0a58
+fd46e589ce2af529552a590442eca868
 2012-05-23T20:20:04.307160Z
 9989
 ahassaan
@@ -262,7 +228,41 @@ ahassaan
 
 
 
-1333
+3139
+
+BilliardsPartOrd.h
+file
+
+
+
+
+2013-07-29T20:43:03.000000Z
+a5aafab65cd2f8d4efd2da8b85794fa5
+2013-06-03T07:19:12.014582Z
+13666
+ahassaan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11718
 
 BilliardsPartOrdSerial.h
 file
@@ -298,16 +298,16 @@ ahassaan
 
 12758
 
-BilliardsPartOrd.h
+BilliardsSerialPQ.cpp
 file
 
 
 
 
 2013-07-29T20:43:03.000000Z
-a5aafab65cd2f8d4efd2da8b85794fa5
-2013-06-03T07:19:12.014582Z
-13666
+9619def0250071169d555da7035f0a58
+2012-05-23T20:20:04.307160Z
+9989
 ahassaan
 
 
@@ -330,7 +330,7 @@ ahassaan
 
 
 
-11718
+1333
 
 BilliardsSerialLog.cpp
 file

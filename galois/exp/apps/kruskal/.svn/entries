@@ -1,7 +1,7 @@
 10
 
 dir
-13894
+13903
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps/kruskal
 https://svn.ices.utexas.edu/repos/iss
 
@@ -26,17 +26,17 @@ lenharth
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-kruskalNoAdjSrc.cpp
+kruskalAdj.h
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-b35f4e1d493a9270a86616035bfffaa3
-2012-06-11T22:39:39.442630Z
-10256
-ahassaan
+364049e2575848e3b73ea74526417a45
+2013-05-13T18:55:09.883432Z
+13622
+lenharth
 
 
 
@@ -58,7 +58,7 @@ ahassaan
 
 
 
-1269
+27125
 
 kruskalAdjEdgeBasedSorted.cpp
 file
@@ -94,17 +94,17 @@ ahassaan
 
 1297
 
-kruskalAdj.h
+kruskalNoAdjSrc.cpp
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-364049e2575848e3b73ea74526417a45
-2013-05-13T18:55:09.883432Z
-13622
-lenharth
+b35f4e1d493a9270a86616035bfffaa3
+2012-06-11T22:39:39.442630Z
+10256
+ahassaan
 
 
 
@@ -126,7 +126,7 @@ lenharth
 
 
 
-27125
+1269
 
 kruskalAdjEdgeBasedUnsorted.cpp
 file
@@ -264,17 +264,17 @@ ahassaan
 
 1278
 
-kruskalODG.h
+kruskalData.h
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-4c8e184c2c90c8e787091dc7ef9a0fe4
-2013-05-13T18:55:09.883432Z
-13622
-lenharth
+9775cd1f1ad14fb0f8513be0330768c2
+2012-09-11T20:58:04.999812Z
+11503
+ahassaan
 
 
 
@@ -296,7 +296,7 @@ lenharth
 
 
 
-7751
+5839
 
 kruskalNoAdjNonSrc.cpp
 file
@@ -332,17 +332,17 @@ ahassaan
 
 1278
 
-kruskalData.h
+kruskalODG.h
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-9775cd1f1ad14fb0f8513be0330768c2
-2012-09-11T20:58:04.999812Z
-11503
-ahassaan
+4c8e184c2c90c8e787091dc7ef9a0fe4
+2013-05-13T18:55:09.883432Z
+13622
+lenharth
 
 
 
@@ -364,41 +364,7 @@ ahassaan
 
 
 
-5839
-
-boruvkaAdjUnsorted.cpp
-file
-
-
-
-
-2013-07-29T20:43:04.000000Z
-974e5a51f3ab8b34f799c31046e00884
-2012-06-11T22:39:39.442630Z
-10256
-ahassaan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1284
+7751
 
 kruskalSerial.cpp
 file
@@ -434,14 +400,14 @@ ahassaan
 
 1278
 
-kruskalAdjNodeBasedSorted.cpp
+boruvkaAdjUnsorted.cpp
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-125c36fc66374347c785cdf5bab90762
+974e5a51f3ab8b34f799c31046e00884
 2012-06-11T22:39:39.442630Z
 10256
 ahassaan
@@ -466,7 +432,41 @@ ahassaan
 
 
 
-1297
+1284
+
+kruskalSerial.h
+file
+
+
+
+
+2013-07-29T20:43:04.000000Z
+375ae632e03ae716a32de0ee99296c74
+2012-09-11T20:58:04.999812Z
+11503
+ahassaan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2093
 
 kruskal.h
 file
@@ -502,16 +502,16 @@ ddn
 
 11742
 
-kruskalSerial.h
+kruskalAdjNodeBasedSorted.cpp
 file
 
 
 
 
 2013-07-29T20:43:04.000000Z
-375ae632e03ae716a32de0ee99296c74
-2012-09-11T20:58:04.999812Z
-11503
+125c36fc66374347c785cdf5bab90762
+2012-06-11T22:39:39.442630Z
+10256
 ahassaan
 
 
@@ -534,7 +534,7 @@ ahassaan
 
 
 
-2093
+1297
 
 kruskalAdjNodeBasedUnsorted.cpp
 file

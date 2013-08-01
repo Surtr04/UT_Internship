@@ -1,3 +1,5 @@
+//Perform graph layout, Daniel Tunkelang style
+
 #include "Galois/Statistic.h"
 #include "Galois/Galois.h"
 #include "Galois/Graph/LCGraph.h"
@@ -11,28 +13,31 @@
 
 const double PI = 3.141593;
 const double Tinit = 255;
-const double Tmax = 256.00;
-const double Tmin = 3;
+const double Tmax = 255.00;
+const double Tmin = 1;
 
-const double repulseK = 10;
 const double gravConst = .0625;//.0625;
-const double springK = .1;
 const int randRange = 1;
-const double idealDist = 8;
+const double idealDist = 4;
 const double lenLimit = 0.001;
+const double maxForceLimit = 50;
+const double totForceLimit = 500;
 const int RmaxMult = 16;
-const bool useMomentum = false;
-const bool useScaling = true;
-const bool noLimit = true;
+const bool useScaling = false;
 
 bool doExit = false;
+double alpha = 1.0;
+double nnodes = 0.0;
+double timestep = 0.0;
 
 namespace cll = llvm::cl;
 static cll::opt<std::string> filename(cll::Positional, cll::desc("<input file>"), cll::Required);
 static cll::opt<bool> opt_no_gravity("no-gravity", cll::desc("no gravity"), cll::Optional, cll::init(false));
-static cll::opt<bool> opt_no_random("no-random", cll::desc("no random"), cll::Optional, cll::init(false));
 static cll::opt<bool> opt_no_repulse("no-repulse", cll::desc("no repulse"), cll::Optional, cll::init(false));
 static cll::opt<bool> opt_no_spring("no-spring", cll::desc("no spring"), cll::Optional, cll::init(false));
+static cll::opt<bool> noLimit("no-limit", cll::desc("no limit to time steps"), cll::Optional, cll::init(false));
+static cll::opt<double> natStepSize("step-size", cll::desc("Maximum step size"), cll::Optional, cll::init(1.0));
+static cll::opt<int> printEvery("print", cll::desc("Iterations between printing"), cll::Optional, cll::init(1));
 
 
 static bool init_app(const char * name, SDL_Surface * icon, uint32_t flags)
@@ -98,10 +103,13 @@ public:
   }
 
   void boundBy(const Point& cornerLow, const Point& cornerHigh) {
+    if (!std::isfinite(x)) { abort(); x = 0.0; }
+    if (!std::isfinite(y)) { abort(); y = 0.0; }
     x = std::max(x, cornerLow.x);
     y = std::max(y, cornerLow.y);
     x = std::min(x, cornerHigh.x);
     y = std::min(y, cornerHigh.y);
+    
   }
 
   T lengthSQ() const {
@@ -130,23 +138,22 @@ Point<T1> operator-(const Point<T1>& lhs, const Point<T2>& rhs) {
 }
 
 class Vertex {
+  Point<double> pos[2];
 public:
-  Point<double> position;
-  Point<double> velocity;
-  Point<double> fGravity;
-  Point<double> fRepulse;
-  Point<double> fSpring;
-  Point<double> fRandom;
+  Point<double> force;
   Point<int> coord;
-  double t;
+  double temp;
   double mass;
 
-  Vertex()
-    : position(randPoint() * idealDist),
-      velocity(randPoint()*10),
-      t(Tinit),
-      mass(1.0)
-  {}
+  Vertex() :temp(Tinit), mass(1.0) {}
+  
+  Point<double>& position(int which) { return pos[which]; }
+
+  void dump() {
+    std::cout << "V Pos [" << position(0).x << "," << position(0).y << " -- " << position(1).x << "," << position(1).y << "], ";
+    std::cout << "F " << force.x << "," << force.y << " mass " << mass << "\n";
+  }
+
 };
 
 typedef Galois::Graph::LC_Linear_Graph<Vertex, unsigned int> Graph;
@@ -156,7 +163,7 @@ typedef Graph::GraphNode GNode;
 double W = WIDTH, H = HEIGHT;
 int midX, midY;
 
-static bool renderGraph(struct rgbData data[][WIDTH], unsigned width, unsigned height, Graph& g, bool forces)
+static bool renderGraph(struct rgbData data[][WIDTH], unsigned width, unsigned height, Graph& g, int which, bool forces)
 {
   for(SDL_Event event; SDL_PollEvent(&event);)
     if(event.type == SDL_QUIT) return 0;
@@ -184,34 +191,35 @@ static bool renderGraph(struct rgbData data[][WIDTH], unsigned width, unsigned h
       } );
   if (forces) {
     if (true)
-      Galois::do_all(g.begin(), g.end(), [&g, &data, red] (GNode& n) {
+      Galois::do_all(g.begin(), g.end(), [&g, &data, which, red] (GNode& n) {
         Vertex& v = g.getData(n);
+        auto velocity = v.position(which) - v.position((which + 1) % 2);
         drawline(data, v.coord.x, v.coord.y, 
-                 v.coord.x - WIDTH * v.velocity.x / W, v.coord.y - HEIGHT * v.velocity.y / H,
+                 v.coord.x - WIDTH * velocity.x / W, v.coord.y - HEIGHT * velocity.y / H,
                  red);
         } );
     
-    if (true) {
-      for (Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
-        Vertex& v = g.getData(*ii);
-        drawline(data, v.coord.x, v.coord.y, 
-                 v.coord.x + WIDTH * v.fGravity.x / W, v.coord.y + HEIGHT * v.fGravity.y / H,
-                 green);
-        drawline(data, v.coord.x, v.coord.y, 
-                 v.coord.x + WIDTH * v.fSpring.x / W, v.coord.y + HEIGHT * v.fSpring.y / H,
-                 green2);
-        drawline(data, v.coord.x, v.coord.y, 
-                 v.coord.x + WIDTH * v.fRepulse.x / W, v.coord.y + HEIGHT * v.fRepulse.y / H,
-                 green3);
-        drawline(data, v.coord.x, v.coord.y, 
-                 v.coord.x + WIDTH * v.fRandom.x / W, v.coord.y + HEIGHT * v.fRandom.y / H,
-                 green4);
-      }
-      drawstring(data, 8, 8, "gravity", green);
-      drawstring(data, 8, 20, "spring", green2);
-      drawstring(data, 8, 32, "repulse", green3);
-      drawstring(data, 8, 48, "random", green4);
-    }
+    // if (true) {
+    //   for (Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
+    //     Vertex& v = g.getData(*ii);
+    //     drawline(data, v.coord.x, v.coord.y, 
+    //              v.coord.x + WIDTH * v.fGravity.x / W, v.coord.y + HEIGHT * v.fGravity.y / H,
+    //              green);
+    //     drawline(data, v.coord.x, v.coord.y, 
+    //              v.coord.x + WIDTH * v.fSpring.x / W, v.coord.y + HEIGHT * v.fSpring.y / H,
+    //              green2);
+    //     drawline(data, v.coord.x, v.coord.y, 
+    //              v.coord.x + WIDTH * v.fRepulse.x / W, v.coord.y + HEIGHT * v.fRepulse.y / H,
+    //              green3);
+    //     drawline(data, v.coord.x, v.coord.y, 
+    //              v.coord.x + WIDTH * v.fRandom.x / W, v.coord.y + HEIGHT * v.fRandom.y / H,
+    //              green4);
+    //   }
+    //   drawstring(data, 8, 8, "gravity", green);
+    //   drawstring(data, 8, 20, "spring", green2);
+    //   drawstring(data, 8, 32, "repulse", green3);
+    //   drawstring(data, 8, 48, "random", green4);
+    // }
   }
   if (true)
     for (Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
@@ -224,139 +232,148 @@ static bool renderGraph(struct rgbData data[][WIDTH], unsigned width, unsigned h
 void initializeVertices(Graph& g) {
   for (auto ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
     Vertex& v = g.getData(*ii);
-    v.mass = 1 + std::distance(g.edge_begin(*ii), g.edge_end(*ii)) / 2;
-    //    v.position *= 1 / v.mass;
+    v.mass = 1 + std::distance(g.edge_begin(*ii), g.edge_end(*ii));
+    v.position(0) = v.position(1) = randPoint() * nnodes  / v.mass;
   }
 }
 
-void computeBaryCen(Graph& g, double& cx, double& cy) {
-  //Compute barycenter
-  cx = 0;
-  cy = 0;
-  for(Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
-    GNode n = *ii;
-    Vertex& v = g.getData(n);
-    cx += v.position.x;
-    cy += v.position.y;
-  }
-  cx /= std::distance(g.begin(), g.end());
-  cy /= std::distance(g.begin(), g.end());
-  //std::cout << " cx " << cx << " cy " << cy << "\n";
-}
-
-//Computes spring force given ideal spring with natural length
-void computeForceSpringIdeal (GNode n, Graph& g) {
-  Vertex& v = g.getData(n);
-  v.fSpring = {0.0,0.0};
+//Computes spring force given quadradic spring with natural length of zero
+Point<double> computeForceSpringZero(int which, Point<double> position, GNode n, Graph& g) {
+  Point<double> fSpring = {0.0,0.0};
   for(Graph::edge_iterator ee = g.edge_begin(n), eee = g.edge_end(n); ee!=eee; ee++) {
     Vertex& u2 = g.getData(g.getEdgeDst(ee));
-    Point<double> change = u2.position - v.position;
+    Point<double> change = u2.position(which) - position;
     double lenSQ = change.lengthSQ();
-    if (lenSQ > lenLimit) {
+    if (lenSQ < lenLimit) { //not stable
+      fSpring += randPoint();
+    } else {
       double len = sqrt(lenSQ);
       auto dir = change / len;
-      double spring = len - idealDist;
-      // if (idealDist < len)
-      //   spring *= log(log(spring));
-      double force = spring * springK;
-      v.fSpring += dir * force;
+      double force = lenSQ * (1/idealDist);
+      fSpring += dir * force;
     }
   }
+  return fSpring;
 }
 
-//Computes spring force given ideal spring with natural length of zero
-void computeForceSpringZero(GNode n, Graph& g) {
-  Vertex& v = g.getData(n);
-  v.fSpring = {0.0,0.0};
-  for(Graph::edge_iterator ee = g.edge_begin(n), eee = g.edge_end(n); ee!=eee; ee++) {
-    Vertex& u2 = g.getData(g.getEdgeDst(ee));
-    Point<double> change = u2.position - v.position;
-    double lenSQ = change.lengthSQ();
-    if (lenSQ > lenLimit) {
-      double len = sqrt(lenSQ);
-      auto dir = change / len;
-      double force = len * springK;
-      v.fSpring += dir * force;
-    }
-  }
-}
-
-void computeForceRepulsive(GNode n, Graph& g) {
-  Vertex& v = g.getData(n);
-  v.fRepulse = {0.0,0.0};
+Point<double> computeForceRepulsive(int which, Point<double> position, GNode n, Graph& g) {
+  Point<double> fRepulse = {0.0,0.0};
   for (Graph::iterator jj = g.begin(), ej = g.end(); jj!=ej; jj++) {
     if (n != *jj) {
-      Vertex& u = g.getData(*jj);
-      auto change = v.position - u.position;
+      Vertex& u = g.getData(*jj, Galois::NONE);
+      auto change = position - u.position(which);
       double lenSQ = change.lengthSQ();
-      auto dir = (lenSQ > lenLimit) ? change / sqrt(lenSQ) : randPoint();
-      if (lenSQ > lenLimit)
-        v.fRepulse += dir * repulseK * v.mass / lenSQ;
+      if (lenSQ < lenLimit) { // not stable
+        fRepulse += randPoint();
+      } else {
+        double len = sqrt(lenSQ);
+        auto dir = change / len;
+        if (true) {
+          Point<double> localR;
+          if (len < lenLimit) {
+          } else if (len <= idealDist) {
+            localR = dir * (idealDist * idealDist) / len; //short range
+          } else {
+            localR = dir * (idealDist * idealDist * idealDist) / lenSQ; //long range
+          }
+          fRepulse += localR;
+        } else {
+          fRepulse += dir * alpha * (idealDist * idealDist) / len; //short range
+          fRepulse += dir * (1.0 - alpha) * (idealDist * idealDist * idealDist) / lenSQ; //long range
+        }
+      }
     }
   }
+  return fRepulse;
 }
 
-void computeForceRandom(GNode n, Graph& g) {
-  Vertex& v = g.getData(n);
-  v.fRandom = randPoint() * sqrt(sqrt(v.velocity.lengthSQ()));
+Point<double> computeForceGravity(Point<double> position) {
+  Point<double> dir = Point<double>(0,0) - position;
+  return dir * gravConst;
 }
 
-void computeForceGravity(GNode n, Graph& g) {
-  Vertex& v = g.getData(n);
-  Point<double> dir = Point<double>(0,0) - v.position;
-  v.fGravity = dir * gravConst;
+
+//takes time step, returns remainder of timestep
+Point<double> updatePosition(Point<double> position, Vertex& v, double step, Point<double> force) {
+  auto velocity = force / v.mass;
+  auto newPos = position + velocity * step;
+  newPos.boundBy(Point<double>(-1000000,-1000000),Point<double>(1000000, 1000000));
+  return newPos;
 }
 
-void computeImpulse(Graph& g) {
-  Galois::do_all(g.begin(), g.end(), [&g] (GNode& n) { 
-      if (!opt_no_random)
-        computeForceRandom(n, g);
-      if (!opt_no_gravity)
-        computeForceGravity(n, g);
-      if (!opt_no_spring)
-        computeForceSpringZero(n, g); 
-      if (!opt_no_repulse)
-        computeForceRepulsive(n, g);
-    });
+void updateTemp(Vertex& v) {
+  v.temp *= 0.99;//(1/nnodes);
+  //v.temp = std::max(0.5, std::min(Tmax, idealDist * v.velocity.lengthSQ())); 
 }
 
-void updateVSimple(Graph& g) {
-  for(Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
-    Vertex& v = g.getData(*ii);
+struct computeImpulse {
+  Graph& g;
+  int which;
+  double stepSize;
+  Galois::Runtime::PerThreadStorage<double>& maxForceSQ;
+  Galois::Runtime::PerThreadStorage<Point<double> >& totalForce;
 
-    Point<double> pCurr = v.fGravity + v.fRepulse + v.fSpring + v.fRandom;
-    double sf = useScaling ? ((double)v.t / Tmax) : 1.0;
-    if (useMomentum)
-      v.velocity = v.velocity + pCurr * sf / v.mass;
-    else
-      v.velocity = pCurr * sf / v.mass;
-    auto oldPos = v.position;
-    v.position += v.velocity;
-    v.position.boundBy(Point<double>(-1000000,-1000000),Point<double>(1000000, 1000000));
-    v.velocity = v.position - oldPos;
-    //    v.t -= 1;
+  computeImpulse(Graph& _g, int w, double ss, Galois::Runtime::PerThreadStorage<double>& mf, 
+                 Galois::Runtime::PerThreadStorage<Point<double>>& tf)
+                 :g(_g), which(w), stepSize(ss), maxForceSQ(mf), totalForce(tf) {}
+
+  void operator()(GNode& n) {
+    Vertex& v = g.getData(n);
+    doNode(n, v);
   }
-}
 
-void computeCoord(Graph& g) {
+  void doNode(GNode& n, Vertex& v) {
+    Point<double> pos = v.position(which);
+    Point<double> fGravity, fRepulse, fSpring;
+    if (!opt_no_gravity)
+      fGravity = computeForceGravity(pos);
+    if (!opt_no_spring)
+      fSpring = computeForceSpringZero(which, pos, n, g);
+    if (!opt_no_repulse)
+      fRepulse = computeForceRepulsive(which, pos, n, g);
+    v.force = fGravity + fRepulse + fSpring;
+    v.position((which + 1) % 2) = updatePosition(pos, v, stepSize, v.force);
+    *totalForce.getLocal() += v.force;
+    if (*maxForceSQ.getLocal() < v.force.lengthSQ())
+      *maxForceSQ.getLocal() = v.force.lengthSQ();
+    updateTemp(v);
+  }
+};
+
+struct recomputePos {
+  Graph& g;
+  int which;
+  double step;
+  recomputePos(Graph& _g, int w, double s) :g(_g), which(w), step(s) {}
+
+  void operator()(GNode& n) {
+    Vertex& v = g.getData(n);
+    v.position((which + 1) % 2) = updatePosition(v.position(which), v, step, v.force);
+    updateTemp(v);
+  }
+};
+
+void computeCoord(int which, Graph& g) {
   Point<double> LB(1000000,1000000), UB(-1000000,-1000000);
   for(Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
     Vertex& v = g.getData(*ii);
-    if (v.position.x < LB.x)
-      LB.x = v.position.x;
-    if (v.position.x > UB.x)
-      UB.x = v.position.x;
-    if (v.position.y < LB.y)
-      LB.y = v.position.y;
-    if (v.position.y > UB.y)
-      UB.y = v.position.y;
+    auto position = v.position(which);
+    if (position.x < LB.x)
+      LB.x = position.x;
+    if (position.x > UB.x)
+      UB.x = position.x;
+    if (position.y < LB.y)
+      LB.y = position.y;
+    if (position.y > UB.y)
+      UB.y = position.y;
+    //    std::cout << v.position.x << "," << v.position.y << " ";
   }
   double w = UB.x - LB.x;
   double h = UB.y - LB.y;
   for(Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
     Vertex& v = g.getData(*ii);
-    v.coord.x = (int)(WIDTH * (v.position.x - LB.x) / w);
-    v.coord.y = (int)(WIDTH * (v.position.y - LB.y) / h);
+    v.coord.x = (int)(WIDTH * (v.position(which).x - LB.x) / w);
+    v.coord.y = (int)(WIDTH * (v.position(which).y - LB.y) / h);
   }
   std::cout << "Size: " << w << "x" << h << " given LB " << LB.x << "," << LB.y << " UB " << UB.x << "," << UB.y << "\n";
   W = w; H = h;
@@ -370,7 +387,7 @@ void computeGlobalTemp(Graph& g, double& Tglob) {
   for (Graph::iterator ii = g.begin(), ei = g.end(); ii!=ei; ii++) {
     ++numNode;
     Vertex& v = g.getData(*ii);
-    Tglob += v.t;
+    Tglob += v.temp;
   }
   Tglob = Tglob / numNode;
 }
@@ -385,10 +402,12 @@ int main(int argc, char **argv) {
   Galois::Graph::readGraph(graph, filename);
   //graph.structureFromFile(filename);
 
+  nnodes = std::distance(graph.begin(), graph.end());
+
   //assign points in space to nodes
   initializeVertices(graph);
 
-  int Rmax = RmaxMult*std::distance(graph.begin(), graph.end());
+  int Rmax = RmaxMult*nnodes;
 
   double Tglob = 0.0;
   computeGlobalTemp(graph, Tglob);
@@ -405,52 +424,69 @@ int main(int argc, char **argv) {
 
   assert(ok);
 
-  init_data(buffer);
-
   SDL_Surface * data_sf = 
     SDL_CreateRGBSurfaceFrom((char*)buffer, WIDTH, HEIGHT, 24, WIDTH * 3,
                              0x000000FF, 0x0000FF00, 0x00FF0000, 0);
   
   SDL_SetEventFilter(filter);
 
-  computeCoord(graph);
-  renderGraph(buffer, WIDTH, HEIGHT, graph, false);
+  computeCoord(0, graph);
+  computeCoord(1, graph);
+  init_data(buffer);
+  renderGraph(buffer, WIDTH, HEIGHT, graph, 0, false);
   render(data_sf);
 
   //Begin stages of algorithm
   Galois::StatTimer T;
   T.start();
-  while(!doExit && (noLimit || (Tglob > Tmin) && (numRounds < Rmax))) {
 
-    double cx = 0, cy = 0;
-    computeBaryCen(graph,cx,cy);
-
+  double mf = 0.0;
+  do {
     //Compute v's impulse
-    computeImpulse(graph);
-
-    if (numRounds % 10 == 0) { //false && numRounds % 4 == 0) {
-      computeCoord(graph);
-      renderGraph(buffer, WIDTH, HEIGHT, graph, true);// SDL_Delay(1000/60))
-      render(data_sf);
-      init_data(buffer);
+    Galois::Runtime::PerThreadStorage<double> maxForceSQ;
+    Galois::Runtime::PerThreadStorage<Point<double>> totalForce;
+    double step = natStepSize;
+    Vertex& v = graph.getData(*graph.begin());
+    //v.dump();
+    Galois::do_all(graph.begin(), graph.end(), computeImpulse(graph, numRounds % 2, step, maxForceSQ, totalForce));
+    //v.dump();
+    Point<double> tf;
+    mf = 0.0;
+    for (int i = 0; i < maxForceSQ.size(); ++i) {
+      if (mf < *maxForceSQ.getRemote(i))
+        mf = *maxForceSQ.getRemote(i);
+      tf += *totalForce.getRemote(i);
     }
-    // char foo;
-    // std::cin >> foo;
+    if (mf > maxForceLimit*maxForceLimit || tf.lengthSQ() > totForceLimit*totForceLimit) {
+      step = std::min((double)natStepSize, std::min(maxForceLimit / sqrt(mf), totForceLimit / sqrt(tf.lengthSQ())));
+      Galois::do_all(graph.begin(), graph.end(), recomputePos(graph, numRounds % 2, step));
+      //v.dump();
+    }
+    //    alpha *= .995;
+    
+    if (numRounds % printEvery == 0) {
+      computeCoord(numRounds % 2, graph);
+      init_data(buffer);
+      renderGraph(buffer, WIDTH, HEIGHT, graph, numRounds % 2, true);// SDL_Delay(1000/60))
+      render(data_sf);
 
-    //Update v's Position and Temperature
-    updateVSimple(graph);
+      std::cout << "Round: " << numRounds << " Tglobal " << Tglob << " Step " << step
+                << " Max Force " << sqrt(mf) << " Effective Max Force " << sqrt(mf) * step 
+                << " Total Force " << sqrt(tf.lengthSQ()) << " Effective Total Force " << sqrt(tf.lengthSQ()) * step
+                << " Average Force " << sqrt(tf.lengthSQ()) / nnodes << " Effective Average Force " << sqrt(tf.lengthSQ()) * step / nnodes
+                << "\n";
 
+    }
     //Update Global temperature
-    computeGlobalTemp(graph, Tglob);
+    //computeGlobalTemp(graph, Tglob);
 
-    std::cout << "Max ROUNDS: " << Rmax << " THIS ROUND: " << numRounds << " Tglobal " << Tglob << "\n";
     numRounds++;
-  }
+  } while(!doExit && (noLimit || (mf > 0.1))); // && numRounds < Rmax)));
   T.stop();
-  std::cout << "Exited loop\n";
-  computeCoord(graph);
+  std::cout << "Exited loop.\n";
+  computeCoord(numRounds % 2, graph);
   init_data(buffer);
-  renderGraph(buffer, WIDTH, HEIGHT, graph, false);
+  renderGraph(buffer, WIDTH, HEIGHT, graph, numRounds % 2, false);
   while (!doExit) {
     SDL_Delay(1000/30);
     render(data_sf);

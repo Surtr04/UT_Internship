@@ -1,7 +1,7 @@
 10
 
 dir
-13894
+13903
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/apps
 https://svn.ices.utexas.edu/repos/iss
 
@@ -26,13 +26,13 @@ ddn
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-delaunayrefinement
+avi
 dir
 
 clustering
 dir
 
-avi
+delaunayrefinement
 dir
 
 betweennesscentrality
@@ -41,10 +41,10 @@ dir
 pta
 dir
 
-gmetis
+sssp
 dir
 
-sssp
+gmetis
 dir
 
 matching
@@ -59,10 +59,10 @@ dir
 surveypropagation
 dir
 
-delaunaytriangulation
+tutorial
 dir
 
-tutorial
+delaunaytriangulation
 dir
 
 connectedcomponents

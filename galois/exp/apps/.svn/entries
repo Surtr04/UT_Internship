@@ -1,14 +1,14 @@
 10
 
 dir
-13894
+13903
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-07-29T17:23:08.123788Z
-13893
+2013-07-31T18:15:51.262950Z
+13902
 lenharth
 
 
@@ -26,10 +26,10 @@ lenharth
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-cholesky
+betweennesscentrality
 dir
 
-betweennesscentrality
+cholesky
 dir
 
 bh_odg
@@ -38,13 +38,13 @@ dir
 pmst
 dir
 
-pagerank
+triangles
 dir
 
 sssp
 dir
 
-triangles
+pagerank
 dir
 
 bc-inner
