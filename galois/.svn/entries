@@ -1,14 +1,14 @@
 10
 
 dir
-13903
+13913
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-07-31T18:15:51.262950Z
-13902
+2013-08-01T20:45:19.608428Z
+13913
 lenharth
 has-props
 
@@ -38,10 +38,10 @@ dir
 include
 dir
 
-scripts
+src
 dir
 
-src
+scripts
 dir
 
 Doxyfile.in
@@ -170,10 +170,10 @@ file
 
 
 
-2013-07-29T20:43:40.000000Z
-44452f6a359ba305a6f5c5d9cc5edcbe
-2013-07-25T18:22:54.766865Z
-13886
+2013-08-01T21:01:04.000000Z
+de89ade079eaaa4d5af5b487998bcde0
+2013-07-31T20:15:22.982474Z
+13909
 ddn
 
 
@@ -196,5 +196,5 @@ ddn
 
 
 
-9920
+9975
 

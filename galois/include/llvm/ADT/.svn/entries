@@ -1,7 +1,7 @@
 10
 
 dir
-13903
+13913
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/include/llvm/ADT
 https://svn.ices.utexas.edu/repos/iss
 
@@ -332,40 +332,6 @@ lenharth
 
 10301
 
-APInt.h
-file
-
-
-
-
-2013-07-29T20:42:53.000000Z
-ed10cc7201da6edb3fb40a9d1b738ce3
-2011-11-15T20:34:16.004723Z
-8546
-lenharth
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-62460
-
 ArrayRef.h
 file
 
@@ -399,6 +365,40 @@ lenharth
 
 
 5998
+
+APInt.h
+file
+
+
+
+
+2013-07-29T20:42:53.000000Z
+ed10cc7201da6edb3fb40a9d1b738ce3
+2011-11-15T20:34:16.004723Z
+8546
+lenharth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+62460
 
 ilist.h
 file
@@ -434,40 +434,6 @@ lenharth
 
 23800
 
-APFloat.h
-file
-
-
-
-
-2013-07-29T20:42:53.000000Z
-632b129ed05a2733c3c2f339708f90e4
-2011-11-15T20:34:16.004723Z
-8546
-lenharth
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-18892
-
 Twine.h
 file
 
@@ -501,6 +467,40 @@ lenharth
 
 
 17381
+
+APFloat.h
+file
+
+
+
+
+2013-07-29T20:42:53.000000Z
+632b129ed05a2733c3c2f339708f90e4
+2011-11-15T20:34:16.004723Z
+8546
+lenharth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18892
 
 OwningPtr.h
 file

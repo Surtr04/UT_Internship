@@ -1,14 +1,14 @@
 10
 
 dir
-13903
+13913
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/include/Galois
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-07-25T20:40:48.794085Z
-13887
+2013-07-31T20:21:22.767898Z
+13910
 ddn
 
 
@@ -607,40 +607,6 @@ ddn
 
 13140
 
-optional.h
-file
-
-
-
-
-2013-07-29T20:42:56.000000Z
-9580b8ee9375102b84b8d7fe0cbe6685
-2013-06-13T01:03:17.772770Z
-13708
-ddn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3689
-
 Version.h
 file
 
@@ -674,6 +640,40 @@ ddn
 
 
 1310
+
+optional.h
+file
+
+
+
+
+2013-07-29T20:42:56.000000Z
+9580b8ee9375102b84b8d7fe0cbe6685
+2013-06-13T01:03:17.772770Z
+13708
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3689
 
 PriorityQueue.h
 file
@@ -746,9 +746,6 @@ ddn
 
 2075
 
-Runtime
-dir
-
 MethodFlags.h
 file
 
@@ -782,6 +779,9 @@ lenharth
 
 
 1884
+
+Runtime
+dir
 
 Endian.h
 file
@@ -885,40 +885,6 @@ ddn
 
 3033
 
-config.h.in
-file
-
-
-
-
-2013-07-29T20:42:56.000000Z
-15d7f8d1774e8d37dd0fa7ae9c19c053
-2013-07-25T18:22:54.766865Z
-13886
-ddn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-965
-
 gdeque.h
 file
 
@@ -952,6 +918,40 @@ ddn
 
 
 6287
+
+config.h.in
+file
+
+
+
+
+2013-07-29T20:42:56.000000Z
+15d7f8d1774e8d37dd0fa7ae9c19c053
+2013-07-25T18:22:54.766865Z
+13886
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+965
 
 Graph
 dir

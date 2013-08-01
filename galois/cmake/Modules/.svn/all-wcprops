@@ -1,13 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/repos/iss/!svn/ver/13732/projects/GaloisCpp/trunk/cmake/Modules
-END
-FindSubversion.cmake
-K 25
-svn:wc:ra_dav:version-url
-V 85
-/repos/iss/!svn/ver/13457/projects/GaloisCpp/trunk/cmake/Modules/FindSubversion.cmake
+/repos/iss/!svn/ver/13911/projects/GaloisCpp/trunk/cmake/Modules
 END
 ParseArguments.cmake
 K 25
@@ -15,11 +9,11 @@ svn:wc:ra_dav:version-url
 V 84
 /repos/iss/!svn/ver/7868/projects/GaloisCpp/trunk/cmake/Modules/ParseArguments.cmake
 END
-FindNUMA.cmake
+FindSubversion.cmake
 K 25
 svn:wc:ra_dav:version-url
-V 79
-/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/cmake/Modules/FindNUMA.cmake
+V 85
+/repos/iss/!svn/ver/13457/projects/GaloisCpp/trunk/cmake/Modules/FindSubversion.cmake
 END
 CheckCXX11Features.cmake
 K 25
@@ -27,17 +21,23 @@ svn:wc:ra_dav:version-url
 V 89
 /repos/iss/!svn/ver/13732/projects/GaloisCpp/trunk/cmake/Modules/CheckCXX11Features.cmake
 END
-FindVTune.cmake
+FindNUMA.cmake
 K 25
 svn:wc:ra_dav:version-url
-V 80
-/repos/iss/!svn/ver/13632/projects/GaloisCpp/trunk/cmake/Modules/FindVTune.cmake
+V 79
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/cmake/Modules/FindNUMA.cmake
 END
 HandleLLVMOptions.cmake
 K 25
 svn:wc:ra_dav:version-url
 V 88
 /repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/cmake/Modules/HandleLLVMOptions.cmake
+END
+FindVTune.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/iss/!svn/ver/13909/projects/GaloisCpp/trunk/cmake/Modules/FindVTune.cmake
 END
 GetSVNVersion-write.cmake
 K 25
@@ -51,17 +51,17 @@ svn:wc:ra_dav:version-url
 V 80
 /repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/cmake/Modules/FindCXX11.cmake
 END
-FindQGLViewer.cmake
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/cmake/Modules/FindQGLViewer.cmake
-END
 CheckHugePages.cmake
 K 25
 svn:wc:ra_dav:version-url
 V 85
 /repos/iss/!svn/ver/12646/projects/GaloisCpp/trunk/cmake/Modules/CheckHugePages.cmake
+END
+FindQGLViewer.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/cmake/Modules/FindQGLViewer.cmake
 END
 FindTBB.cmake
 K 25
@@ -104,6 +104,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 80
 /repos/iss/!svn/ver/12686/projects/GaloisCpp/trunk/cmake/Modules/CheckCilk.cmake
+END
+FindHPCToolKit.cmake
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/iss/!svn/ver/13911/projects/GaloisCpp/trunk/cmake/Modules/FindHPCToolKit.cmake
 END
 FindGMP.cmake
 K 25

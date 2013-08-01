@@ -1,14 +1,14 @@
 10
 
 dir
-13903
+13913
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/include/Galois/c++11-compat
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-06-19T22:03:27.684236Z
-13731
+2013-07-31T20:21:22.767898Z
+13910
 ddn
 
 
@@ -100,10 +100,10 @@ file
 
 
 
-2013-07-29T20:42:54.000000Z
-0cd3d9a67cfc1b6355ae1fcc26e5e898
-2013-06-19T22:03:27.684236Z
-13731
+2013-08-01T21:01:03.000000Z
+e7562945c24150a31809784d0ab5903a
+2013-07-31T20:21:22.767898Z
+13910
 ddn
 
 
@@ -126,7 +126,7 @@ ddn
 
 
 
-1310
+1580
 
 atomic_internal_xlc_ppc.h
 file
