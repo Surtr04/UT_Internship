@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=5 /work/02556/dpereira/Inputs/USA-road-d.W.gr 16
+INFO: Hostname c557-901-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  18822 Size of final graph: 403
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -1,1 -0,15
+Time clustering:  350
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -1,1 -0,15
+Refined dist
+Size in decade percentages:  -1,7 0,2 1,7
+Time refinement:  1574
+
+
+Time:  20919
+Total edge cut : 1748
+
+Part saved in : 0x7fff1d01ace0
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4
+STAT,(NULL),Coarsen,5,18822,18822,0,0,0,0
+STAT,(NULL),Conflicts,5,0,0,0,0,0,0
+STAT,(NULL),Iterations,5,31,8,4,4,6,9
+STAT,(NULL),MeminfoPost,5,756066,151354,151354,151095,151129,151134
+STAT,(NULL),MeminfoPre,5,189016,37944,37944,37685,37719,37724
+STAT,(NULL),Partition,5,350,350,0,0,0,0
+STAT,(NULL),Refine,5,1574,1574,0,0,0,0
+STAT,(NULL),Threads,5,5,5,0,0,0,0
+STAT,(NULL),Time,5,20919,20919,0,0,0,0
+STAT,match,Conflicts,5,3409,1505,1095,350,160,299
+STAT,match,Iterations,5,14965488,2876865,2888647,2967598,3069585,3162793
+STAT,popedge,Conflicts,5,0,0,0,0,0,0
+STAT,popedge,Iterations,5,7336089,1434716,1411199,1428537,1480857,1580780
+STAT,refine,Conflicts,5,338,75,74,79,58,52
+STAT,refine,Iterations,5,32469,6072,7242,6009,6555,6591

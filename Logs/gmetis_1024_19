@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=19 /work/02556/dpereira/Inputs/USA-road-d.W.gr 1024
+INFO: Hostname c558-003-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  5167 Size of final graph: 39869
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -0,1023 1,1
+Time clustering:  1251
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -0,1023 1,1
+Refined dist
+Size in decade percentages:  -1,363 0,296 1,364 3,1
+Time refinement:  1405
+
+
+Time:  8001
+Total edge cut : 36161
+
+Part saved in : 0x7fff75d002e0
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15,T16,T17,T18
+STAT,(NULL),Coarsen,19,5167,5167,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Conflicts,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Iterations,19,2047,11,142,50,112,82,48,68,133,151,98,132,143,149,140,71,159,132,100,126
+STAT,(NULL),MeminfoPost,19,756145,39817,39890,39818,39800,39885,39827,39818,39786,39737,39808,39771,39698,39842,39771,39719,39860,39851,39676,39771
+STAT,(NULL),MeminfoPre,19,189033,9969,10042,9970,9952,10037,9979,9970,9938,9889,9960,9923,9850,9994,9923,9871,10012,10003,9828,9923
+STAT,(NULL),Partition,19,1251,1251,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Refine,19,1405,1405,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Threads,19,19,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Time,19,8001,8001,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,match,Conflicts,19,3133,327,474,188,148,443,119,103,97,159,107,71,116,97,78,100,147,75,154,130
+STAT,match,Iterations,19,14840291,794233,746446,795463,759698,747245,734414,736999,762264,788857,781905,814535,803596,768546,753977,815329,767704,798073,847828,823179
+STAT,popedge,Conflicts,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,popedge,Iterations,19,7269222,376268,372658,380215,378358,371262,372315,360178,356790,366245,371073,390738,394526,379816,381086,383051,368320,418964,424716,422643
+STAT,refine,Conflicts,19,989,77,52,47,50,55,51,55,62,58,69,62,48,59,44,55,45,39,33,28
+STAT,refine,Iterations,19,462236,22285,25948,24336,22714,27215,25569,24241,24720,21627,24729,22744,22896,26575,23419,22855,25648,26417,21245,27053

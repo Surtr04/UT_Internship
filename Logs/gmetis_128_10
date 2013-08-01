@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=10 /work/02556/dpereira/Inputs/USA-road-d.W.gr 128
+INFO: Hostname c557-901-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  9779 Size of final graph: 2983
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -1,8 -0,116 1,4
+Time clustering:  393
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -1,8 -0,116 1,4
+Refined dist
+Size in decade percentages:  -1,43 -0,42 1,43
+Time refinement:  1079
+
+
+Time:  11429
+Total edge cut : 7926
+
+Part saved in : 0x7fff7da0dc60
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9
+STAT,(NULL),Coarsen,10,9779,9779,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Conflicts,10,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Iterations,10,255,26,27,27,30,22,19,21,30,26,27
+STAT,(NULL),MeminfoPost,10,756079,75712,75644,75710,75647,75543,75555,75557,75575,75666,75470
+STAT,(NULL),MeminfoPre,10,189019,19006,18938,19004,18941,18837,18849,18851,18869,18960,18764
+STAT,(NULL),Partition,10,393,393,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Refine,10,1079,1079,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Threads,10,10,10,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Time,10,11429,11429,0,0,0,0,0,0,0,0,0
+STAT,match,Conflicts,10,2507,611,182,440,241,140,120,176,196,159,242
+STAT,match,Iterations,10,14977350,1470854,1469252,1516601,1421515,1478281,1444438,1570198,1512893,1528524,1564794
+STAT,popedge,Conflicts,10,0,0,0,0,0,0,0,0,0,0,0
+STAT,popedge,Iterations,10,7342824,713464,723038,714629,687162,702882,753157,743452,728104,759711,817225
+STAT,refine,Conflicts,10,781,110,80,87,93,79,68,83,80,62,39
+STAT,refine,Iterations,10,128641,12873,12459,12541,13710,12209,13527,12400,13067,12730,13125

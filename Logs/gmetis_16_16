@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=16 /work/02556/dpereira/Inputs/USA-road-d.W.gr 16
+INFO: Hostname c557-901-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  6302 Size of final graph: 418
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -1,1 -0,15
+Time clustering:  359
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -1,1 -0,15
+Refined dist
+Size in decade percentages:  -1,5 -0,5 1,6
+Time refinement:  679
+
+
+Time:  7517
+Total edge cut : 2022
+
+Part saved in : 0x7fffe3dfe360
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14,T15
+STAT,(NULL),Coarsen,16,6302,6302,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Conflicts,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Iterations,16,31,5,3,0,3,2,0,1,0,3,4,2,4,2,2,0,0
+STAT,(NULL),MeminfoPost,16,756117,47321,47339,47246,47351,47276,47284,47224,47234,47212,47192,47291,47213,47274,47303,47154,47203
+STAT,(NULL),MeminfoPre,16,189029,11878,11896,11803,11908,11833,11841,11781,11791,11769,11749,11848,11770,11831,11860,11711,11760
+STAT,(NULL),Partition,16,359,359,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Refine,16,679,679,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Threads,16,16,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Time,16,7517,7517,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,match,Conflicts,16,2850,350,203,139,200,135,155,189,159,187,175,140,140,114,127,189,248
+STAT,match,Iterations,16,14953766,902508,899059,931924,937547,948585,891900,916993,895084,972319,935589,961188,934099,905974,966655,988337,966005
+STAT,popedge,Conflicts,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,popedge,Iterations,16,7328598,446046,436785,458289,451116,442473,428581,437432,441196,463600,465787,462863,457367,445744,480693,504312,506314
+STAT,refine,Conflicts,16,1196,149,106,99,84,74,72,77,66,56,72,63,57,52,66,54,49
+STAT,refine,Iterations,16,37701,2442,2233,2296,1984,1849,2124,2062,2758,1982,2800,2292,2138,2546,3068,2280,2847
