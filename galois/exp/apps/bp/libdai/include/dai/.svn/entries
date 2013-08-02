@@ -1,7 +1,7 @@
 10
 
 dir
-13913
+13914
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai
 https://svn.ices.utexas.edu/repos/iss
 
@@ -536,40 +536,6 @@ lenharth
 
 7416
 
-mr.h
-file
-
-
-
-
-2013-07-29T20:43:01.000000Z
-9a5d8897c4e42f732b7e30913f099c31
-2011-11-03T17:09:14.189131Z
-8353
-ddn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6992
-
 factor.h
 file
 
@@ -603,6 +569,40 @@ ddn
 
 
 25978
+
+mr.h
+file
+
+
+
+
+2013-07-29T20:43:01.000000Z
+9a5d8897c4e42f732b7e30913f099c31
+2011-11-03T17:09:14.189131Z
+8353
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6992
 
 daialg.h
 file
@@ -672,40 +672,6 @@ ddn
 
 2805
 
-smallset.h
-file
-
-
-
-
-2013-07-29T20:43:01.000000Z
-88d153abfa240e19c805faed19e0fcd0
-2011-11-03T17:09:14.189131Z
-8353
-ddn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9918
-
 treeep.h
 file
 
@@ -739,6 +705,40 @@ ddn
 
 
 8359
+
+smallset.h
+file
+
+
+
+
+2013-07-29T20:43:01.000000Z
+88d153abfa240e19c805faed19e0fcd0
+2011-11-03T17:09:14.189131Z
+8353
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9918
 
 dag.h
 file
@@ -842,17 +842,17 @@ ddn
 
 5888
 
-graph.h
+exactinf.h
 file
 
 
 
 
 2013-07-29T20:43:01.000000Z
-11018eaf534630078ad87cdc2ca7fe99
-2012-11-16T18:58:46.489207Z
-12054
-lenharth
+4466ac0ae3e7d50ff47a0e6f69d1ccaa
+2011-11-03T17:09:14.189131Z
+8353
+ddn
 
 
 
@@ -874,7 +874,7 @@ lenharth
 
 
 
-13829
+3713
 
 bp.h
 file
@@ -910,17 +910,17 @@ ddn
 
 15870
 
-exactinf.h
+graph.h
 file
 
 
 
 
 2013-07-29T20:43:01.000000Z
-4466ac0ae3e7d50ff47a0e6f69d1ccaa
-2011-11-03T17:09:14.189131Z
-8353
-ddn
+11018eaf534630078ad87cdc2ca7fe99
+2012-11-16T18:58:46.489207Z
+12054
+lenharth
 
 
 
@@ -942,7 +942,7 @@ ddn
 
 
 
-3713
+13829
 
 prob.h
 file
@@ -978,40 +978,6 @@ lenharth
 
 26415
 
-hak.h
-file
-
-
-
-
-2013-07-29T20:43:01.000000Z
-7efaa6cc9dac9d65fcf15db1ce6abff6
-2011-11-03T17:09:14.189131Z
-8353
-ddn
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-6441
-
 clustergraph.h
 file
 
@@ -1045,6 +1011,40 @@ lenharth
 
 
 14245
+
+hak.h
+file
+
+
+
+
+2013-07-29T20:43:01.000000Z
+7efaa6cc9dac9d65fcf15db1ce6abff6
+2011-11-03T17:09:14.189131Z
+8353
+ddn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6441
 
 doc.h
 file

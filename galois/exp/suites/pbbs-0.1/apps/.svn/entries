@@ -1,7 +1,7 @@
 10
 
 dir
-13913
+13914
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/exp/suites/pbbs-0.1/apps
 https://svn.ices.utexas.edu/repos/iss
 
@@ -26,10 +26,10 @@ ddn
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-maximalIndependentSet
+comparisonSort
 dir
 
-comparisonSort
+maximalIndependentSet
 dir
 
 convexHull
@@ -47,19 +47,19 @@ dir
 nearestNeighbors
 dir
 
-maximalMatching
+suffixArray
 dir
 
 delaunayTriangulation
 dir
 
-suffixArray
-dir
-
-integerSort
+maximalMatching
 dir
 
 dictionary
+dir
+
+integerSort
 dir
 
 rayCast

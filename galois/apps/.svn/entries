@@ -1,14 +1,14 @@
 10
 
 dir
-13913
+13914
 https://svn.ices.utexas.edu/repos/iss/projects/GaloisCpp/trunk/apps
 https://svn.ices.utexas.edu/repos/iss
 
 
 
-2013-08-01T20:45:19.608428Z
-13913
+2013-08-02T15:47:02.863996Z
+13914
 lenharth
 
 
@@ -26,13 +26,13 @@ lenharth
 
 522c16a8-e32f-0410-b4cc-8071c0b41197
 
-delaunayrefinement
+avi
 dir
 
 clustering
 dir
 
-avi
+delaunayrefinement
 dir
 
 betweennesscentrality
@@ -41,10 +41,10 @@ dir
 pta
 dir
 
-gmetis
+sssp
 dir
 
-sssp
+gmetis
 dir
 
 matching
@@ -59,10 +59,10 @@ dir
 surveypropagation
 dir
 
-delaunaytriangulation
+tutorial
 dir
 
-tutorial
+delaunaytriangulation
 dir
 
 connectedcomponents
