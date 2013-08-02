@@ -69,15 +69,22 @@ namespace Galois {
     static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
   }
 
+
+// #define GALOIS_HAS_MEM_FUNC_ANY(func, name) \
+//   template<typename T> \
+//   struct has_##name { \
+//     typedef char yes[1]; \
+//     typedef char no[2]; \
+//     template<typename U, U> struct type_check; \
+//     template<typename W> static yes& test(type_check<decltype(&W::func), &W::func>*); \
+//     template<typename  > static no&  test(...); \
+//     static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
+//   }
+
 #define GALOIS_HAS_MEM_FUNC_ANY(func, name) \
   template<typename T> \
   struct has_##name { \
-    typedef char yes[1]; \
-    typedef char no[2]; \
-    template<typename U, U> struct type_check; \
-    template<typename W> static yes& test(type_check<decltype(&W::func), &W::func>*); \
-    template<typename  > static no&  test(...); \
-    static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
+      return 0; \
   }
 
 #define GALOIS_HAS_MEM_TYPE(func, name) \
@@ -126,6 +133,7 @@ struct has_deterministic_parallel_break : public has_tf_deterministic_parallel_b
  * \endcode
  */
 GALOIS_HAS_MEM_FUNC_ANY(galoisDeterministicId, tf_deterministic_id);
+
 template<typename T>
 struct has_deterministic_id : public has_tf_deterministic_id<T> {};
 
