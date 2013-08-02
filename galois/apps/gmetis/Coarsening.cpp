@@ -96,17 +96,19 @@ struct TwoHopMatcher {
  4. This operator can also create the multinode, i.e. the node which is created on combining two matched nodes.  
  5. You can enable/disable 4th by changing variantMetis::mergeMatching
 */
+
 template<typename MatchingPolicy>
 struct parallelMatchAndCreateNodes {
   MatchingPolicy matcher;
   TwoHopMatcher<MatchingPolicy> matcher2;
-
   GGraph *fineGGraph;
   GGraph *coarseGGraph;
   Galois::InsertBag<GNode>& bag;
-  parallelMatchAndCreateNodes(MetisGraph* Graph, Galois::InsertBag<GNode>& bagNoNeighbor)
+
+  bool with2Hop;
+  parallelMatchAndCreateNodes(MetisGraph* Graph, Galois::InsertBag<GNode>& bagNoNeighbor, bool _with2Hop = false)
     : matcher(), matcher2(),
-      fineGGraph(Graph->getFinerGraph()->getGraph()), coarseGGraph(Graph->getGraph()), bag(bagNoNeighbor) {
+      fineGGraph(Graph->getFinerGraph()->getGraph()), coarseGGraph(Graph->getGraph()), bag(bagNoNeighbor), with2Hop(_with2Hop) {
     assert(fineGGraph != coarseGGraph);
   }
 
@@ -119,7 +121,7 @@ struct parallelMatchAndCreateNodes {
     }
     GNode ret;
     do {
-      if (fineGGraph->getData(item).isFailedMatch())
+      if (with2Hop && fineGGraph->getData(item).isFailedMatch() )
         ret = matcher2(item, fineGGraph);
       else
         ret = matcher(item, fineGGraph);
@@ -151,7 +153,7 @@ struct parallelMatchAndCreateNodes {
       //assertAllMatched(item, fineGGraph);
       //Cautious point
       //no match
-      if (fineGGraph->getData(item).isFailedMatch()) {
+      if (fineGGraph->getData(item).isFailedMatch() || !with2Hop) {
         N = coarseGGraph->createNode(numEdges, fineGGraph->getData(item).getWeight(), item);
         fineGGraph->getData(item).setMatched();
         fineGGraph->getData(item).setParent(N);
@@ -218,7 +220,7 @@ void matchNoNeighborNodes(MetisGraph* Graph, Galois::InsertBag<GNode>& bag){
  */
 
 struct parallelPopulateEdges {
-  typedef int tt_does_not_need_parallel_push;
+  typedef int tt_does_not_need_push;
   typedef int tt_needs_per_iter_alloc;
     
   GGraph *coarseGGraph;
@@ -279,19 +281,41 @@ struct parallelPopulateEdges {
   }
 };
 
+//struct HighDegreeIndexer: public std::unary_function<GNode, unsigned int> {
+//  static GGraph* indexgraph;
+//  unsigned int operator()(const GNode& val) const {
+//    return indexgraph->getData(val, Galois::MethodFlag::NONE).isFailedMatch() ?
+//      std::numeric_limits<unsigned int>::max() :
+//      std::numeric_limits<unsigned int>::max() - 
+//      (std::distance(indexgraph->edge_begin(val, Galois::MethodFlag::NONE), 
+//                     indexgraph->edge_end(val, Galois::MethodFlag::NONE)));
+//  }
+//};
+
 struct HighDegreeIndexer: public std::unary_function<GNode, unsigned int> {
   static GGraph* indexgraph;
   unsigned int operator()(const GNode& val) const {
-    return std::numeric_limits<unsigned int>::max() - std::distance(indexgraph->edge_begin(val, Galois::MethodFlag::NONE), indexgraph->edge_end(val, Galois::MethodFlag::NONE));
+    return indexgraph->getData(val, Galois::MethodFlag::NONE).isFailedMatch() ?
+      std::numeric_limits<unsigned int>::max() :
+      (std::numeric_limits<unsigned int>::max() - 
+      (std::distance(indexgraph->edge_begin(val, Galois::MethodFlag::NONE), 
+                     indexgraph->edge_end(val, Galois::MethodFlag::NONE))) >> 2);
   }
 };
 
 GGraph* HighDegreeIndexer::indexgraph = 0;
 
+//struct LowDegreeIndexer: public std::unary_function<GNode, unsigned int> {
+//  unsigned int operator()(const GNode& val) const {
+//    return  HighDegreeIndexer::indexgraph->getData(val, Galois::MethodFlag::NONE).isFailedMatch() ? std::numeric_limits<unsigned int>::max():
+//      std::distance(HighDegreeIndexer::indexgraph->edge_begin(val, Galois::MethodFlag::NONE), HighDegreeIndexer::indexgraph->edge_end(val, Galois::MethodFlag::NONE));
+//  }
+//};
+
 struct LowDegreeIndexer: public std::unary_function<GNode, unsigned int> {
   unsigned int operator()(const GNode& val) const {
     return  HighDegreeIndexer::indexgraph->getData(val, Galois::MethodFlag::NONE).isFailedMatch() ? std::numeric_limits<unsigned int>::max():
-     (std::distance(HighDegreeIndexer::indexgraph->edge_begin(val, Galois::MethodFlag::NONE), HighDegreeIndexer::indexgraph->edge_end(val, Galois::MethodFlag::NONE)));
+      (std::distance(HighDegreeIndexer::indexgraph->edge_begin(val, Galois::MethodFlag::NONE), HighDegreeIndexer::indexgraph->edge_end(val, Galois::MethodFlag::NONE)) >> 2);
   }
 };
 
@@ -310,7 +334,7 @@ unsigned minRuns(unsigned coarsenTo, unsigned size) {
   return num;
 }
 
-void findMatching(MetisGraph* coarseMetisGraph, unsigned iterNum, bool useRM = false) {
+void findMatching(MetisGraph* coarseMetisGraph, unsigned iterNum, bool useRM = false, bool with2Hop = false) {
   MetisGraph* fineMetisGraph = coarseMetisGraph->getFinerGraph();
 
   /*
@@ -324,10 +348,10 @@ void findMatching(MetisGraph* coarseMetisGraph, unsigned iterNum, bool useRM = f
     typedef decltype(fineMetisGraph->getGraph()->local_begin()) ITY;
     typedef Galois::WorkList::StableIterator<ITY, true> WL;
     Galois::InsertBag<GNode> bagNoNeighbor;
-    parallelMatchAndCreateNodes<RMmatch> pRM(coarseMetisGraph, bagNoNeighbor);
-    // std::ostringstream name;
-    // name << "RM_Match_" << iterNum;
-    Galois::for_each_local<WL>(*fineMetisGraph->getGraph(), pRM, "match");//name.str().c_str());
+    parallelMatchAndCreateNodes<RMmatch> pRM(coarseMetisGraph, bagNoNeighbor, with2Hop);
+    std::ostringstream name;
+    name << "RM_Match_" << iterNum;
+    Galois::for_each_local<WL>(*fineMetisGraph->getGraph(), pRM, "match"); /* name.str().c_str());*/
     if(!bagNoNeighbor.empty())
       matchNoNeighborNodes(coarseMetisGraph, bagNoNeighbor);
   } else {
@@ -342,10 +366,10 @@ void findMatching(MetisGraph* coarseMetisGraph, unsigned iterNum, bool useRM = f
     HighDegreeIndexer::indexgraph = fineMetisGraph->getGraph();
 
     Galois::InsertBag<GNode> bagNoNeighbor;
-    parallelMatchAndCreateNodes<HEMmatch> pHEM(coarseMetisGraph, bagNoNeighbor);
-    // std::ostringstream name;
-    // name << "HEM_Match_" << iterNum;
-    Galois::for_each_local<pLD>(*fineMetisGraph->getGraph(), pHEM, "match"); //name.str().c_str());*/
+    parallelMatchAndCreateNodes<HEMmatch> pHEM(coarseMetisGraph, bagNoNeighbor, with2Hop);
+    std::ostringstream name;
+     name << "HEM_Match_" << iterNum;
+     Galois::for_each_local<pLD>(*fineMetisGraph->getGraph(), pHEM, "match"); /* name.str().c_str()); */
   
     if(!bagNoNeighbor.empty()){
       matchNoNeighborNodes(coarseMetisGraph, bagNoNeighbor);
@@ -364,14 +388,14 @@ void createCoarseEdges(MetisGraph *coarseMetisGraph, unsigned iterNum) {
   Galois::for_each_local<WL>(*coarseMetisGraph->getGraph(), pPE, "popedge");//name.str().c_str());
 }
 
-MetisGraph* coarsenOnce(MetisGraph *fineMetisGraph, unsigned iterNum, bool useRM = false) {
+MetisGraph* coarsenOnce(MetisGraph *fineMetisGraph, unsigned iterNum, bool useRM = false, bool with2Hop = false) {
   MetisGraph *coarseMetisGraph = new MetisGraph(fineMetisGraph);
   //assertNoMatched(fineMetisGraph->getGraph());
-  //Galois::Timer t;
-  //t.start();
-  findMatching(coarseMetisGraph, iterNum, useRM);
-  //t.stop();
-  //std::cout << "Time Matching " << iterNum << " is " << t.get() << "\n";
+  //  Galois::Timer t;
+  //  t.start();
+  findMatching(coarseMetisGraph, iterNum, useRM, with2Hop);
+  //  t.stop();
+  //  std::cout << "Time Matching " << iterNum << " is " << t.get() << "\n";
   //assertNoMatched(coarseMetisGraph->getGraph());
   //Galois::Timer t2;
   //t2.start();
@@ -390,14 +414,17 @@ MetisGraph* coarsen(MetisGraph* fineMetisGraph, unsigned coarsenTo) {
   //graphStat(fineMetisGraph->getGraph());
   MetisGraph* coarseGraph = fineMetisGraph;
   unsigned iterNum = 0;
+  bool with2Hop = false; 
   while (iRuns) {//overflow
-    coarseGraph = coarsenOnce(coarseGraph, iterNum); //, iterNum == 0);
+    coarseGraph = coarsenOnce(coarseGraph, iterNum, iterNum <2, with2Hop); 
     //std::cout << "coarsening " << iterNum << " done, now " <<  std::distance(coarseGraph->getGraph()->begin(), coarseGraph->getGraph()->end()) << " on " << coarseGraph << " targeting " << coarsenTo << "\n";
     //    graphStat(coarseGraph->getGraph());
     if (iRuns)
       --iRuns;
-    if (!iRuns)
+    if (!iRuns){
       iRuns = minRuns(coarsenTo, std::distance(coarseGraph->getGraph()->begin(), coarseGraph->getGraph()->end()));
+      if (iRuns > iterNum/2) with2Hop = true;
+    }
     ++iterNum;
   }
   

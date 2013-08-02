@@ -73,7 +73,7 @@ void Partition(MetisGraph* metisGraph, unsigned nparts) {
   TM.start();
   unsigned meanWeight = ( (double)metisGraph->getTotalWeight()) / (double)nparts;
   //unsigned coarsenTo = std::max(metisGraph->getNumNodes() / (40 * intlog2(nparts)), 20 * (nparts));
-  unsigned coarsenTo = 40 * nparts;
+  unsigned coarsenTo = 100 * nparts; // antes -> 40
 
   std::cout << "\n  Starting coarsening: \n";
   Galois::StatTimer T("Coarsen");
@@ -213,7 +213,7 @@ int main(int argc, char** argv) {
 
   Galois::reportPageAlloc("MeminfoPre");
   //Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 5);
-  Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 3);
+  Galois::preAlloc(Galois::Runtime::MM::numPageAllocTotal() * 3);//esta 5
 
   Partition(&metisGraph, numPartitions);
 
