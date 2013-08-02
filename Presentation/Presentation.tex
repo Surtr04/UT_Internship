@@ -1,0 +1,200 @@
+%%!TEX encoding = UTF-8 Unicode 
+\documentclass{beamer}
+\let\Tiny=\tiny
+
+\mode<presentation>{
+  \usetheme{Singapore}
+  \usecolortheme{rose}
+  \usefonttheme{structurebold}
+  \setbeamertemplate{caption}[numbered]
+} 
+
+\usepackage{pgfplots}
+\usepackage{verbatim}
+\pgfplotsset{compat=1.8}
+\pgfplotsset{grid style={dashed}}
+
+\usepackage{listings}
+\lstset{
+    tabsize=4,
+    basicstyle=\ttfamily,
+    frame=single,
+    captionpos=b,
+    breaklines=true,
+    columns=flexible,
+}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{todonotes}
+\usepackage{multirow}
+\usepackage{pgfpages}
+\pgfpagesuselayout{resize to}[physical paper width=8in, physical paper height=6in]
+
+\title{
+    GMetis - Xeon Phi
+}
+
+\author{
+    David Pereira
+    \and
+    Rui Brito
+}
+
+\date{\today}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+% Introduction
+%-----------------------------------------------------------------------------
+
+\section{Introduction}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+    \item Blabla
+    \item Bleble
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+% System characteristics
+%-----------------------------------------------------------------------------
+
+\section{System characteristics}
+
+\begin{frame}{Stampede Host}
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{| c | c |}\hline
+Manufacturer & Intel\\ \hline
+Model & Xeon E5-2680\\ \hline
+$\mu$Arch & Sandy Bridge\\ \hline
+Clock freq & 2.70 GHz\\ \hline
+\#CPUs (sockets) & 2 \\ \hline
+\#Cores/CPU & 8\\ \hline
+\#Thread/Core & 1\\ \hline
+L1 cache size/core & 32 KB\\ \hline
+L2 cache size/core & 256 KB\\ \hline
+L3 shared cache size/CPU & 20 MB\\ \hline
+Vector width & 256 bits (AVX)\\ \hline
+%FIXME: Ver se se põe GFlops. Talvez nao seja preciso. De resto, a informação
+%está correcta. Pode-se acrescentar ou remover alguma coisa.
+%Peak SP Gflops/s & 256.32 \\ \hline
+%Peak DP Gflops/s & 128.16 \\ \hline
+\end{tabular}
+\caption{Intel Xeon E5-2680}
+\end{table}
+\end{frame}
+
+%TODO: por aqui a imagem do HWLock - depois decidir se fica ou não
+
+\begin{frame}{Stampede Coprocessor}
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{| c | c |}\hline
+Manufacturer & Intel\\ \hline
+Model & Xeon E5-2680\\ \hline
+$\mu$Arch & Sandy Bridge\\ \hline
+Clock freq & 1.1 GHz\\ \hline
+\#CPUs (sockets) & 1 \\ \hline
+\#Cores/CPU & 61\\ \hline
+\#Thread/Core & 4\\ \hline
+L1 cache size/core & 32KB\\ \hline
+L2 cache size/core & 256 KB\\ \hline
+L3 shared cache size/CPU & 12 MB\\ \hline
+Vector width & 512 bits\\ \hline
+%FIXME: Ver se se põe GFlops. Talvez nao seja preciso. De resto,
+%completar alguma informação incorrecta. Pode-se acrescentar ou remover alguma coisa.
+%Peak SP Gflops/s & 256.32 \\ \hline
+%Peak DP Gflops/s & 128.16 \\ \hline
+\end{tabular}
+\caption{Intel Xeon Phi}
+\end{table}
+\end{frame}
+
+%-----------------------------------------------------------------------------
+% Metis
+%-----------------------------------------------------------------------------
+
+\section{Metis}
+
+\begin{frame}
+%\begin{center}
+%\begin{figure}[htbp]
+    %\includegraphics[scale=.35]{.png}
+%\end{figure}
+%\end{center}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+% Mt-metis
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+%\begin{center}
+%\begin{figure}[htbp]
+    %\includegraphics[scale=.35]{.png}
+%\end{figure}
+%\end{center}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+% GMetis
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+%\begin{center}
+%\begin{figure}[htbp]
+    %\includegraphics[scale=.35]{.png}
+%\end{figure}
+%\end{center}
+\end{frame}
+
+%TODO: Por no fim cenas sobre edgecuts para efeitos de comparação.
+%TODO: Por melhorias feitas.
+
+
+%-----------------------------------------------------------------------------
+% Conclusion
+%-----------------------------------------------------------------------------
+
+\section{Conclusion}
+
+\begin{frame}{Conclusion}
+\begin{itemize}
+    \item Blabla
+    \item Bleble
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------
+% End Page 
+%-----------------------------------------------------------------------------
+
+\begin{frame}
+  \titlepage
+  \begin{center}
+  \huge Questions \& Discussion
+  \end{center}
+\end{frame}
+
+\end{document}
