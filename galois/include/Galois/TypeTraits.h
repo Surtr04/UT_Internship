@@ -84,7 +84,7 @@ namespace Galois {
 #define GALOIS_HAS_MEM_FUNC_ANY(func, name) \
   template<typename T> \
   struct has_##name { \
-      return 0; \
+      return false; \
   }
 
 #define GALOIS_HAS_MEM_TYPE(func, name) \
