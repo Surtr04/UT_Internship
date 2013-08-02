@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=9 /work/02556/dpereira/Inputs/USA-road-d.W.gr 1024
+INFO: Hostname c558-003-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  10594 Size of final graph: 40561
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -0,1023 1,1
+Time clustering:  1373
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -0,1023 1,1
+Refined dist
+Size in decade percentages:  -1,345 -0,328 1,350 3,1
+Time refinement:  3083
+
+
+Time:  15230
+Total edge cut : 37243
+
+Part saved in : 0x7fff8f45d0e0
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4,T5,T6,T7,T8
+STAT,(NULL),Coarsen,9,10594,10594,0,0,0,0,0,0,0,0
+STAT,(NULL),Conflicts,9,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Iterations,9,2047,26,268,277,273,241,210,289,191,272
+STAT,(NULL),MeminfoPost,9,756070,84147,84013,84097,84025,83917,83982,83915,84118,83856
+STAT,(NULL),MeminfoPre,9,189016,21141,21007,21091,21019,20911,20976,20909,21112,20850
+STAT,(NULL),Partition,9,1373,1373,0,0,0,0,0,0,0,0
+STAT,(NULL),Refine,9,3083,3083,0,0,0,0,0,0,0,0
+STAT,(NULL),Threads,9,9,9,0,0,0,0,0,0,0,0
+STAT,(NULL),Time,9,15230,15230,0,0,0,0,0,0,0,0
+STAT,match,Conflicts,9,1575,321,138,146,160,110,163,93,161,283
+STAT,match,Iterations,9,14900802,1574093,1693406,1604538,1621440,1619854,1729229,1624519,1702727,1730996
+STAT,popedge,Conflicts,9,0,0,0,0,0,0,0,0,0,0
+STAT,popedge,Iterations,9,7306438,787143,805553,799815,746811,809010,826198,808015,835018,888875
+STAT,refine,Conflicts,9,341,38,37,48,55,31,44,44,32,12
+STAT,refine,Iterations,9,475035,57059,47545,56289,49520,54731,50165,52399,56312,51015

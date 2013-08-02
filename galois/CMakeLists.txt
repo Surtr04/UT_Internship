@@ -14,9 +14,11 @@ endif()
 
 ###### Options (alternatively pass as options to cmake -DName=Value) ######
 set(USE_GPROF OFF CACHE BOOL "Enable GCC profiling")
-set(USE_VTUNE OFF CACHE BOOL "Use VTune (if found) for profiling")
+set(USE_VTUNE OFF CACHE BOOL "Use VTune for profiling")
 set(USE_PAPI OFF CACHE BOOL "Use PAPI counters for profiling")
+set(USE_HPCTOOLKIT OFF CACHE BOOL "Use HPCToolKit for profiling")
 set(USE_STRICT_CONFIG OFF CACHE BOOL "Instead of falling back gracefully, fail")
+set(USE_LONGJMP OFF CACHE BOOL "Use longjmp instead of exceptions to signal aborts")
 set(INSTALL_APPS OFF CACHE BOOL "Install apps as well as library")
 set(SKIP_COMPILE_APPS OFF CACHE BOOL "Skip compilation of applications using Galois library")
 
@@ -37,6 +39,7 @@ set(USE_EXP OFF CACHE BOOL "Use experimental features")
 set(EXP_DOALL "PTHREAD" CACHE STRING "Which type of implementation of parallel_doall")
 set(USE_PROF OFF CACHE BOOL "Use profiling specific features")
 set(USE_SUBVERSION_REVISION ON CACHE BOOL "Embed subversion numbers")
+
 
 ###### Configure (users don't need to go beyond here) ######
 enable_testing()
@@ -64,8 +67,8 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "XL")
   else()
     message(FATAL_ERROR "XLC must be higher than 12.0")
   endif()
-  #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qsuppress=1540-0724 -qmaxmem=-1 -qalias=noansi")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qsuppress=1540-0724 -qmaxmem=-1")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qsuppress=1540-0724 -qsuppress=1500-029 -qmaxmem=-1 -qalias=noansi -qsmp=omp")
+  #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -qsuppress=1540-0724 -qmaxmem=-1")
 endif()
 
 #clang 
@@ -103,6 +106,10 @@ include(CheckCilk)
 include(CheckHugePages)
 if(NOT HAVE_HUGEPAGES AND USE_STRICT_CONFIG)
   message(FATAL_ERROR "Need huge pages")
+endif()
+
+if(USE_LONGJMP)
+  set(GALOIS_USE_LONGJMP on)
 endif()
 
 #Boost
@@ -154,9 +161,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g")
 
 #Enable architecture-specific optimizations
-if(CMAKE_BUILD_TYPE MATCHES "Release" AND CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
-endif()
+#if(CMAKE_BUILD_TYPE MATCHES "Release" AND CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+#  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+#endif()
 
 #more warnings
 if(CMAKE_BUILD_TYPE MATCHES "Debug")

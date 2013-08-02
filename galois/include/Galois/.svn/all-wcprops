@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/repos/iss/!svn/ver/13812/projects/GaloisCpp/trunk/include/Galois
+/repos/iss/!svn/ver/13910/projects/GaloisCpp/trunk/include/Galois
 END
 UnionFind.h
 K 25
@@ -37,7 +37,7 @@ LazyObject.h
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/LazyObject.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/LazyObject.h
 END
 Statistic.h
 K 25
@@ -49,7 +49,7 @@ TypeTraits.h
 K 25
 svn:wc:ra_dav:version-url
 V 78
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/TypeTraits.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/TypeTraits.h
 END
 FixedSizeRing.h
 K 25
@@ -97,7 +97,7 @@ UserContext.h
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/repos/iss/!svn/ver/13688/projects/GaloisCpp/trunk/include/Galois/UserContext.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/UserContext.h
 END
 FlatMap.h
 K 25
@@ -105,17 +105,17 @@ svn:wc:ra_dav:version-url
 V 75
 /repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/FlatMap.h
 END
-Version.h
-K 25
-svn:wc:ra_dav:version-url
-V 75
-/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/include/Galois/Version.h
-END
 optional.h
 K 25
 svn:wc:ra_dav:version-url
 V 76
 /repos/iss/!svn/ver/13708/projects/GaloisCpp/trunk/include/Galois/optional.h
+END
+Version.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/iss/!svn/ver/13621/projects/GaloisCpp/trunk/include/Galois/Version.h
 END
 PriorityQueue.h
 K 25
@@ -139,7 +139,7 @@ Endian.h
 K 25
 svn:wc:ra_dav:version-url
 V 74
-/repos/iss/!svn/ver/12819/projects/GaloisCpp/trunk/include/Galois/Endian.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Endian.h
 END
 gslist.h
 K 25
@@ -153,17 +153,17 @@ svn:wc:ra_dav:version-url
 V 72
 /repos/iss/!svn/ver/13670/projects/GaloisCpp/trunk/include/Galois/gstl.h
 END
-config.h.in
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/repos/iss/!svn/ver/13731/projects/GaloisCpp/trunk/include/Galois/config.h.in
-END
 gdeque.h
 K 25
 svn:wc:ra_dav:version-url
 V 74
 /repos/iss/!svn/ver/13729/projects/GaloisCpp/trunk/include/Galois/gdeque.h
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/config.h.in
 END
 TwoLevelIterator.h
 K 25

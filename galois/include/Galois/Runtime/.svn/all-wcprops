@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/include/Galois/Runtime
+/repos/iss/!svn/ver/13887/projects/GaloisCpp/trunk/include/Galois/Runtime
 END
 Termination.h
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/repos/iss/!svn/ver/13291/projects/GaloisCpp/trunk/include/Galois/Runtime/Termination.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Runtime/Termination.h
 END
 DoAll.h
 K 25
@@ -37,7 +37,7 @@ ParallelWork.h
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/repos/iss/!svn/ver/13797/projects/GaloisCpp/trunk/include/Galois/Runtime/ParallelWork.h
+/repos/iss/!svn/ver/13887/projects/GaloisCpp/trunk/include/Galois/Runtime/ParallelWork.h
 END
 ThreadPool.h
 K 25
@@ -49,7 +49,7 @@ PerThreadStorage.h
 K 25
 svn:wc:ra_dav:version-url
 V 92
-/repos/iss/!svn/ver/12762/projects/GaloisCpp/trunk/include/Galois/Runtime/PerThreadStorage.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Runtime/PerThreadStorage.h
 END
 LCordered.h
 K 25
@@ -67,7 +67,7 @@ DeterministicWork.h
 K 25
 svn:wc:ra_dav:version-url
 V 93
-/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/Runtime/DeterministicWork.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Runtime/DeterministicWork.h
 END
 Sampling.h
 K 25
@@ -91,7 +91,7 @@ Context.h
 K 25
 svn:wc:ra_dav:version-url
 V 83
-/repos/iss/!svn/ver/13736/projects/GaloisCpp/trunk/include/Galois/Runtime/Context.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/include/Galois/Runtime/Context.h
 END
 QueuingLock.h
 K 25

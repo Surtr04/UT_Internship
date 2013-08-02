@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/repos/iss/!svn/ver/13734/projects/GaloisCpp/trunk/exp/include/Galois/Runtime
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/include/Galois/Runtime
 END
 BulkSynchronousWork.h
 K 25
@@ -13,7 +13,7 @@ ParallelWorkInline.h
 K 25
 svn:wc:ra_dav:version-url
 V 98
-/repos/iss/!svn/ver/13588/projects/GaloisCpp/trunk/exp/include/Galois/Runtime/ParallelWorkInline.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/include/Galois/Runtime/ParallelWorkInline.h
 END
 ParaMeter.h
 K 25

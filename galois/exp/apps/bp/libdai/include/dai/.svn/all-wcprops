@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/repos/iss/!svn/ver/12825/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai
 END
 decmap.h
 K 25
@@ -157,7 +157,7 @@ bp.h
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/repos/iss/!svn/ver/12825/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bp.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/apps/bp/libdai/include/dai/bp.h
 END
 exactinf.h
 K 25

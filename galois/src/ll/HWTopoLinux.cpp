@@ -40,7 +40,6 @@
 #include <cstdio>
 #include <cstring>
 #include <cerrno>
-#include <iostream>
 
 #include <sched.h>
 
@@ -241,7 +240,7 @@ struct AutoLinuxPolicy {
     if (virtmap.empty()) {
       //1-1 mapping for non-cpuset using systems
       for (unsigned i = 0; i < vals.size(); ++i)
-	      virtmap.push_back(i);
+	virtmap.push_back(i);
     }
 
     if (EnvCheck("GALOIS_DEBUG_TOPO"))
@@ -250,21 +249,16 @@ struct AutoLinuxPolicy {
     //Get thread count
     numThreadsRaw = vals.size();
     numThreads = virtmap.size();
-    
+
     //Get package level stuff
     int maxrawpackage = generateRawPackageData(vals);
     generatePackageData(vals);
     
-    // o sort serve para agrupar packages (neste caso cores)
+    //Sort by package to get package-dense mapping
     std::sort(virtmap.begin(), virtmap.end(), DensePackageLessThan(vals));
-
     generateHyperthreads(vals);
 
-    //std::sort(virtmap.begin(), virtmap.end(), DensePackageLessThan(vals));
     //Finally renumber for virtual processor numbers
-    /*for( int i = 0; i < (int)virtmap.size(); ++i){
-      std::cout << "virtmap: " << i << " value: " << virtmap[i] << std::endl; 
-    }*/
     finalizePackageData(vals, maxrawpackage);
 
     //Get core count
@@ -282,7 +276,7 @@ struct AutoLinuxPolicy {
     leaders.resize(numPackages, -1);
     for (int i = 0; i < (int) packages.size(); ++i)
       if (leaders[packages[i]] == -1)
-	      leaders[packages[i]] = i;
+	leaders[packages[i]] = i;
 
     if (EnvCheck("GALOIS_DEBUG_TOPO"))
       printFinalConfiguration(); 
@@ -320,7 +314,7 @@ struct AutoLinuxPolicy {
     std::vector<int> mapping(maxrawpackage+1);
     int nextval = 1;
     for (int i = 0; i < (int)virtmap.size(); ++i) {
-      int x = vals[virtmap[i]].coreid; //physid
+      int x = vals[virtmap[i]].physid;
       if (!mapping[x])
         mapping[x] = nextval++;
       packages.push_back(mapping[x]-1);
@@ -347,23 +341,15 @@ struct AutoLinuxPolicy {
   void generateHyperthreads(const std::vector<cpuinfo>& vals) {
     //Find duplicates, which are hyperthreads, and place them at the end
     // annoyingly, values after tempi are unspecified for std::unique, so copy in and out instead
-    unsigned hyperthreadN = vals[0].sib/vals[0].cpucores;
     std::vector<int> dense(numThreads);
     std::vector<int>::iterator it = std::unique_copy(virtmap.begin(), virtmap.end(), 
         dense.begin(), DensePackageEqual(vals));
     std::vector<bool> mask(numThreadsRaw);
     for (std::vector<int>::iterator ii = dense.begin(); ii < it; ++ii)
       mask[*ii] = true;
-    /*for (std::vector<int>::iterator ii = virtmap.begin(), ei = virtmap.end(); ii < ei; ++ii) {
+    for (std::vector<int>::iterator ii = virtmap.begin(), ei = virtmap.end(); ii < ei; ++ii) {
       if (!mask[*ii])
         *it++ = *ii;
-    }*/
-  
-    for (int i = 0; i < hyperthreadN; i++) {
-      for( std::vector<int>::iterator ii = virtmap.begin() + i, ei = virtmap.end(); ii < ei; ii += hyperthreadN) {
-        if(!mask[*ii])
-          *it++ = *ii;
-      }
     }
     virtmap = dense;
   }
@@ -371,7 +357,7 @@ struct AutoLinuxPolicy {
   void generatePackageData(const std::vector<cpuinfo>& vals) {
     std::vector<int> p;
     for (unsigned i = 0; i < virtmap.size(); ++i)
-      p.push_back(vals[virtmap[i]].coreid);
+      p.push_back(vals[virtmap[i]].physid);
     std::sort(p.begin(), p.end());
     std::vector<int>::iterator it = std::unique(p.begin(), p.end());
     numPackages = std::distance(p.begin(), it);
@@ -380,7 +366,7 @@ struct AutoLinuxPolicy {
   int generateRawPackageData(const std::vector<cpuinfo>& vals) {
     std::vector<int> p;
     for (unsigned i = 0; i < vals.size(); ++i)
-      p.push_back(vals[i].coreid);
+      p.push_back(vals[i].physid);
 
     int retval = *std::max_element(p.begin(), p.end());
     std::sort(p.begin(), p.end());

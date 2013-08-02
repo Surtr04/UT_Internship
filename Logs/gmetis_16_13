@@ -1,0 +1,49 @@
+Hello from MIC
+Galois Benchmark Suite v2.2.0 (r0)
+Copyright (C) 2013 The University of Texas at Austin
+http://iss.ices.utexas.edu/galois/
+
+application: GMetis
+Partitions a graph into K parts and minimizing the graph cut
+http://iss.ices.utexas.edu/?p=projects/galois/benchmarks/gMetis
+
+INFO: CommandLine /work/02556/dpereira/MIC/apps/gmetis/gmetis -t=13 /work/02556/dpereira/Inputs/USA-road-d.W.gr 16
+INFO: Hostname c557-901-mic0.stampede.tacc.utexas.edu
+Created Graph with 6262104 nodes and 15248146 edges
+Nodes 6262104| Edges 15248146 7624073
+
+  Starting coarsening: 
+Time coarsen:  7775 Size of final graph: 421
+
+  Sarting initial partitioning using GGGP:
+Size in decade percentages:  -0,16
+Time clustering:  359
+
+  Sarting refinnement with BKL2
+Initial dist
+Size in decade percentages:  -0,16
+Refined dist
+Size in decade percentages:  -1,7 -0,2 1,7
+Time refinement:  769
+
+
+Time:  9080
+Total edge cut : 1699
+
+Part saved in : 0x7fffc321f2e0
+STATTYPE,LOOP,CATEGORY,n,sum,T0,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12
+STAT,(NULL),Coarsen,13,7775,7775,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Conflicts,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Iterations,13,31,6,3,0,0,2,1,2,1,2,1,5,4,4
+STAT,(NULL),MeminfoPost,13,756080,58275,58183,58203,58216,58213,58104,58114,58106,58168,58072,58224,58144,58058
+STAT,(NULL),MeminfoPre,13,189020,14655,14563,14583,14596,14593,14484,14494,14486,14548,14452,14604,14524,14438
+STAT,(NULL),Partition,13,359,359,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Refine,13,769,769,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Threads,13,13,13,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,(NULL),Time,13,9080,9080,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,match,Conflicts,13,2328,365,154,258,170,146,182,141,116,157,133,183,128,195
+STAT,match,Iterations,13,14981062,1174247,1096269,1098524,1139770,1088548,1147211,1133153,1218622,1126931,1158237,1173583,1193666,1232301
+STAT,popedge,Conflicts,13,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+STAT,popedge,Iterations,13,7345117,552712,510514,557616,551578,538348,540276,559874,582384,564537,570450,558786,631699,626343
+STAT,refine,Conflicts,13,1014,127,108,100,72,87,84,71,71,56,72,74,56,36
+STAT,refine,Iterations,13,32681,2391,1831,2187,1920,2236,2516,3066,3071,3148,3243,2546,2263,2263

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/iss/!svn/ver/13902/projects/GaloisCpp/trunk/exp/apps/visualize
+END
+drawgraph.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/iss/!svn/ver/13902/projects/GaloisCpp/trunk/exp/apps/visualize/drawgraph.cpp
+END
+drawing.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13892/projects/GaloisCpp/trunk/exp/apps/visualize/drawing.h
+END
+font8x8.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/iss/!svn/ver/13892/projects/GaloisCpp/trunk/exp/apps/visualize/font8x8.h
+END
+CMakeLists.txt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/iss/!svn/ver/13892/projects/GaloisCpp/trunk/exp/apps/visualize/CMakeLists.txt
+END

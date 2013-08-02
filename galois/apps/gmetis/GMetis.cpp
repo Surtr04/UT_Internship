@@ -35,7 +35,6 @@
 #include "Galois/Statistic.h"
 //#include "GraphReader.h"
 #include "Lonestar/BoilerPlate.h"
-#define GALOIS_DEBUG_TOPO
 
 namespace cll = llvm::cl;
 
@@ -65,76 +64,6 @@ static cll::opt<int> numPartitions(cll::Positional, cll::desc("<Number of partit
 
 const double COARSEN_FRACTION = 0.9;
 
-/**
- * KMetis Algorithm
- */
-void Partition(MetisGraph* metisGraph, unsigned nparts) {
-  Galois::StatTimer TM;
-  TM.start();
-  unsigned meanWeight = ( (double)metisGraph->getTotalWeight()) / (double)nparts;
-  //unsigned coarsenTo = std::max(metisGraph->getNumNodes() / (40 * intlog2(nparts)), 20 * (nparts));
-  unsigned coarsenTo = 100 * nparts; // antes -> 40
-
-  std::cout << "\n  Starting coarsening: \n";
-  Galois::StatTimer T("Coarsen");
-  T.start();
-  MetisGraph* mcg = coarsen(metisGraph, coarsenTo);
-  T.stop();
-  std::cout << "Time coarsen:  "<<T.get()<< " Size of final graph: " <<  mcg->getNumNodes()<<'\n';
-  std::cerr << "Time coarsen:  " << T.get() << '\n';
-   
-  Galois::StatTimer T2("Partition");
-  T2.start();
-  std::vector<partInfo> parts;
-  switch (partMode) {
-    case GGP:parts = partition(mcg, nparts, GGP); break;
-    case GGGP: parts = partition(mcg, nparts, GGGP); break;
-    case MGGGP: parts = BisectAll(mcg, nparts, meanWeight); break;
-    default: abort();
-  }
-  T2.stop();
-
-  std::vector<partInfo> initParts = parts;
-  std::cout << "Time clustering:  "<<T2.get()<<'\n';
-  std::cerr << "Time clustering:  " << T2.get() << '\n';
-  Galois::StatTimer T3("Refine");
-  T3.start();
-  refinementMode refM =refineMode;
-  refine(mcg, parts, meanWeight, refM);
-  T3.stop();
-
-  TM.stop();
-  std::cout << "Initial dist\n";
-  printPartStats(initParts);
-  std::cout << "Refined dist\n";
-  printPartStats(parts);
-  std::cout << "Time refinement:  "<<T3.get()<<"\n\n";
-  std::cerr << "Time refinement:  " << T3.get() << "\n";
-
-  std::cout << "\nTime:  " << TM.get() << '\n';
-  std::cerr << "Time:  " << TM.get() << '\n';
-  return;
-}
-
-struct parallelInitMorphGraph {
-  GGraph &graph;
-  parallelInitMorphGraph(GGraph &g):graph(g) {  }
-  void operator()(GNode node) {
-    for(GGraph::edge_iterator jj = graph.edge_begin(node),kk=graph.edge_end(node);jj!=kk;jj++) {
-      graph.getEdgeData(jj)=1;
-      // weight+=1;
-    }
-  }
-};
-
-int edgeCount2(GGraph& g) {
-  int count=0;
-  for (auto nn = g.begin(), en = g.end(); nn != en; ++nn) {
-    for (auto ii = g.edge_begin(*nn), ee = g.edge_end(*nn); ii != ee; ++ii)
-        count += g.getEdgeData(ii);
-  }
-  return count/2;
-}
 
 int computeCut(GGraph& g) {
   int cuts=0;
@@ -151,33 +80,71 @@ int computeCut(GGraph& g) {
 
 
 
+/**
+ * KMetis Algorithm
+ */
+void Partition(MetisGraph* metisGraph, unsigned nparts) {
+  Galois::StatTimer TM;
+  TM.start();
+  unsigned meanWeight = ( (double)metisGraph->getTotalWeight()) / (double)nparts;
+  //unsigned coarsenTo = std::max(metisGraph->getNumNodes() / (40 * intlog2(nparts)), 20 * (nparts));
+  unsigned coarsenTo = 100 * nparts; // antes -> 40
 
-/*void printGraphBeg(GGraph& g) {
-  int i=0;
-  for (auto nn = g.begin(), en = g.end() ; nn != en; ++nn)
-    g.getData(*nn).num =i++;
-  i=0;
-  for (auto nn = g.begin(), en = g.end() ; nn != en && i<10000; ++nn) {
-    for (auto ii = g.edge_begin(*nn), ee = g.edge_end(*nn); ii != ee; ++ii) {
-      auto& m = g.getData(g.getEdgeDst(ii));
-      std::cout<<g.getData(g.getEdgeDst(ii)).num<<' ';
-      i++;
-    }
-   std::cout<<'\n';
+  std::cout << "\n  Starting coarsening: \n";
+  Galois::StatTimer T("Coarsen");
+  T.start();
+  MetisGraph* mcg = coarsen(metisGraph, coarsenTo);
+  T.stop();
+  std::cout << "Time coarsen:  "<<T.get()<< " Size of final graph: " <<  mcg->getNumNodes()<<'\n';
+   
+  Galois::StatTimer T2("Partition");
+  T2.start();
+  std::vector<partInfo> parts;
+  switch (partMode) {
+    case GGP:parts = partition(mcg, nparts, GGP); break;
+    case GGGP: parts = partition(mcg, nparts, GGGP); break;
+    case MGGGP: parts = BisectAll(mcg, nparts, meanWeight); break;
+    default: abort();
   }
-  std::cout<<'\n';
-}*/
+  T2.stop();
+
+  //std::cout << "Init edge cut : " << computeCut(*mcg->getGraph()) << "\n\n";
+
+  std::vector<partInfo> initParts = parts;
+  std::cout << "Time clustering:  "<<T2.get()<<'\n';
+  Galois::StatTimer T3("Refine");
+  T3.start();
+  refinementMode refM =refineMode;
+  refine(mcg, parts, meanWeight, refM);
+  T3.stop();
+
+  TM.stop();
+  std::cout << "Initial dist\n";
+  printPartStats(initParts);
+  std::cout << "Refined dist\n";
+  printPartStats(parts);
+  std::cout << "Time refinement:  "<<T3.get()<<"\n\n";
+
+  std::cout << "\nTime:  " << TM.get() << '\n';
+  return;
+}
 
 
+//printGraphBeg(*graph)
+
+struct parallelInitMorphGraph {
+  GGraph &graph;
+  parallelInitMorphGraph(GGraph &g):graph(g) {  }
+  void operator()(GNode node) {
+    for(GGraph::edge_iterator jj = graph.edge_begin(node),kk=graph.edge_end(node);jj!=kk;jj++) {
+      graph.getEdgeData(jj)=1;
+      // weight+=1;
+    }
+  }
+};
 
 
 int main(int argc, char** argv) {
-  #ifdef __MIC__
-    std::cout << "Hello from MIC" << std::endl;
-  #else
-    std::cout << "Hello from HOST" << std::endl;
-  #endif
-  
   Galois::StatManager statManager;
   LonestarStart(argc, argv, name, desc, url);
 
@@ -194,7 +161,6 @@ int main(int argc, char** argv) {
 
   Galois::do_all_local(*graph, parallelInitMorphGraph(*graph));
 
-{
   unsigned numEdges = 0;
   std::map<unsigned, unsigned> hist;
   for (auto ii = graph->begin(), ee = graph->end(); ii != ee; ++ii) {
@@ -203,9 +169,7 @@ int main(int argc, char** argv) {
     ++hist[val];
   }
 
-  std::cout << "Nodes " << std::distance(graph->begin(), graph->end()) << "| Edges " << numEdges << ' ' << edgeCount2(*graph)<<std::endl;
-
-}
+  std::cout << "Nodes " << std::distance(graph->begin(), graph->end()) << "| Edges " << numEdges << std::endl;
  // for (auto pp = hist.begin(), ep = hist.end(); pp != ep; ++pp)
   //std::cout << pp->first << " : " << pp->second << "\n";
 

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/repos/iss/!svn/ver/13622/projects/GaloisCpp/trunk/exp/apps/bfs_wf
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/apps/bfs_wf
 END
 BFSserialFIFO.cpp
 K 25
@@ -43,7 +43,7 @@ WavefrontBFS.h
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/repos/iss/!svn/ver/13622/projects/GaloisCpp/trunk/exp/apps/bfs_wf/WavefrontBFS.h
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/exp/apps/bfs_wf/WavefrontBFS.h
 END
 BFSwavefrontNolock.cpp
 K 25

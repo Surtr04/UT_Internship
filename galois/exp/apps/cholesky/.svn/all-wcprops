@@ -21,17 +21,17 @@ svn:wc:ra_dav:version-url
 V 88
 /repos/iss/!svn/ver/13832/projects/GaloisCpp/trunk/exp/apps/cholesky/NumericCholesky.cpp
 END
-test.py
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/repos/iss/!svn/ver/13832/projects/GaloisCpp/trunk/exp/apps/cholesky/test.py
-END
 matrix2gr.py
 K 25
 svn:wc:ra_dav:version-url
 V 81
 /repos/iss/!svn/ver/13832/projects/GaloisCpp/trunk/exp/apps/cholesky/matrix2gr.py
+END
+test.py
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/iss/!svn/ver/13832/projects/GaloisCpp/trunk/exp/apps/cholesky/test.py
 END
 cholesky.py
 K 25

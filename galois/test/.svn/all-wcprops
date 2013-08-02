@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 55
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/test
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/test
 END
 pc.cpp
 K 25
@@ -91,5 +91,5 @@ CMakeLists.txt
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/repos/iss/!svn/ver/13807/projects/GaloisCpp/trunk/test/CMakeLists.txt
+/repos/iss/!svn/ver/13886/projects/GaloisCpp/trunk/test/CMakeLists.txt
 END

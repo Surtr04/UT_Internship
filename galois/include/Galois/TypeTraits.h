@@ -69,16 +69,21 @@ namespace Galois {
     static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
   }
 
+
+// #define GALOIS_HAS_MEM_FUNC_ANY(func, name) \
+//   template<typename T> \
+//   struct has_##name { \
+//     typedef char yes[1]; \
+//     typedef char no[2]; \
+//     template<typename U, U> struct type_check; \
+//     template<typename W> static yes& test(type_check<decltype(&W::func), &W::func>*); \
+//     template<typename  > static no&  test(...); \
+//     static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
+//   }
+
 #define GALOIS_HAS_MEM_FUNC_ANY(func, name) \
   template<typename T> \
-  struct has_##name { \
-    typedef char yes[1]; \
-    typedef char no[2]; \
-    template<typename U, U> struct type_check; \
-    template<typename W> static yes& test(type_check<decltype(&W::func), &W::func>*); \
-    template<typename  > static no&  test(...); \
-    static const bool value = sizeof(test<T>(0)) == sizeof(yes); \
-  }
+  struct has_##name { }
 
 #define GALOIS_HAS_MEM_TYPE(func, name) \
   template<typename T> \
@@ -126,6 +131,7 @@ struct has_deterministic_parallel_break : public has_tf_deterministic_parallel_b
  * \endcode
  */
 GALOIS_HAS_MEM_FUNC_ANY(galoisDeterministicId, tf_deterministic_id);
+
 template<typename T>
 struct has_deterministic_id : public has_tf_deterministic_id<T> {};
 
@@ -138,14 +144,14 @@ struct has_deterministic_id : public has_tf_deterministic_id<T> {};
  *  struct T {
  *    struct GaloisDeteministicLocalState {
  *      int x, y, z; // Local state
- *      GaloisDeteministicLocalState(T& self, Galois::PerIterAllocTy& alloc) {
+ *      GaloisDeterministicLocalState(T& self, Galois::PerIterAllocTy& alloc) {
  *        // initialize local state
  *      }
  *    };
  *
  *    void operator()(const A& item, Galois::UserContext<A>&) { 
  *      // An example of using local state
- *      typedef GaloisDeteministicLocalState LS;
+ *      typedef GaloisDeterministicLocalState LS;
  *      bool used;
  *      LS* p = (LS*) ctx.getLocalState(used);
  *      if (used) {
