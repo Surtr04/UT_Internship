@@ -177,7 +177,7 @@ std::vector<int> parseCPUSet() {
       int b = atoi(np);
       int e = atoi(d);
       while (b <= e)
-	vals.push_back(b++);
+    vals.push_back(b++);
     } else { //singleton
       vals.push_back(atoi(np));
     }
@@ -241,7 +241,7 @@ struct AutoLinuxPolicy {
     if (virtmap.empty()) {
       //1-1 mapping for non-cpuset using systems
       for (unsigned i = 0; i < vals.size(); ++i)
-	      virtmap.push_back(i);
+          virtmap.push_back(i);
     }
 
     if (EnvCheck("GALOIS_DEBUG_TOPO"))
@@ -282,7 +282,7 @@ struct AutoLinuxPolicy {
     leaders.resize(numPackages, -1);
     for (int i = 0; i < (int) packages.size(); ++i)
       if (leaders[packages[i]] == -1)
-	      leaders[packages[i]] = i;
+          leaders[packages[i]] = i;
 
     if (EnvCheck("GALOIS_DEBUG_TOPO"))
       printFinalConfiguration(); 
@@ -311,7 +311,7 @@ struct AutoLinuxPolicy {
           " Tr ", virtmap[i], 
           " L? ", ((int)i == leaders[packages[i]] ? 1 : 0));
       if (i >= numCores)
-	gPrint(" HT");
+    gPrint(" HT");
       gPrint("\n");
     }
   }
