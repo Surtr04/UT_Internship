@@ -2,9 +2,15 @@
 \documentclass{beamer}
 \let\Tiny=\tiny
 
+%\mode<presentation>{
+  %\usetheme{Singapore}
+  %\usecolortheme{rose}
+  %\usefonttheme{structurebold}
+  %\setbeamertemplate{caption}[numbered]
+%} 
 \mode<presentation>{
-  \usetheme{Singapore}
-  \usecolortheme{rose}
+  \usetheme{Boadilla}
+  \usecolortheme{whale}
   \usefonttheme{structurebold}
   \setbeamertemplate{caption}[numbered]
 } 
@@ -116,8 +122,7 @@ Clock freq & 1.1 GHz\\ \hline
 \#Cores/CPU & 61\\ \hline
 \#Thread/Core & 4\\ \hline
 L1 cache size/core & 32KB\\ \hline
-L2 cache size/core & 256 KB\\ \hline
-L3 shared cache size/CPU & 12 MB\\ \hline
+L2 cache size/core & 512 KB\\ \hline
 Vector width & 512 bits\\ \hline
 %FIXME: Ver se se põe GFlops. Talvez nao seja preciso. De resto,
 %completar alguma informação incorrecta. Pode-se acrescentar ou remover alguma coisa.
@@ -125,6 +130,32 @@ Vector width & 512 bits\\ \hline
 %Peak DP Gflops/s & 128.16 \\ \hline
 \end{tabular}
 \caption{Intel Xeon Phi}
+\end{table}
+\end{frame}
+
+\begin{frame}{Important characteristics}
+  \begin{itemize}
+    \item Dual issue pipeline
+    \item Four hardware threads per core
+    \item Pipeline does not issue instructions from the same hardware
+      context for two consecutive clock cycles
+    \item Maximum issue rate only attainable with at least 2 threads per
+      core
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabular}{| c | c |}\hline
+Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
+1 & 1\\ \hline
+2 & 0.5\\ \hline
+3 & 0.5 \\ \hline
+4 & 0.5\\ \hline
+\end{tabular}
+\caption{Minimum Theoretical CPIs}
 \end{table}
 \end{frame}
 
