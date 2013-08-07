@@ -15,10 +15,10 @@
   \setbeamertemplate{caption}[numbered]
 } 
 
-\usepackage{pgfplots}
+%\usepackage{pgfplots}
 \usepackage{verbatim}
-\pgfplotsset{compat=1.8}
-\pgfplotsset{grid style={dashed}}
+%\pgfplotsset{compat=1.8}
+%\pgfplotsset{grid style={dashed}}
 
 \usepackage{listings}
 \lstset{
@@ -91,6 +91,24 @@
 %-----------------------------------------------------------------------------
 
 \begin{frame}{Algorithm Description}
+
+\begin{itemize}
+  \item Given a graph $G_0 = (V_0,E_0)$:
+  \begin{itemize}    
+    \item Coarsening
+    \begin{itemize}
+      \item For a given graph $G_0$ is transformed into a sequence of smaller graphs $G_1,G_2,\cdots,G_m$ such that $|V_0|>|V_1|>|V_2|>\cdots>|V_m|$
+    \end{itemize}
+    \item Partitioning 
+    \begin{itemize}
+      \item A 2-way partitiom $P_m$ of the graph $G_m = (V_m,E_m)$ is computed that partitions $V_m$ into two parts, each containng half the vertices of $G_0$
+    \end{itemize}
+    \item Refinement
+    \begin{itemize}
+      \item The partition $P_m$ of $G_m$ is projected back to $G_0$ by going through intermediate partitions $P_{m-1}, P_{m-2},\cdots,P_1,P_0 $
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
   
 \end{frame}
 
