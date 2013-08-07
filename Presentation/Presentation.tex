@@ -70,8 +70,18 @@
 
 \begin{frame}{Introduction}
 \begin{itemize}
-    \item Blabla
-    \item Bleble
+    \item GMetis is a graph partitioning application which uses the Galois
+      framwork
+    \item Consists of three major phases
+      \begin{itemize}
+        \item Coarsening
+        \begin{itemize}
+          \item Find matching nodes
+          \item Coarsen Graph
+        \end{itemize}
+        \item Initial Paritioning (Clustering)
+        \item Refinement
+      \end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -107,9 +117,9 @@ Vector width & 256 bits (AVX)\\ \hline
 \end{table}
 \end{frame}
 
-%TODO: por aqui a imagem do HWLock - depois decidir se fica ou não
+%TODO: por aqui a imagem do HWLock? - depois decidir se fica ou não
 
-\begin{frame}{Stampede Coprocessor}
+\begin{frame}{Stampede Coprocessor - Xeon Phi}
 \begin{table}[H]
 \centering
 \footnotesize
@@ -124,10 +134,8 @@ Clock freq & 1.1 GHz\\ \hline
 L1 cache size/core & 32KB\\ \hline
 L2 cache size/core & 512 KB\\ \hline
 Vector width & 512 bits\\ \hline
-%FIXME: Ver se se põe GFlops. Talvez nao seja preciso. De resto,
-%completar alguma informação incorrecta. Pode-se acrescentar ou remover alguma coisa.
-%Peak SP Gflops/s & 256.32 \\ \hline
-%Peak DP Gflops/s & 128.16 \\ \hline
+Peak SP Gflops/s & 2112\\ \hline
+Peak DP Gflops/s & 1056\\ \hline
 \end{tabular}
 \caption{Intel Xeon Phi}
 \end{table}
@@ -135,8 +143,8 @@ Vector width & 512 bits\\ \hline
 
 \begin{frame}{Important characteristics}
   \begin{itemize}
-    \item Dual issue pipeline
     \item Four hardware threads per core
+    \item In-order dual issue pipeline
     \item Pipeline does not issue instructions from the same hardware
       context for two consecutive clock cycles
     \item Maximum issue rate only attainable with at least 2 threads per
@@ -152,7 +160,7 @@ Vector width & 512 bits\\ \hline
 Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 1 & 1\\ \hline
 2 & 0.5\\ \hline
-3 & 0.5 \\ \hline
+3 & 0.5\\ \hline
 4 & 0.5\\ \hline
 \end{tabular}
 \caption{Minimum Theoretical CPIs}
@@ -211,8 +219,15 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 
 \begin{frame}{Conclusion}
 \begin{itemize}
-    \item Blabla
-    \item Bleble
+  \item Metis and mt-metis have better edgecut
+  \item Metis and mt-metis have lower runtime for small number of
+    partitions
+  \item GMetis is faster for high number of partitions
+  \item Metis graph partitioning algorithm is not suitable to run on MIC
+    as it do not harness vector
+  % no entanto, não é razão para problemas de escalabilidade
+  \item Metis and mt-metis are writen in C whereas GMetis is writen in
+    C++ and uses Templates. This may explain diferences in performance
 \end{itemize}
 \end{frame}
 

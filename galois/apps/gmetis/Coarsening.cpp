@@ -390,9 +390,19 @@ void createCoarseEdges(MetisGraph *coarseMetisGraph, unsigned iterNum) {
 
 MetisGraph* coarsenOnce(MetisGraph *fineMetisGraph, unsigned iterNum, bool useRM = false, bool with2Hop = false) {
   MetisGraph *coarseMetisGraph = new MetisGraph(fineMetisGraph);
+  GGraph* g = fineMetisGraph->getGraph();
   //assertNoMatched(fineMetisGraph->getGraph());
   //  Galois::Timer t;
   //  t.start();
+  //coarseMetisGraph.getGraph().getEdgeData().V;
+  std::cout << "AAAAAAAAAAAAAAAAAAAA" << std::endl;
+  for (auto nn = g->begin(), en = g->end(); nn != en; ++nn) {
+    std::cout << "TTTTTTTTTTTTTTTTTTTT" << std::endl;
+    for (auto ii = g->edge_begin(*nn), ee = g->edge_end(*nn); ii != ee; ++ii) {
+        std::cout << "CENAS: " << g->getEdgeData(ii) << std::endl;
+    }
+  }
+  std::cout << "QQQQQQQQQQQQQQQQQQQQ" << std::endl;
   findMatching(coarseMetisGraph, iterNum, useRM, with2Hop);
   //  t.stop();
   //  std::cout << "Time Matching " << iterNum << " is " << t.get() << "\n";
