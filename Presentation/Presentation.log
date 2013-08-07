@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.6)  7 AUG 2013 16:42
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.6)  7 AUG 2013 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1100,11 +1100,17 @@ line 86.
 File: ot1mathkerncmss.fd 2012/04/26
 ) [3
 
-] [4
+] <img/metis.png, id=130, 412.54124pt x 346.29375pt>
+File: img/metis.png Graphic file (type png)
+ <use img/metis.png>
+Package pdftex.def Info: img/metis.png used on input line 101.
+(pdftex.def)             Requested size: 206.27011pt x 173.14644pt.
+
+[4
 
 ] [5
 
-] [6
+ <./img/metis.png>] [6
 
 ] [7
 
@@ -1120,6 +1126,8 @@ File: ot1mathkerncmss.fd 2012/04/26
 
 ] [13
 
+] [14
+
 ]
 \tf@nav=\write6
 \openout6 = `Presentation.nav'.
@@ -1130,23 +1138,24 @@ File: ot1mathkerncmss.fd 2012/04/26
 \tf@snm=\write8
 \openout8 = `Presentation.snm'.
 
- [14
+ [15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
- (./Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 273.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+
+(./Presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: F80970A96F65160B996758322D01F8A0;189.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
+(rerunfilecheck)             Checksum: 1865E8FD8F6E8A4EDC12D298ACCB9FC0;245.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
  ) 
 Here is how much of TeX's memory you used:
- 20424 strings out of 493488
- 387573 string characters out of 3141327
+ 20440 strings out of 493488
+ 387742 string characters out of 3141327
  484793 words of memory out of 3000000
- 23192 multiletter control sequences out of 15000+200000
+ 23202 multiletter control sequences out of 15000+200000
  15451 words of font info for 56 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,16n,60p,437b,683s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1163,10 +1172,10 @@ ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/
 texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Presentation.pdf (13 pages, 145480 bytes).
+Output written on Presentation.pdf (14 pages, 212291 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 408 compressed objects within 5 object streams
- 31 named destinations out of 1000 (max. 500000)
- 105 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 485 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
