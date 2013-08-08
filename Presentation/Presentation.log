@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.8.2)  8 AUG 2013 21:47
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.8.2)  8 AUG 2013 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,7 +1061,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ]
-<img/metis.png, id=130, 412.54124pt x 346.29375pt>
+<img/metis.png, id=124, 412.54124pt x 346.29375pt>
 File: img/metis.png Graphic file (type png)
  <use img/metis.png>
 Package pdftex.def Info: img/metis.png used on input line 101.
@@ -1083,7 +1083,7 @@ ed-to.pdf img/coarsening.eps>
 (epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
 
-<img/coarsening-eps-converted-to.pdf, id=187, 1016.79875pt x 728.7225pt>
+<img/coarsening-eps-converted-to.pdf, id=181, 1016.79875pt x 728.7225pt>
 File: img/coarsening-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/coarsening-eps-converted-to.pdf>
@@ -1105,7 +1105,7 @@ Package epstopdf Info: Source file: <img/coarsening2.eps>
 ted-to.pdf img/coarsening2.eps>
 (epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
-<img/coarsening2-eps-converted-to.pdf, id=188, 1013.7875pt x 728.7225pt>
+<img/coarsening2-eps-converted-to.pdf, id=182, 1013.7875pt x 728.7225pt>
 File: img/coarsening2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/coarsening2-eps-converted-to.pdf>
@@ -1146,7 +1146,7 @@ Package epstopdf Info: Source file: <img/partition.eps>
 d-to.pdf img/partition.eps>
 (epstopdf)             \includegraphics on input line 176.
 Package epstopdf Info: Output file is already uptodate.
-<img/partition-eps-converted-to.pdf, id=223, 1013.7875pt x 728.7225pt>
+<img/partition-eps-converted-to.pdf, id=217, 1013.7875pt x 728.7225pt>
 File: img/partition-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/partition-eps-converted-to.pdf>
@@ -1188,7 +1188,7 @@ Package epstopdf Info: Source file: <img/refinement.eps>
 ed-to.pdf img/refinement.eps>
 (epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
-<img/refinement-eps-converted-to.pdf, id=255, 1013.7875pt x 728.7225pt>
+<img/refinement-eps-converted-to.pdf, id=249, 1013.7875pt x 728.7225pt>
 File: img/refinement-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/refinement-eps-converted-to.pdf>
@@ -1202,78 +1202,103 @@ Package pdftex.def Info: img/refinement-eps-converted-to.pdf used on input line
  <./img/refinement-eps-converted-to.pdf>] [10
 
 ]
-<img/phi_arch.jpg, id=339, 652.4375pt x 358.33875pt>
+<img/phi_arch.jpg, id=333, 652.4375pt x 358.33875pt>
 File: img/phi_arch.jpg Graphic file (type jpg)
  <use img/phi_arch.jpg>
-Package pdftex.def Info: img/phi_arch.jpg used on input line 261.
+Package pdftex.def Info: img/phi_arch.jpg used on input line 263.
 (pdftex.def)             Requested size: 293.59416pt x 161.25095pt.
 
 [11
 
 ] [12
 
- <./img/phi_arch.jpg>] [13
+ <./img/phi_arch.jpg>]
 
-] [14
+LaTeX Warning: File `gmetis128.eps' not found on input line 289.
 
-]
 Package epstopdf Info: Source file: <gmetis128.eps>
-(epstopdf)                    date: 2013-08-08 20:26:13
-(epstopdf)                    size: 256852 bytes
 (epstopdf)             Output file: <gmetis128-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-08-08 22:57:05
+(epstopdf)                    size: 41326 bytes
 (epstopdf)             Command: <repstopdf --outfile=gmetis128-eps-converted-to
 .pdf gmetis128.eps>
-(epstopdf)             \includegraphics on input line 316.
-runsystem(repstopdf --outfile=gmetis128-eps-converted-to.pdf gmetis128.eps)...e
-xecuted safely (allowed).
-
-Package epstopdf Info: Result file: <gmetis128-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-08-08 21:47:07
-(epstopdf)                    size: 32256 bytes.
-
-<gmetis128-eps-converted-to.pdf, id=446, 614.295pt x 794.97pt>
+(epstopdf)             \includegraphics on input line 289.
+Package epstopdf Info: Output file is already uptodate.
+<gmetis128-eps-converted-to.pdf, id=387, 685.56125pt x 326.21875pt>
 File: gmetis128-eps-converted-to.pdf Graphic file (type pdf)
 
 <use gmetis128-eps-converted-to.pdf>
-Package pdftex.def Info: gmetis128-eps-converted-to.pdf used on input line 316.
+Package pdftex.def Info: gmetis128-eps-converted-to.pdf used on input line 289.
 
-(pdftex.def)             Requested size: 215.00647pt x 278.24367pt.
-
-Overfull \vbox (61.04387pt too high) detected at line 316
- []
-
-[15
+(pdftex.def)             Requested size: 308.49971pt x 146.79707pt.
+ [13
 
 ]
-Package epstopdf Info: Source file: <comparison.eps>
-(epstopdf)                    date: 2013-08-08 21:47:01
-(epstopdf)                    size: 203896 bytes
-(epstopdf)             Output file: <comparison-eps-converted-to.pdf>
-(epstopdf)             Command: <repstopdf --outfile=comparison-eps-converted-t
-o.pdf comparison.eps>
-(epstopdf)             \includegraphics on input line 324.
-runsystem(repstopdf --outfile=comparison-eps-converted-to.pdf comparison.eps)..
-.executed safely (allowed).
+Package epstopdf Info: Source file: <img/mtmetis128.eps>
+(epstopdf)                    date: 2013-08-08 22:56:31
+(epstopdf)                    size: 82954 bytes
+(epstopdf)             Output file: <img/mtmetis128-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-08-08 23:04:14
+(epstopdf)                    size: 41039 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/mtmetis128-eps-convert
+ed-to.pdf img/mtmetis128.eps>
+(epstopdf)             \includegraphics on input line 302.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <comparison-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-08-08 21:47:07
-(epstopdf)                    size: 14041 bytes.
- <comparison-eps-converted-to.pdf, id=473, 614.295pt x 794.97pt>
-File: comparison-eps-converted-to.pdf Graphic file (type pdf)
+<img/mtmetis128-eps-converted-to.pdf, id=414, 685.56125pt x 326.21875pt>
+File: img/mtmetis128-eps-converted-to.pdf Graphic file (type pdf)
 
-<use comparison-eps-converted-to.pdf>
-Package pdftex.def Info: comparison-eps-converted-to.pdf used on input line 324
-.
-(pdftex.def)             Requested size: 215.00647pt x 278.24367pt.
+<use img/mtmetis128-eps-converted-to.pdf>
+Package pdftex.def Info: img/mtmetis128-eps-converted-to.pdf used on input line
+ 302.
+(pdftex.def)             Requested size: 308.49971pt x 146.79707pt.
+ [14
 
-Overfull \vbox (61.04387pt too high) detected at line 324
- []
+ <./gmetis128-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <img/comparison.eps>
+(epstopdf)                    date: 2013-08-08 21:53:33
+(epstopdf)                    size: 36433 bytes
+(epstopdf)             Output file: <img/comparison-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-08-08 23:04:14
+(epstopdf)                    size: 18932 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/comparison-eps-convert
+ed-to.pdf img/comparison.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+ <img/comparison-eps-converted-to.pdf, id=444, 685.56125pt x 326.21875pt>
+File: img/comparison-eps-converted-to.pdf Graphic file (type pdf)
 
-[16
+<use img/comparison-eps-converted-to.pdf>
+Package pdftex.def Info: img/comparison-eps-converted-to.pdf used on input line
+ 315.
+(pdftex.def)             Requested size: 308.49971pt x 146.79707pt.
+ [15
 
- <./gmetis128-eps-converted-to.pdf>] [17
+ <./img/mtmetis128-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <img/edgecut.eps>
+(epstopdf)                    date: 2013-08-08 23:08:08
+(epstopdf)                    size: 36108 bytes
+(epstopdf)             Output file: <img/edgecut-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-08-08 23:08:15
+(epstopdf)                    size: 19545 bytes
+(epstopdf)             Command: <repstopdf --outfile=img/edgecut-eps-converted-
+to.pdf img/edgecut.eps>
+(epstopdf)             \includegraphics on input line 323.
+Package epstopdf Info: Output file is already uptodate.
+ <img/edgecut-eps-converted-to.pdf, id=473, 685.56125pt x 326.21875pt>
+File: img/edgecut-eps-converted-to.pdf Graphic file (type pdf)
 
- <./comparison-eps-converted-to.pdf>] [18
+<use img/edgecut-eps-converted-to.pdf>
+Package pdftex.def Info: img/edgecut-eps-converted-to.pdf used on input line 32
+3.
+(pdftex.def)             Requested size: 308.49971pt x 146.79707pt.
+ [16
+
+ <./img/comparison-eps-converted-to.pdf>] [17
+
+ <./img/edgecut-eps-converted-to.pdf>] [18
+
+] [19
 
 ]
 \tf@nav=\write6
@@ -1285,43 +1310,43 @@ Overfull \vbox (61.04387pt too high) detected at line 324
 \tf@snm=\write8
 \openout8 = `Presentation.snm'.
 
- [19
+ [20
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
- (./Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 378.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 378.
+
+(./Presentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 378.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 378.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 1865E8FD8F6E8A4EDC12D298ACCB9FC0;245.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 360.
+(rerunfilecheck)             Checksum: 6B70110C0C77F72FD3401F5A8F9ABD98;205.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 378.
  ) 
 Here is how much of TeX's memory you used:
- 20626 strings out of 493488
- 385972 string characters out of 3146893
+ 20657 strings out of 493488
+ 386875 string characters out of 3146893
  482351 words of memory out of 3000000
- 23372 multiletter control sequences out of 15000+200000
+ 23400 multiletter control sequences out of 15000+200000
  19205 words of font info for 71 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  50i,16n,60p,416b,702s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi
-9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msam7.pfb>
-Output written on Presentation.pdf (18 pages, 411968 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Presentation.pdf (19 pages, 476434 bytes).
 PDF statistics:
- 620 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 42 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 645 PDF objects out of 1000 (max. 8388607)
+ 582 compressed objects within 6 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
