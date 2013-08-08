@@ -226,16 +226,11 @@ L1 cache size/core & 32 KB\\ \hline
 L2 cache size/core & 256 KB\\ \hline
 L3 shared cache size/CPU & 20 MB\\ \hline
 Vector width & 256 bits (AVX)\\ \hline
-%FIXME: Ver se se põe GFlops. Talvez nao seja preciso. De resto, a informação
-%está correcta. Pode-se acrescentar ou remover alguma coisa.
-%Peak SP Gflops/s & 256.32 \\ \hline
-%Peak DP Gflops/s & 128.16 \\ \hline
 \end{tabular}
 \caption{Intel Xeon E5-2680}
 \end{table}
 \end{frame}
 
-%TODO: por aqui a imagem do HWLock? - depois decidir se fica ou não
 
 \begin{frame}{Stampede Co-processor - Xeon Phi}
 \begin{table}[H]
@@ -252,8 +247,6 @@ Clock freq & 1.1 GHz\\ \hline
 L1 cache size/core & 32KB\\ \hline
 L2 cache size/core & 512 KB\\ \hline
 Vector width & 512 bits\\ \hline
-Peak SP Gflops/s & 2112\\ \hline
-Peak DP Gflops/s & 1056\\ \hline
 \end{tabular}
 \caption{Intel Xeon Phi}
 \end{table}
@@ -280,21 +273,6 @@ Peak DP Gflops/s & 1056\\ \hline
 
 
 
-\begin{frame}
-\begin{table}[H]
-\centering
-\footnotesize
-\begin{tabular}{| c | c |}\hline
-Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
-1 & 1\\ \hline
-2 & 0.5\\ \hline
-3 & 0.5\\ \hline
-4 & 0.5\\ \hline
-\end{tabular}
-\caption{Minimum Theoretical CPI}
-\end{table}
-\end{frame}
-
 %-----------------------------------------------------------------------------
 % Metis
 %-----------------------------------------------------------------------------
@@ -302,6 +280,8 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 \section{Metis}
 
 \begin{frame}
+USA-road-d.W.gr
+Nodes 6262104 | Edges 15248146
 %\begin{center}
 %\begin{figure}[htbp]
     %\includegraphics[scale=.35]{.png}
@@ -327,13 +307,22 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 % GMetis
 %-----------------------------------------------------------------------------
 
-\begin{frame}
-%\begin{center}
-%\begin{figure}[htbp]
-    %\includegraphics[scale=.35]{.png}
-%\end{figure}
-%\end{center}
+\begin{frame}{GMetis}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.35]{gmetis128.eps}
+  \end{figure}
+\end{center}
 \end{frame}
+
+\begin{frame}{GMetis}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.35]{comparison.eps}
+  \end{figure}
+\end{center}
+\end{frame}
+
 
 %TODO: Por no fim cenas sobre edgecuts para efeitos de comparação.
 %TODO: Por melhorias feitas.
