@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.6)  7 AUG 2013 17:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.2.6)  7 AUG 2013 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,11 +1114,18 @@ Package pdftex.def Info: img/metis.png used on input line 101.
 
 ] [7
 
-] [8
+]
+<img/phi_arch.jpg, id=246, 652.4375pt x 358.33875pt>
+File: img/phi_arch.jpg Graphic file (type jpg)
+ <use img/phi_arch.jpg>
+Package pdftex.def Info: img/phi_arch.jpg used on input line 187.
+(pdftex.def)             Requested size: 293.59416pt x 161.25095pt.
+
+[8
 
 ] [9
 
-] [10
+ <./img/phi_arch.jpg>] [10
 
 ] [11
 
@@ -1127,6 +1134,8 @@ Package pdftex.def Info: img/metis.png used on input line 101.
 ] [13
 
 ] [14
+
+] [15
 
 ]
 \tf@nav=\write6
@@ -1138,24 +1147,24 @@ Package pdftex.def Info: img/metis.png used on input line 101.
 \tf@snm=\write8
 \openout8 = `Presentation.snm'.
 
- [15
+ [16
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
 
 (./Presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
 Package rerunfilecheck Info: File `Presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 1865E8FD8F6E8A4EDC12D298ACCB9FC0;245.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 20440 strings out of 493488
- 387742 string characters out of 3141327
+ 20450 strings out of 493488
+ 387876 string characters out of 3141327
  484793 words of memory out of 3000000
- 23202 multiletter control sequences out of 15000+200000
+ 23208 multiletter control sequences out of 15000+200000
  15451 words of font info for 56 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,16n,60p,437b,683s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1172,10 +1181,10 @@ ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loca
 l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/
 texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Presentation.pdf (14 pages, 212291 bytes).
+Output written on Presentation.pdf (15 pages, 327495 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 438 compressed objects within 5 object streams
- 34 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 512 PDF objects out of 1000 (max. 8388607)
+ 463 compressed objects within 5 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
