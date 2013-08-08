@@ -71,7 +71,7 @@
 \begin{frame}{Introduction}
 \begin{itemize}
     \item GMetis is a graph partitioning application which uses the Galois
-      framework
+      framwork
     \item Consists of three major phases
       \begin{itemize}
         \item Coarsening
@@ -79,7 +79,7 @@
           \item Find matching nodes
           \item Coarsen Graph
         \end{itemize}
-        \item Initial Partitioning (Clustering)
+        \item Initial Paritioning (Clustering)
         \item Refinement
       \end{itemize}
 \end{itemize}
@@ -111,7 +111,7 @@
     \end{itemize}
     \item Partitioning 
     \begin{itemize}
-      \item A 2-way partition $P_m$ of the graph $G_m = (V_m,E_m)$ is computed that partitions $V_m$ into two parts, each containing half the vertices of $G_0$
+      \item A 2-way partitiom $P_m$ of the graph $G_m = (V_m,E_m)$ is computed that partitions $V_m$ into two parts, each containng half the vertices of $G_0$
     \end{itemize}
     \item Refinement
     \begin{itemize}
@@ -156,7 +156,7 @@ Vector width & 256 bits (AVX)\\ \hline
 
 %TODO: por aqui a imagem do HWLock? - depois decidir se fica ou não
 
-\begin{frame}{Stampede Co-processor - Xeon Phi}
+\begin{frame}{Stampede Coprocessor - Xeon Phi}
 \begin{table}[H]
 \centering
 \footnotesize
@@ -200,7 +200,7 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 3 & 0.5\\ \hline
 4 & 0.5\\ \hline
 \end{tabular}
-\caption{Minimum Theoretical CPI}
+\caption{Minimum Theoretical CPIs}
 \end{table}
 \end{frame}
 
@@ -263,8 +263,8 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
   \item Metis graph partitioning algorithm is not suitable to run on MIC
     as it do not harness vector
   % no entanto, não é razão para problemas de escalabilidade
-  \item Metis and mt-metis are written in C whereas GMetis is written in
-    C++ and uses Templates. This may explain differences in performance
+  \item Metis and mt-metis are writen in C whereas GMetis is writen in
+    C++ and uses Templates. This may explain diferences in performance
 \end{itemize}
 \end{frame}
 
