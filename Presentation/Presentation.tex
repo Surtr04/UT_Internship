@@ -151,11 +151,55 @@
 
 
 \begin{frame}{Partitioning}
-  
+  \begin{columns}[c]
+    \column{.45\textwidth}{}
+    \scriptsize
+    \begin{center}
+      \begin{figure}[htbp]
+        \includegraphics[scale=.15]{img/coarsening2.eps}
+      \end{figure}
+    \end{center}
+
+    \column{.05\textwidth}{} 
+    \begin{center}
+      $\longrightarrow$  
+    \end{center}    
+    
+    \column{.45\textwidth}{} 
+    \begin{center}
+      \begin{figure}[htbp]
+        \includegraphics[scale=.15]{img/partition.eps}
+      \end{figure}
+    \end{center}
+
+  \end{columns}
 \end{frame}
 
 \begin{frame}{Refinement}
   
+  \begin{columns}[c]
+    \column{.45\textwidth}{}
+    \scriptsize
+    \begin{center}
+      \begin{figure}[htbp]
+        \includegraphics[scale=.15]{img/partition.eps}
+      \end{figure}
+    \end{center}
+
+    \column{.05\textwidth}{} 
+    \begin{center}
+      $\longrightarrow$  
+    \end{center}    
+    
+    \column{.45\textwidth}{} 
+    \begin{center}
+      \begin{figure}[htbp]
+        \includegraphics[scale=.15]{img/refinement.eps}
+      \end{figure}
+    \end{center}
+
+  \end{columns}
+
 \end{frame}
 
 
@@ -303,15 +347,12 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
 
 \begin{frame}{Conclusion}
 \begin{itemize}
-  \item Metis and mt-metis have better edgecut
-  \item Metis and mt-metis have lower runtime for small number of
-    partitions
-  \item GMetis is faster for high number of partitions
-  \item Metis graph partitioning algorithm is not suitable to run on MIC
-    as it do not harness vector
+  \item Metis and mt-metis have better edgecut;
+  \item Metis and mt-metis have lower runtimes for a smaller number of partitions;
+  \item GMetis is faster for a high number of partitions;
+  \item Metis graph partitioning algorithm is not suitable to run on MIC as it does not use SIMD extensions;
   % no entanto, não é razão para problemas de escalabilidade
-  \item Metis and mt-metis are written in C whereas GMetis is written in
-    C++ and uses Templates. This may explain differences in performance
+  \item Metis and mt-metis are written in C whereas GMetis is written in C++ and uses various high level resources (e.g. Templates). This may explain differences in performance.
 \end{itemize}
 \end{frame}
 
