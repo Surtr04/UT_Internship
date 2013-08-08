@@ -2,6 +2,6 @@
 \select@language {english}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@sectionintoc {2}{Algorithm Description}{4}{0}{2}
-\beamer@sectionintoc {3}{System characteristics}{6}{0}{3}
-\beamer@sectionintoc {4}{Metis}{11}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{14}{0}{5}
+\beamer@sectionintoc {3}{System characteristics}{9}{0}{3}
+\beamer@sectionintoc {4}{Metis}{14}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{17}{0}{5}
