@@ -352,7 +352,8 @@ Number of Hardware Threads per core & Minimum Theoretical CPI per Core\\ \hline
   \item GMetis is faster for a high number of partitions;
   \item Metis graph partitioning algorithm is not suitable to run on MIC as it does not use SIMD extensions;
   % no entanto, não é razão para problemas de escalabilidade
-  \item Metis and mt-metis are written in C whereas GMetis is written in C++ and uses various high level resources (e.g. Templates). This may explain differences in performance.
+  \item Metis and mt-metis are written in C whereas GMetis is written in C++ and uses various high level resources (e.g. Templates). This may explain differences in performance;
+  \item Software availability problems made progress difficult; <+->
 \end{itemize}
 \end{frame}
 
