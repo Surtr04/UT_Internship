@@ -225,6 +225,7 @@ Clock freq & 2.70 GHz\\ \hline
 L1 cache size/core & 32 KB\\ \hline
 L2 cache size/core & 256 KB\\ \hline
 L3 shared cache size/CPU & 20 MB\\ \hline
+Main Memory/CPU & 16 GB\\ \hline
 Vector width & 256 bits (AVX)\\ \hline
 \end{tabular}
 \caption{Intel Xeon E5-2680}
@@ -238,21 +239,22 @@ Vector width & 256 bits (AVX)\\ \hline
 \footnotesize
 \begin{tabular}{| c | c |}\hline
 Manufacturer & Intel\\ \hline
-Model & Xeon E5-2680\\ \hline
-$\mu$Arch & Sandy Bridge\\ \hline
+Model & Xeon Phi SE10P\\ \hline
+$\mu$Arch & Many Integrated Cores - MIC\\ \hline
 Clock freq & 1.1 GHz\\ \hline
 \#CPUs (sockets) & 1 \\ \hline
 \#Cores/CPU & 61\\ \hline
 \#Thread/Core & 4\\ \hline
 L1 cache size/core & 32KB\\ \hline
 L2 cache size/core & 512 KB\\ \hline
+Main Memory/CPU & 8 GB\\ \hline
 Vector width & 512 bits\\ \hline
 \end{tabular}
 \caption{Intel Xeon Phi}
 \end{table}
 \end{frame}
 
-\begin{frame}{Xeon Phi $\mu$Architecture}
+\begin{frame}{Xeon Phi Coprocessor Core\footnote{http://software.intel.com/en-us/articles/intel-xeon-phi-coprocessor-codename-knights-corner}}
   \begin{center}
   \begin{figure}[htbp]
       \includegraphics[scale=.45]{img/phi_arch.jpg}
@@ -272,21 +274,18 @@ Vector width & 512 bits\\ \hline
 \end{frame}
 
 
-
 %-----------------------------------------------------------------------------
-% Metis
+% GMetis
 %-----------------------------------------------------------------------------
 
-\section{Metis}
 
-\begin{frame}
-USA-road-d.W.gr
-Nodes 6262104 | Edges 15248146
-%\begin{center}
-%\begin{figure}[htbp]
-    %\includegraphics[scale=.35]{.png}
-%\end{figure}
-%\end{center}
+\begin{frame}{GMetis\footnote{USA-road-d.W.gr with 6262104 nodes and
+  15248146 edges}}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.45]{gmetis128.eps}
+  \end{figure}
+\end{center}
 \end{frame}
 
 
@@ -294,23 +293,23 @@ Nodes 6262104 | Edges 15248146
 % Mt-metis
 %-----------------------------------------------------------------------------
 
-\begin{frame}
-%\begin{center}
-%\begin{figure}[htbp]
-    %\includegraphics[scale=.35]{.png}
-%\end{figure}
-%\end{center}
+\begin{frame}{Mt-metis}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.45]{img/mtmetis128.eps}
+  \end{figure}
+\end{center}
 \end{frame}
 
 
 %-----------------------------------------------------------------------------
-% GMetis
+% Comparisons
 %-----------------------------------------------------------------------------
 
 \begin{frame}{GMetis}
 \begin{center}
   \begin{figure}[htbp]
-    \includegraphics[scale=.35]{gmetis128.eps}
+    \includegraphics[scale=.45]{img/comparison.eps}
   \end{figure}
 \end{center}
 \end{frame}
@@ -318,15 +317,25 @@ Nodes 6262104 | Edges 15248146
 \begin{frame}{GMetis}
 \begin{center}
   \begin{figure}[htbp]
-    \includegraphics[scale=.35]{comparison.eps}
+    \includegraphics[scale=.45]{img/edgecut.eps}
   \end{figure}
 \end{center}
 \end{frame}
 
 
-%TODO: Por no fim cenas sobre edgecuts para efeitos de comparação.
-%TODO: Por melhorias feitas.
-
+\begin{frame}{Enhancements}
+  \begin{itemize}
+    \item Package Mapping (HW Topology)
+    \begin{itemize}
+      \item Default Mapping
+      \item Load Balance
+      \item Dense Package
+    \end{itemize}
+    \item Use of Random Match and Heavy Weight Match
+    \item WorkList schedulers
+    \item Software prefetching
+\end{itemize}
+\end{frame}
 
 %-----------------------------------------------------------------------------
 % Conclusion
@@ -341,10 +350,18 @@ Nodes 6262104 | Edges 15248146
   \item GMetis is faster for a high number of partitions;
   \item Metis graph partitioning algorithm is not suitable to run on MIC as it does not use SIMD extensions;
   % no entanto, não é razão para problemas de escalabilidade
-  \item Metis and mt-metis are written in C whereas GMetis is written in C++ and uses various high level resources (e.g. Templates). This may explain differences in performance;
-  \item Software availability problems made progress difficult; <+->
+  \item Metis and mt-metis are written in C whereas GMetis is written in
+    C++ and uses various high level abstractions (e.g. Templates). This may explain differences in performance;
+  \item Software availability problems made progress difficult;
 \end{itemize}
 \end{frame}
+
+% 2 ou 3 dias downtime - maintenance do stampede
+% hpctoolkit - lixo
+% perfexpert - depende do hpctoolkit
+% vtune nao é suportado
+% PAPI e timers à pata
+% Minor version do ICC e troca de compiladores
 
 
 %-----------------------------------------------------------------------------
@@ -354,7 +371,7 @@ Nodes 6262104 | Edges 15248146
 \begin{frame}
   \titlepage
   \begin{center}
-  \huge Questions \& Discussion
+  \huge ?
   \end{center}
 \end{frame}
 
