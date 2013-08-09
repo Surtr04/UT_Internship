@@ -376,7 +376,7 @@
       <data key="d6">
         <y:ShapeNode>
           <y:Geometry height="30.0" width="30.0" x="-323.0" y="-290.0"/>
-          <y:Fill color="#99CCFF" transparent="false"/>
+          <y:Fill color="#FFCC00" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" modelName="custom" textColor="#000000" visible="true" width="11.587890625" x="9.2060546875" y="5.93359375">5<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
