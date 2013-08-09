@@ -1,0 +1,73 @@
+\documentclass[abstract=on,9pt,twocolumn]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{datetime}
+
+\usepackage[paper=a4paper,top=2cm,left=1.5cm,right=1.5cm,bottom=2cm,foot=1cm]{geometry}
+
+\usepackage{relsize}%	relative font sizes
+
+\usepackage[retainorgcmds]{IEEEtrantools}%	IEEEeqnarray
+\setlength{\IEEEnormaljot}{4\IEEEnormaljot}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{hyperref}
+% \usepackage{cleveref}
+\usepackage[noabbrev]{cleveref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{subfig}
+
+%%%%%%%%%%%%%%%%
+%  title page  %
+%%%%%%%%%%%%%%%%
+%\titlehead{University of Minho \hfill Master's Degree in Informatics Engineering\\Department of Informatics \hfill Parallel and Distributed Computing}
+
+\title{GMetis - Xeon Phi}
+
+\author{
+    \\David Pereira\\
+     	\texttt{\smaller email@...}
+\\~\\~
+\and\\Rui Brito\\
+		\texttt{\smaller pg22781@alunos.uminho.pt}
+}
+
+\date{Austin, \docdate}
+
+%%%%%%%%%%%
+%  Hacks  %
+%%%%%%%%%%%
+
+%	Paragraph (title) with linebreak
+\newcommand{\paragraphh}[1]{\paragraph{#1\hfill}\hfill
+
+}
+
+%	Add "Appendix" to the appendices titles, but not to the references
+\usepackage{ifthen}
+\newcommand*{\appendixmore}{%
+  \renewcommand*{\othersectionlevelsformat}[1]{%
+    \ifthenelse{\equal{##1}{section}}{\appendixname~}{}%
+    \csname the##1\endcsname\autodot\enskip}
+  \renewcommand*{\sectionmarkformat}{%
+    \appendixname~\thesection\autodot\enskip}
+}
+
+\newdateformat{mmmyyyydate}{\monthname[\THEMONTH] \THEYEAR}
+\newcommand{\docdate}{\mmmyyyydate\today}
+
+
+
+\begin{document}
+	\maketitle	
+
+	\bibliographystyle{cell}
+	\bibliography{references}
+
+\end{document}
