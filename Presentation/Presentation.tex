@@ -77,7 +77,7 @@
         \item Coarsening
         \begin{itemize}
           \item Find matching nodes
-          \item Coarsen Graph
+          \item Create Coarse Edges
         \end{itemize}
         \item Initial Partitioning (Clustering)
         \item Refinement
@@ -254,14 +254,6 @@ Vector width & 512 bits\\ \hline
 \end{table}
 \end{frame}
 
-\begin{frame}{Xeon Phi Coprocessor Core\footnote{http://software.intel.com/en-us/articles/intel-xeon-phi-coprocessor-codename-knights-corner}}
-  \begin{center}
-  \begin{figure}[htbp]
-      \includegraphics[scale=.45]{img/phi_arch.jpg}
-  \end{figure}
-  \end{center}
-\end{frame}
-
 \begin{frame}{Important characteristics}
   \begin{itemize}
     \item Four hardware threads per core
@@ -273,12 +265,20 @@ Vector width & 512 bits\\ \hline
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Xeon Phi Coprocessor Core\footnote{http://software.intel.com/en-us/articles/intel-xeon-phi-coprocessor-codename-knights-corner}}
+  \begin{center}
+  \begin{figure}[htbp]
+      \includegraphics[scale=.45]{img/phi_arch.jpg}
+  \end{figure}
+  \end{center}
+\end{frame}
+
 
 
 %-----------------------------------------------------------------------------
 % GMetis
 %-----------------------------------------------------------------------------
-\section{Results}
+
 
 \begin{frame}{GMetis\footnote{USA-road-d.W.gr with 6262104 nodes and
   15248146 edges}}
@@ -306,24 +306,6 @@ Vector width & 512 bits\\ \hline
 %-----------------------------------------------------------------------------
 % Comparisons
 %-----------------------------------------------------------------------------
-
-\begin{frame}{GMetis}
-\begin{center}
-  \begin{figure}[htbp]
-    \includegraphics[scale=.45]{img/comparison.eps}
-  \end{figure}
-\end{center}
-\end{frame}
-
-\begin{frame}{GMetis}
-\begin{center}
-  \begin{figure}[htbp]
-    \includegraphics[scale=.45]{img/edgecut.eps}
-  \end{figure}
-\end{center}
-\end{frame}
-
-
 \begin{frame}{Enhancements}
   \begin{itemize}
     \item Package Mapping (HW Topology)
@@ -338,6 +320,24 @@ Vector width & 512 bits\\ \hline
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Metis Comparison}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.45]{img/comparison.eps}
+  \end{figure}
+\end{center}
+\end{frame}
+
+\begin{frame}{Edgecut comparison}
+\begin{center}
+  \begin{figure}[htbp]
+    \includegraphics[scale=.45]{img/edgecut.eps}
+  \end{figure}
+\end{center}
+\end{frame}
+
+
+
 %-----------------------------------------------------------------------------
 % Conclusion
 %-----------------------------------------------------------------------------
@@ -351,9 +351,7 @@ Vector width & 512 bits\\ \hline
   \item GMetis is faster for a high number of partitions;
   \item Metis graph partitioning algorithm is not suitable to run on MIC as it does not use SIMD extensions;
   % no entanto, não é razão para problemas de escalabilidade
-  \item Metis and mt-metis are written in C whereas GMetis is written in
-    C++ and uses various high level abstractions (e.g. Templates). This may explain differences in performance;
-  \item Software availability problems made progress difficult;
+  \item Lack of software/profilers made progress difficult;
 \end{itemize}
 \end{frame}
 
