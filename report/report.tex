@@ -20,6 +20,8 @@
 \usepackage{indentfirst}
 \usepackage[hyphens]{url}
 \usepackage[linktocpage]{hyperref}
+%\usepackage{hyperref}
+%\usepackage{cleveref}
 \usepackage[noabbrev]{cleveref}
 \usepackage{listings}
 \usepackage{color}
@@ -29,7 +31,6 @@
 %  title page  %
 %%%%%%%%%%%%%%%%
 \titlehead{University of Texas at Austin \hfill Institute for Computational Engineering and Sciences (ICES)}
-
 \title{GMetis - Xeon Phi}
 
 \author{
@@ -165,7 +166,6 @@ Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsenin
 \end{center}
 
 Figure \ref{img:part_graph} displays the partitioned graph, this is the next step in the algorithm. To do this, a Greedy Graph Growing (GGGP) algorithm is used.\cite{Karypis:1998:FHQ:305219.305248} The goal of this phase, is to compute a high quality bisection (e.g., small edge-cut) of the coarsened graph such that each part contains roughly half of the vertices and edges of the original graph.
-
 \begin{center}
   \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/partition.eps}
@@ -176,7 +176,6 @@ Figure \ref{img:part_graph} displays the partitioned graph, this is the next ste
 
 Figure \ref{img:refined_graph} shows the results of the refinement phase. During this stage, the partition of the coarser graph is projected back to the original graph by going through the graphs.\cite{Karypis:1998:FHQ:305219.305248}
 Once again, the goal here, is to minimize the edge-cut, however, a good balance in the number of vertices assigned to each partition is also very important. Hence, in this final phase, some algorithms use special heuristics to further improve on the balancing achieved.
-
 \begin{center}
   \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/refinement.eps}
@@ -252,7 +251,7 @@ pipeline which can issue two instructions from the same hardware thread
 per clock cycle. However, the front-end of the pipeline does not issue
 instructions from the same hardware thread in consecutive cycles.\cite{Cepeda:PhiPerformance}
 
-rThis means that the maximum issue rate is only attainable with at least
+This means that the maximum issue rate is only attainable with at least
 2 threads per core while the other threads have the purpose of hiding
 pipeline stalls due to memory latency. %FIXME: Compor esta frase
 
@@ -275,6 +274,7 @@ memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 \section{Metis}
 \label{sec:metis}
 
+The version of Metis we used to perform measurement was 5.1.0
 
 %-----------------------------------------------------------------------------
 % Mt-metis
@@ -282,6 +282,8 @@ memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 
 \section{Mt-metis}
 \label{sec:mt-metis}
+
+We used the 0.1 version of mtmetis.
 
 \begin{center}
 \begin{figure}[htb]
@@ -310,6 +312,100 @@ This figure shows the scalability of gmetis on Xeon phi over the runtime
 with on thread. This example is for 128 partition, but we did
 measurements for different number of partitions, such as 16 and 1024. All
 of them have a similar behaviour.
+
+
+%-----------------------------------------------------------------------------
+% Enhancements
+%-----------------------------------------------------------------------------
+
+Throughout this month, we did some modifications to improve
+\textit{GMetis} performance. We started by changing package mapping that
+is done internally by the \textit{Galois} framework.
+
+\textit{Galois} has support for \textit{NUMA} systems. This means that
+it can run on different sockets (packets in Galois terminology) simultaneously.
+
+Before an application starts running, \textit{Galois} parses the
+cpuinfo file located in "/proc/cpuinfo" to create its packages.
+\textit{Galois} normaly assigns a package to each socket. Therefore,
+\textit{Galois} was assigning a package to the entire MIC coprocessor.
+
+We changed that, but the results did not changed considerably.
+Another characteristic was that galois was not prepared to deal with
+processor that support more than hyperthread two thus when using diferent
+thread values, some processor cores could have four threads running,
+while others only one (default mapping). We also changed that so that the mapping could be
+the most load balanced possible (load balanced mapping). For instance,
+when running the application with 121 threads, with the default mapping,
+the first 20 cores will run with four threads while the others will only
+run with one thread. With the load balance mapping, only the last core
+will run one thread, while the others will run 2 threads.
+
+Although the Xeon Phi contains 61 cores, you should remember that the
+operating system also needs to run. Therefore, only 60 cores may be
+available for computations tasks.
+
+%TODO: Talvez cagar leis sobre worklists bem como packages e para que
+%servem, nomeadamente, loadbalancing
+%TODO: Nao se deve correr em 61 cores. Devia-se se calhar mudar outra
+%vez a parte de mapping para ver se faz alguma intreferencia
+
+Unfortunately, Intel VTune only has support for Stampede's hosts, and
+not for the coprocessor. Although, Intel states that profiling and
+improving an application on the host gives similar improvements on MIC,
+supports for profiling the MIC would be welcome, as there are important
+differences in the architectures.
+
+We profiled with the help of simple timers as well as with Papi, and we
+found the most time consuming function, which is findMatching. This
+function iterates through the graph's nodes, trying to match each node
+with one available neighbor.
+
+%TODO: Falar um pouco mais sobre isso, dizer que depois ficam matched, e
+%que por isso, alguns nós podem ficar sozinhos (pk nao têm nodos livres
+%para fazer match)
+
+There are different ways to match the graph's nodes. The ones used are
+"Heavy Weight Match" and "Random Match". The first iterates through each
+node and match them with the neighbor whose shared edge has the most
+weight. The second matches each node with the first neighbor node that
+has not been matched yet.
+
+Previously, these were used separately, i.e., only one of them was
+used in the application. Using the two combined proved to be a better
+solution, as the performance improved, and the edgecut remained the
+same. Random Match is used in the first two iterations of the coarsening
+phase. This improved runtime because, RM computes faster, as it does not
+need to iterate through all neighbors when there is a node that has not
+been matched. The algorithm is used only on the first two iterations
+because the graph is larger on these iterations, and using RM instead of
+HEM on small graphs does not proves to be faster and can actually worsen
+edgecut.
+
+%TODO: Falar do gcc e do icc
+A deeper look into the assembly code generated by the two compilers
+shows that gcc does not introduce prefetch instructions (even when using
+\_\_builtin\_prefetch) as oposed to icc that prefetches. The results,
+however do not differences on runtime.
+
+We also did some tests with different worklist schedulers provided by
+Galois. AltChunkedLIFO<8> was the fastest and it is actually the more
+scalable one.
+
+
+%-----------------------------------------------------------------------------
+% Metis comparison
+%-----------------------------------------------------------------------------
+
+
+Some extra measurements allowed us to find that with 45-50 partitions
+, GMetis start to run faster than mt-metis.
+
+%-----------------------------------------------------------------------------
+% Edgecut
+%-----------------------------------------------------------------------------
+
+
 
 %-----------------------------------------------------------------------------
 % Conclusion
