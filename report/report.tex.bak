@@ -124,7 +124,7 @@
 \section{The Metis Algorithm}
 \label{sec:metis_alg}
 
-  Formally, the metis algorithm consists of three phases. 
+  Formally, the metis algorithm consists of three fases. 
 
   \begin{itemize}
   \item Given a graph $G_0 = (V_0,E_0)$:
@@ -165,7 +165,7 @@
   \begin{center}
     \begin{figure}[htb]
       \includegraphics[width=\columnwidth]{img/partition.eps}
-      \caption{Partitioned graph}
+      \caption{Partioned graph}
       \label{img:part_graph}
     \end{figure}
   \end{center}
@@ -301,7 +301,7 @@ memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 
 This figure shows the scalability of gmetis on Xeon phi over the runtime
 with on thread. This example is for 128 partition, but we did
-measurements for different number of partitions, such as 16 and 1024. All
+measurements for different number of partitons, such as 16 and 1024. All
 of them have a similar behaviour.
 
 %-----------------------------------------------------------------------------
