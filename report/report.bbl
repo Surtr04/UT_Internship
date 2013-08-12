@@ -1,0 +1,16 @@
+\begin{thebibliography}{1}
+
+\bibitem{Cepeda:PhiPerformance}
+Shannon Cepeda.
+\newblock Optimization and performance tuning for intel® xeon phi™
+  coprocessors, part 2: Understanding and using hardware events.
+\newblock
+  \url{http://software.intel.com/en-us/articles/optimization-and-performance-tuning-for-intel-xeon-phi-coprocessors-part-2-understanding},
+  November 2012.
+
+\bibitem{Karypis95parallelmultilevel}
+George Karypis and Vipin Kumar.
+\newblock Parallel multilevel graph partitioning.
+\newblock Technical report, University of Minnesota, 1995.
+
+\end{thebibliography}

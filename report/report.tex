@@ -124,7 +124,7 @@
 \section{The Metis Algorithm}
 \label{sec:metis_alg}
 
-  Formally, the metis algorithm consists of three phases. 
+  Formally, the metis algorithm consists of three phases. They are as follows:
 
   \begin{itemize}
   \item Given a graph $G_0 = (V_0,E_0)$:
@@ -144,39 +144,41 @@
   \end{itemize}
 \end{itemize}
 
+Visually, this translates into the following scenario:
 
-  \begin{center}
-    \begin{figure}[htb]
-      \includegraphics[width=\columnwidth]{img/coarsening.eps}
-      \caption{Initial graph}
-      \label{img:init_graph}
-    \end{figure} 
-  \end{center}
-  
-  
-  \begin{center}
-    \begin{figure}[htb]
-      \includegraphics[width=\columnwidth]{img/coarsening2.eps}
-      \caption{Coarsened graph}
-      \label{img:coarse_graph}
-    \end{figure}
-  \end{center}
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[width=\columnwidth]{img/coarsening.eps}
+    \caption{Initial graph}
+    \label{img:init_graph}
+  \end{figure} 
+\end{center}
 
-  \begin{center}
-    \begin{figure}[htb]
-      \includegraphics[width=\columnwidth]{img/partition.eps}
-      \caption{Partitioned graph}
-      \label{img:part_graph}
-    \end{figure}
-  \end{center}
+Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsening phase. During this phase, a sequence of coarser graphs is constructed.\cite{Karypis95parallelmultilevel} A coarser graph is constructed by matching neighbour vertices and then contracting the edges.
 
-  \begin{center}
-    \begin{figure}[htb]
-      \includegraphics[width=\columnwidth]{img/refinement.eps}
-      \caption{Refined graph}
-      \label{img:refined_graph} 
-    \end{figure}
-  \end{center}
+\begin{center}
+  \begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/coarsening2.eps}
+    \caption{Coarsened graph}
+    \label{img:coarse_graph}
+  \end{figure}
+\end{center}
+
+\begin{center}
+  \begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/partition.eps}
+    \caption{Partitioned graph}
+    \label{img:part_graph}
+  \end{figure}
+\end{center}
+
+\begin{center}
+  \begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/refinement.eps}
+    \caption{Refined graph}
+    \label{img:refined_graph} 
+  \end{figure}
+\end{center}
 
 
 %-----------------------------------------------------------------------------
@@ -243,8 +245,8 @@ Apart from the characteristics showed in table \ref{tab:mic}, there are
 others that should be mentioned. Each core contains a in-order dual
 pipeline which can issue two instructions from the same hardware thread
 per clock cycle. However, the front-end of the pipeline does not issue
-instructions from the same hardware thread in consecutive cycles.
-%FIXME: Fazer um cite ao link que o andrew mandou por email
+instructions from the same hardware thread in consecutive cycles.\cite{Cepeda:PhiPerformance}
+
 This means that the maximum issue rate is only attainable with at least
 2 threads per core while the other threads have the purpose of hiding
 pipeline stalls due to memory latency. %FIXME: Compor esta frase
@@ -330,8 +332,8 @@ necessary to perform operating system operations.
 % Bibliography
 %-----------------------------------------------------------------------------
 
-%\bibliographystyle{plain}
-%\bibliography{references}
+\bibliographystyle{plain}
+\bibliography{references}
 
 
 \end{document}
