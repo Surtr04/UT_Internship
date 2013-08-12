@@ -13,4 +13,10 @@ George Karypis and Vipin Kumar.
 \newblock Parallel multilevel graph partitioning.
 \newblock Technical report, University of Minnesota, 1995.
 
+\bibitem{Karypis:1998:FHQ:305219.305248}
+George Karypis and Vipin Kumar.
+\newblock A fast and high quality multilevel scheme for partitioning irregular
+  graphs.
+\newblock {\em SIAM J. Sci. Comput.}, 20(1):359--392, December 1998.
+
 \end{thebibliography}

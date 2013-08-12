@@ -18,8 +18,8 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{indentfirst}
-\usepackage{hyperref}
-% \usepackage{cleveref}
+\usepackage[hyphens]{url}
+\usepackage[linktocpage]{hyperref}
 \usepackage[noabbrev]{cleveref}
 \usepackage{listings}
 \usepackage{color}
@@ -28,7 +28,7 @@
 %%%%%%%%%%%%%%%%
 %  title page  %
 %%%%%%%%%%%%%%%%
-%\titlehead{University of Minho \hfill Master's Degree in Informatics Engineering\\Department of Informatics \hfill Parallel and Distributed Computing}
+\titlehead{University of Texas at Austin \hfill Institute for Computational Engineering and Sciences (ICES)}
 
 \title{GMetis - Xeon Phi}
 
@@ -129,22 +129,22 @@
   \begin{itemize}
   \item Given a graph $G_0 = (V_0,E_0)$:
   \begin{itemize}    
-    \item Coarsening
+    \item Coarsening:
     \begin{itemize}
       \item $G_0$ is transformed into a sequence of smaller graphs $G_1,G_2,\cdots,G_m$ such that $|V_0|>|V_1|>|V_2|>\cdots>|V_m|$
     \end{itemize}
-    \item Partitioning 
+    \item Partitioning: 
     \begin{itemize}
       \item A 2-way partition $P_m$ of the graph $G_m = (V_m,E_m)$ is computed that partitions $V_m$ into two parts, each containing half the vertices of $G_0$
     \end{itemize}
-    \item Refinement
+    \item Refinement:
     \begin{itemize}
       \item The partition $P_m$ of $G_m$ is projected back to $G_0$ by going through intermediate partitions $P_{m-1}, P_{m-2},\cdots,P_1,P_0$
     \end{itemize}
   \end{itemize}
 \end{itemize}
 
-Visually, this translates into the following scenario:
+Visually, this translates into the following scenarios:
 
 \begin{center}
   \begin{figure}[H]
@@ -164,6 +164,8 @@ Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsenin
   \end{figure}
 \end{center}
 
+Figure \ref{img:part_graph} displays the partitioned graph, this is the next step in the algorithm. To do this, a Greedy Graph Growing (GGGP) algorithm is used.\cite{Karypis:1998:FHQ:305219.305248} The goal of this phase, is to compute a high quality bisection (e.g., small edge-cut) of the coarsened graph such that each part contains roughly half of the vertices and edges of the original graph.
+
 \begin{center}
   \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/partition.eps}
@@ -171,6 +173,9 @@ Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsenin
     \label{img:part_graph}
   \end{figure}
 \end{center}
+
+Figure \ref{img:refined_graph} shows the results of the refinement phase. During this stage, the partition of the coarser graph is projected back to the original graph by going through the graphs.\cite{Karypis:1998:FHQ:305219.305248}
+Once again, the goal here, is to minimize the edge-cut, however, a good balance in the number of vertices assigned to each partition is also very important. Hence, in this final phase, some algorithms use special heuristics to further improve on the balancing achieved.
 
 \begin{center}
   \begin{figure}[htb]
@@ -247,7 +252,7 @@ pipeline which can issue two instructions from the same hardware thread
 per clock cycle. However, the front-end of the pipeline does not issue
 instructions from the same hardware thread in consecutive cycles.\cite{Cepeda:PhiPerformance}
 
-This means that the maximum issue rate is only attainable with at least
+rThis means that the maximum issue rate is only attainable with at least
 2 threads per core while the other threads have the purpose of hiding
 pipeline stalls due to memory latency. %FIXME: Compor esta frase
 
