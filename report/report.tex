@@ -148,14 +148,14 @@
 Visually, this translates into the following scenarios:
 
 \begin{center}
-  \begin{figure}[H]
+  \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/coarsening.eps}
     \caption{Initial graph}
     \label{img:init_graph}
   \end{figure} 
 \end{center}
 
-Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsening phase. During this phase, a sequence of coarser graphs is constructed.\cite{Karypis95parallelmultilevel} A coarser graph is constructed by matching neighbour vertices and then contracting the edges.
+Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsening phase. During this phase, a sequence of coarser graphs is constructed.\cite{Karypis95parallelmultilevel} A coarser graph is constructed by matching neighbour vertices and then contracting the edges. Thus, the edge between two vertices is collapsed and a multinode consisting of those two vertices is created. Also, the edge-cut of a partition in a coarser graph should be equal to the edge-cut of the same partition in the finer graph.\cite{Karypis:1998:FHQ:305219.305248} This process is achieved in one of two approaches. The first approach consists on finding a random matching and created a multinode with the process described above, while de second approach consists of matchinf groups of vertices that are highly connected.\cite{Karypis:1998:FHQ:305219.305248}
 
 \begin{center}
   \begin{figure}[htb]
