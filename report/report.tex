@@ -72,7 +72,8 @@
 
 % Correr o Metis num core do MIC? Em vez de correr no Host?
 
-
+%TODO: Falar sobre o facto do Sampede não ter o VTune com suporte para
+%os MICs?
 
 %-----------------------------------------------------------------------------
 % Begin Document
@@ -368,17 +369,27 @@ available for computations tasks.
 Unfortunately, Intel VTune only has support for Stampede's hosts, and
 not for the co-processor. Although, Intel states that profiling and
 improving an application on the host gives similar improvements on MIC,
-profiling support for the MIC architecture would be welcome, as there are key
-differences in the architectures.
+profiling support for the MIC architecture on \textit{Stampede} would be
+welcome, as there are key differences in the architectures.
 
-We profiled with the help of simple timers as well as PAPI, and we
-found the most time consuming function, which is findMatching. This
-function iterates through the graph's nodes, trying to match each node
-with one available neighbor.
+Thereby, we profiled the application with the help of simple timers as
+well as PAPI, and we found the most time consuming function, which is
+findMatching. This function iterates through the graph's nodes, trying
+to match each node with one available neighbor.
+
+This function is part of the \textit{Coarsening} phase, together with
+the \textit{CreateCorseEdge}.
+The coarsening phase as the objective of coarsening a graph so it can be
+more easily partitioned. This is done mainly in two phases. The first,
+findMatching, matches nodes that have not been matched yet, and creates
+a "supernode" for each pair of matched nodes. The
+\textit{CreateCorseEdge} creates the edges between "supernodes", merging
+edges that are shared between the two nodes of the supernode and their
+common neighbors.
 
 %TODO: Falar um pouco mais sobre isso, dizer que depois ficam matched, e
 %que por isso, alguns nós podem ficar sozinhos (pk nao têm nodos livres
-%para fazer match)
+%para fazer match).
 
 There are different ways to match the graph's nodes. The ones used are
 "Heavy Weight Match" and "Random Match". The first iterates through each
@@ -426,6 +437,10 @@ We can see that for 16 partitions, mt-metis run faster than gmetis,
 acheiving a total speedup of 24x as opposed to the 17x of gmetis.
 For the other partitions, gmetis is actually faster, acheiving a total
 speedup of 17x and 11x for 128 and 1024 partitions respectively.
+
+%mt-metis128 com melhor tempo com 28 threads
+%gmetis128 com melhor tempo com 70 threads
+
 
 %FIXME: Dizer com que número de threads se atingiu o melhor tempo?
 %FIXME: Qual das duas imagens se usa??????
@@ -481,9 +496,6 @@ Xeon Phi provides a theoretical performance of 2112 GFlop/sec for double
 precision arithmetic and 1056 GFlops/sec for single precision
 arithmetic. This values comprises the use of 60 cores since one core is
 necessary to perform operating system operations.
-
-%TODO: Falar sobre o facto do Sampede não ter o VTune com suporte para
-%os MICs?
 
 
 %-----------------------------------------------------------------------------

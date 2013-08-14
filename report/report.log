@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.8.2)  13 AUG 2013 23:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Arch Linux) (format=pdflatex 2013.8.2)  14 AUG 2013 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -548,20 +548,20 @@ Package caption Info: listings package is loaded.
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
@@ -615,7 +615,7 @@ File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 \everyMPtoPDFconversion=\toks29
 )
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 81.
+Package hyperref Info: Link coloring OFF on input line 82.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -624,9 +624,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -635,33 +635,33 @@ LaTeX Info: Redefining \nameref on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 83.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 84.
  (/usr/share/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 83.
+(Font)              <10.95> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 83.
+(Font)              <8> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 83.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 83.
+(Font)              <6> on input line 84.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 84.
 
 (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 128.
+(Font)              <9> on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 128.
+(Font)              <5> on input line 129.
 Package epstopdf Info: Source file: <img/coarsening.eps>
 (epstopdf)                    date: 2013-08-13 21:29:26
 (epstopdf)                    size: 54001 bytes
@@ -670,7 +670,7 @@ Package epstopdf Info: Source file: <img/coarsening.eps>
 (epstopdf)                    size: 7914 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/coarsening-eps-convert
 ed-to.pdf img/coarsening.eps>
-(epstopdf)             \includegraphics on input line 149.
+(epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/coarsening-eps-converted-to.pdf, id=36, 1016.79875pt x 728.7225pt>
@@ -678,7 +678,7 @@ File: img/coarsening-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/coarsening-eps-converted-to.pdf>
 Package pdftex.def Info: img/coarsening-eps-converted-to.pdf used on input line
- 149.
+ 150.
 (pdftex.def)             Requested size: 251.07481pt x 179.93405pt.
 Package epstopdf Info: Source file: <img/coarsening2.eps>
 (epstopdf)                    date: 2013-08-13 21:29:26
@@ -688,7 +688,7 @@ Package epstopdf Info: Source file: <img/coarsening2.eps>
 (epstopdf)                    size: 6995 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/coarsening2-eps-conver
 ted-to.pdf img/coarsening2.eps>
-(epstopdf)             \includegraphics on input line 159.
+(epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/coarsening2-eps-converted-to.pdf, id=42, 1013.7875pt x 728.7225pt>
@@ -696,7 +696,7 @@ File: img/coarsening2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/coarsening2-eps-converted-to.pdf>
 Package pdftex.def Info: img/coarsening2-eps-converted-to.pdf used on input lin
-e 159.
+e 160.
 (pdftex.def)             Requested size: 251.07481pt x 180.46779pt.
  [1
 
@@ -713,7 +713,7 @@ Package epstopdf Info: Source file: <img/partition.eps>
 (epstopdf)                    size: 6996 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/partition-eps-converte
 d-to.pdf img/partition.eps>
-(epstopdf)             \includegraphics on input line 168.
+(epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/partition-eps-converted-to.pdf, id=72, 1013.7875pt x 728.7225pt>
@@ -721,7 +721,7 @@ File: img/partition-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/partition-eps-converted-to.pdf>
 Package pdftex.def Info: img/partition-eps-converted-to.pdf used on input line 
-168.
+169.
 (pdftex.def)             Requested size: 251.07481pt x 180.46779pt.
 Package epstopdf Info: Source file: <img/refinement.eps>
 (epstopdf)                    date: 2013-08-13 21:29:26
@@ -731,7 +731,7 @@ Package epstopdf Info: Source file: <img/refinement.eps>
 (epstopdf)                    size: 7938 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/refinement-eps-convert
 ed-to.pdf img/refinement.eps>
-(epstopdf)             \includegraphics on input line 178.
+(epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/refinement-eps-converted-to.pdf, id=75, 1013.7875pt x 728.7225pt>
@@ -739,22 +739,22 @@ File: img/refinement-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/refinement-eps-converted-to.pdf>
 Package pdftex.def Info: img/refinement-eps-converted-to.pdf used on input line
- 178.
+ 179.
 (pdftex.def)             Requested size: 251.07481pt x 180.46779pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 201.
+(Font)              <7> on input line 202.
 
 
-Package caption Warning: \label without proper \caption on input line 235.
+Package caption Warning: \label without proper \caption on input line 236.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:mic' on page 2 undefined on input line 248.
+LaTeX Warning: Reference `tab:mic' on page 2 undefined on input line 249.
 
 <img/phi_arch.jpg, id=78, 652.4375pt x 358.33875pt>
 File: img/phi_arch.jpg Graphic file (type jpg)
  <use img/phi_arch.jpg>
-Package pdftex.def Info: img/phi_arch.jpg used on input line 263.
+Package pdftex.def Info: img/phi_arch.jpg used on input line 264.
 (pdftex.def)             Requested size: 251.07481pt x 137.89796pt.
 
 [2 <./img/partition-eps-converted-to.pdf> <./img/refinement-eps-converted-to.pd
@@ -767,7 +767,7 @@ Package epstopdf Info: Source file: <img/mtmetis128.eps>
 (epstopdf)                    size: 34158 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/mtmetis128-eps-convert
 ed-to.pdf img/mtmetis128.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 298.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/mtmetis128-eps-converted-to.pdf, id=94, 685.56125pt x 326.21875pt>
@@ -775,7 +775,7 @@ File: img/mtmetis128-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/mtmetis128-eps-converted-to.pdf>
 Package pdftex.def Info: img/mtmetis128-eps-converted-to.pdf used on input line
- 297.
+ 298.
 (pdftex.def)             Requested size: 251.07481pt x 119.46954pt.
 Package epstopdf Info: Source file: <img/gmetis128.eps>
 (epstopdf)                    date: 2013-08-13 22:49:21
@@ -785,7 +785,7 @@ Package epstopdf Info: Source file: <img/gmetis128.eps>
 (epstopdf)                    size: 33610 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/gmetis128-eps-converte
 d-to.pdf img/gmetis128.eps>
-(epstopdf)             \includegraphics on input line 312.
+(epstopdf)             \includegraphics on input line 313.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/gmetis128-eps-converted-to.pdf, id=95, 685.56125pt x 326.21875pt>
@@ -793,7 +793,7 @@ File: img/gmetis128-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/gmetis128-eps-converted-to.pdf>
 Package pdftex.def Info: img/gmetis128-eps-converted-to.pdf used on input line 
-312.
+313.
 (pdftex.def)             Requested size: 251.07481pt x 119.46954pt.
  [3 <./img/mtmetis128-eps-converted-to.pdf> <./img/gmetis128-eps-converted-to.p
 df>]
@@ -805,7 +805,7 @@ Package epstopdf Info: Source file: <img/comparison3.eps>
 (epstopdf)                    size: 16011 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/comparison3-eps-conver
 ted-to.pdf img/comparison3.eps>
-(epstopdf)             \includegraphics on input line 434.
+(epstopdf)             \includegraphics on input line 450.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/comparison3-eps-converted-to.pdf, id=108, 685.56125pt x 326.21875pt>
@@ -813,7 +813,7 @@ File: img/comparison3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/comparison3-eps-converted-to.pdf>
 Package pdftex.def Info: img/comparison3-eps-converted-to.pdf used on input lin
-e 434.
+e 450.
 (pdftex.def)             Requested size: 251.07481pt x 119.46954pt.
 Package epstopdf Info: Source file: <img/comparison4.eps>
 (epstopdf)                    date: 2013-08-13 22:50:38
@@ -823,7 +823,7 @@ Package epstopdf Info: Source file: <img/comparison4.eps>
 (epstopdf)                    size: 18912 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/comparison4-eps-conver
 ted-to.pdf img/comparison4.eps>
-(epstopdf)             \includegraphics on input line 442.
+(epstopdf)             \includegraphics on input line 458.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/comparison4-eps-converted-to.pdf, id=109, 687.56876pt x 326.21875pt>
@@ -831,7 +831,7 @@ File: img/comparison4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/comparison4-eps-converted-to.pdf>
 Package pdftex.def Info: img/comparison4-eps-converted-to.pdf used on input lin
-e 442.
+e 458.
 (pdftex.def)             Requested size: 251.07481pt x 119.12111pt.
 Package epstopdf Info: Source file: <img/edgecut.eps>
 (epstopdf)                    date: 2013-08-13 23:08:05
@@ -841,18 +841,18 @@ Package epstopdf Info: Source file: <img/edgecut.eps>
 (epstopdf)                    size: 17421 bytes
 (epstopdf)             Command: <repstopdf --outfile=img/edgecut-eps-converted-
 to.pdf img/edgecut.eps>
-(epstopdf)             \includegraphics on input line 458.
+(epstopdf)             \includegraphics on input line 475.
 Package epstopdf Info: Output file is already uptodate.
 
 <img/edgecut-eps-converted-to.pdf, id=111, 685.56125pt x 326.21875pt>
 File: img/edgecut-eps-converted-to.pdf Graphic file (type pdf)
 
 <use img/edgecut-eps-converted-to.pdf>
-Package pdftex.def Info: img/edgecut-eps-converted-to.pdf used on input line 45
-8.
+Package pdftex.def Info: img/edgecut-eps-converted-to.pdf used on input line 47
+5.
 (pdftex.def)             Requested size: 251.07481pt x 119.46954pt.
 
-Underfull \hbox (badness 1910) in paragraph at lines 488--492
+Underfull \hbox (badness 1910) in paragraph at lines 495--499
 []\T1/cmr/m/n/9 Xeon Phi pro-vides a the-o-ret-i-cal per-for-mance of 2112
  []
 
@@ -890,13 +890,13 @@ i -[]
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 505.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 509.
  [4 <./img/comparison3-eps-converted-to.pdf> <./img/comparison4-eps-converted-t
 o.pdf> <./img/edgecut-eps-converted-to.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 505.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 509.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 505.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 505.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 509.
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: DFAEA6604FE7046A50A79113FAE9E088;413.
 
@@ -927,7 +927,7 @@ blic/cm-super/sfsx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
 fsx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></u
 sr/share/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/share/texmf-
 dist/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on report.pdf (4 pages, 498672 bytes).
+Output written on report.pdf (4 pages, 500481 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  159 compressed objects within 2 object streams
