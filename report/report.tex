@@ -275,6 +275,7 @@ memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 \section{Metis}
 \label{sec:metis}
 
+
 The version of Metis we used to perform measurement was 5.1.0
 
 %-----------------------------------------------------------------------------
@@ -337,25 +338,24 @@ it take advantage of different sockets (packets in Galois terminology) simultane
 Before an application starts running, \textit{Galois} parses the
 cpuinfo file located in "/proc/cpuinfo" to create its mapping, which means that each socket
 corresponds to a package, or rather, all the cores in a socket belong to the same package.
-This means that \textit{Galois} was assigning a package to the entire MIC co-processor, since it has 60 usale cores in the same "package".
+This means that \textit{Galois} was assigning a package to the entire MIC co-processor, since it has 60 usable cores in the same "package".
 
 %TODO: Talvez cagar leis sobre worklists bem como packages e para que
 %servem, nomeadamente, loadbalancing
 This is especially bad, since the \textit{Galois} framework uses a sort of work stealing mechanism inside each package. It works by assigning a master thread in each package, then each thread inside a package can steal work from another inside the same package. In case of aborts, the work is pushed to a stack in the master thread, if it aborts when that master thread pops from the stack, then the work is pushed in another packet's stack. In the MIC, since there is only one packet, this means that all 244 threads were stealing work from each other. Hence, worst case scenario, the code is run serially. 
 
-Also, it should be noted that, since \textit{Galois} was not prepared to deal with a processor that supports more than two-way hyperthreading, when using diferent thread values, some processor cores could have four threads running, while others only one (default mapping).
+Also, it should be noted that, since \textit{Galois} was not prepared to deal with a processor that supports more than two-way hyperthreading, when using different thread values, some processor cores could have four threads running, while others only one (default mapping).
 
 We changed that, by assigning each hyperthread to its respective core id (which would make a packet).
 Another reason for this change is so that the mapping could be
-the most balanced possible (load balanced mapping), for instance,
+the most balanced possible (load balanced mapping)\footnote{Although the Xeon Phi contains 61 cores, it should be noted that the
+operating system also needs to run. Therefore, only 60 cores may be
+available for computations tasks.}, for instance,
 when running the application with 121 threads, with the default mapping,
 the first 20 cores will run with four threads while the others will only
 run with one thread. With the load balance mapping, only the last core
-will run one thread, while the others will run 2 threads. However, this did not achieve any considerable improvements. We also tried assigning each thread to a packet in a round-robin fashion (dense package mapping), but that proved to be innefective as well.
+will run one thread, while the others will run 2 threads. However, this did not achieve any considerable improvements. We also tried assigning each thread to a packet in a round-robin fashion (dense package mapping), but that proved to be ineffective as well.
 
-Although the Xeon Phi contains 61 cores, it should be noted that the
-operating system also needs to run. Therefore, only 60 cores may be
-available for computations tasks.
 
 %We did not changed the mapping to run only on 60 cores, but it would be
 %interesting to do it and perform measurements with the operating system
@@ -434,8 +434,8 @@ for each number of threads, for the three partitions number. For those, the best
 chosen. The time of the sequential metis is included to see how much
 speedup both mt-metis and gmetis obtains for each partition number. 
 We can see that for 16 partitions, mt-metis run faster than gmetis,
-acheiving a total speedup of 24x as opposed to the 17x of gmetis.
-For the other partitions, gmetis is actually faster, acheiving a total
+achieving a total speedup of 24x as opposed to the 17x of gmetis.
+For the other partitions, gmetis is actually faster, achieving a total
 speedup of 17x and 11x for 128 and 1024 partitions respectively.
 
 %mt-metis128 com melhor tempo com 28 threads
@@ -464,10 +464,10 @@ speedup of 17x and 11x for 128 and 1024 partitions respectively.
 %TODO: Falar que o metis tenta obter partições o mais balanceadas
 %possiveis na parte da introdução
 As previously stated, the objective of \textit{Metis} is to partition a graph in a way
-that the partitions are balanced and the edgecut between them is the smallest
+that the partitions are balanced and the edge-cut between them is the smallest
 possible. For this last metric, GMetis performs worse. According to the
-measurements made on figure~\ref{img:edgecut}, \textit{GMetis} edgecut is
-always more than two times higher than metis and mt-metis. The openmp
+measurements made on figure~\ref{img:edgecut}, \textit{GMetis} edge-cut is
+always more than two times higher than metis and mt-metis. The openMP
 version of metis performs a little bit worse than its original version.
 
 \begin{center}

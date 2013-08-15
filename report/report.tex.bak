@@ -67,15 +67,13 @@
 
 
 %-----------------------------------------------------------------------------
-% Cenas a falar
+% Cenas a falar, melhorar ou colocar no relatorio
 %-----------------------------------------------------------------------------
-
-% USA W -> o maior grafo possivel de correr no MIC devido a limitações
-% de memória
 
 % Correr o Metis num core do MIC? Em vez de correr no Host?
 
-
+%TODO: Falar sobre o facto do Sampede não ter o VTune com suporte para
+%os MICs?
 
 %-----------------------------------------------------------------------------
 % Begin Document
@@ -155,7 +153,7 @@ Visually, this translates into the following scenarios:
   \end{figure} 
 \end{center}
 
-Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsening phase. During this phase, a sequence of coarser graphs is constructed.\cite{Karypis95parallelmultilevel} A coarser graph is constructed by matching neighbour vertices and then contracting the edges. Thus, the edge between two vertices is collapsed and a multinode consisting of those two vertices is created. Also, the edge-cut of a partition in a coarser graph should be equal to the edge-cut of the same partition in the finer graph.\cite{Karypis:1998:FHQ:305219.305248} This process is achieved in one of two approaches. The first approach consists on finding a random matching and created a multinode with the process described above, while de second approach consists of matchinf groups of vertices that are highly connected.\cite{Karypis:1998:FHQ:305219.305248}
+Figures \ref{img:init_graph} and \ref{img:coarse_graph} illustrate the coarsening phase. During this phase, a sequence of coarser graphs is constructed.\cite{Karypis95parallelmultilevel} A coarser graph is constructed by matching neighbour vertices and then contracting the edges. Thus, the edge between two vertices is collapsed and a multinode consisting of those two vertices is created. Also, the edge-cut of a partition in a coarser graph should be equal to the edge-cut of the same partition in the finer graph.\cite{Karypis:1998:FHQ:305219.305248} This process is achieved in one of two approaches. The first approach consists on finding a random matching and created a multinode with the process described above, while the second approach consists of matching groups of vertices that are highly connected.\cite{Karypis:1998:FHQ:305219.305248}
 
 \begin{center}
   \begin{figure}[htb]
@@ -193,9 +191,9 @@ Once again, the goal here, is to minimize the edge-cut, however, a good balance 
 \label{sec:sys_char}
 
 The measurements were performed in both Stampede's hosts and
-coprocessors.
+co-processors.
 The hosts are comprised of dual Intel Xeon E5-2680, while the
-coprocessors are the new Intel Xeon Phi with 61 cores. Their
+co-processors are the new Intel Xeon Phi with 61 cores. Their
 characteristics are presented in the following tables.
 
 \begin{table}[H]
@@ -239,7 +237,10 @@ Vector width & 512 bits\\ \hline
 \caption{Intel Xeon Phi}
 \end{table}
 
-
+As can be seen, the Intel Xeon Phi only has 8 GB of memory, thereby
+limiting large input graphs to run with GMetis. Therefore, all
+measurements were done with the USA-W roadmap, which is the largest graph
+that still fits in memory. This graph contains 6262104 nodes and 15248146 edges.
 
 %-----------------------------------------------------------------------------
 % Xeon Phi
@@ -274,6 +275,7 @@ memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 \section{Metis}
 \label{sec:metis}
 
+
 The version of Metis we used to perform measurement was 5.1.0
 
 %-----------------------------------------------------------------------------
@@ -284,6 +286,13 @@ The version of Metis we used to perform measurement was 5.1.0
 \label{sec:mt-metis}
 
 We used the 0.1 version of mtmetis.
+%The next figure shows the scalability of Mt-metis on Xeon Phi. Despite
+%the large number of measurements taken, results shows spikes when
+%running mt-metis with a certain number of partitions. We can see that
+%mt-metis scales up to 28 threads, declining rapidly for more than 60
+%threads. %FIXME: Falar do numero de threads entre 28 e 60
+%This is mainly due to the clustering and refinement stages.
+All measurements were taken with the version 0.1 of mt-metis.
 
 \begin{center}
 \begin{figure}[htb]
@@ -308,8 +317,8 @@ We used the 0.1 version of mtmetis.
 \end{figure}
 \end{center}
 
-This figure shows the scalability of gmetis on Xeon phi over the runtime
-with on thread. This example is for 128 partition, but we did
+This figure shows the scalability of gmetis on Xeon Phi over the runtime
+with one thread. This example is for 128 partition, but we did
 measurements for different number of partitions, such as 16 and 1024. All
 of them have a similar behaviour.
 
@@ -317,94 +326,157 @@ of them have a similar behaviour.
 %-----------------------------------------------------------------------------
 % Enhancements
 %-----------------------------------------------------------------------------
+\subsection{Enhancements}
 
 Throughout this month, we did some modifications to improve
-\textit{GMetis} performance. We started by changing package mapping that
+\textit{GMetis}' performance. We started by experimenting with how the package mapping
 is done internally by the \textit{Galois} framework.
 
-\textit{Galois} has support for \textit{NUMA} systems. This means that
-it can run on different sockets (packets in Galois terminology) simultaneously.
+\textit{Galois} has support for \textit{NUMA} systems, thus, this means that
+it take advantage of different sockets (packets in Galois terminology) simultaneously.
 
 Before an application starts running, \textit{Galois} parses the
-cpuinfo file located in "/proc/cpuinfo" to create its packages.
-\textit{Galois} normaly assigns a package to each socket. Therefore,
-\textit{Galois} was assigning a package to the entire MIC coprocessor.
-
-We changed that, but the results did not changed considerably.
-Another characteristic was that galois was not prepared to deal with
-processor that support more than hyperthread two thus when using diferent
-thread values, some processor cores could have four threads running,
-while others only one (default mapping). We also changed that so that the mapping could be
-the most load balanced possible (load balanced mapping). For instance,
-when running the application with 121 threads, with the default mapping,
-the first 20 cores will run with four threads while the others will only
-run with one thread. With the load balance mapping, only the last core
-will run one thread, while the others will run 2 threads.
-
-Although the Xeon Phi contains 61 cores, you should remember that the
-operating system also needs to run. Therefore, only 60 cores may be
-available for computations tasks.
+cpuinfo file located in "/proc/cpuinfo" to create its mapping, which means that each socket
+corresponds to a package, or rather, all the cores in a socket belong to the same package.
+This means that \textit{Galois} was assigning a package to the entire MIC co-processor, since it has 60 usable cores in the same "package".
 
 %TODO: Talvez cagar leis sobre worklists bem como packages e para que
 %servem, nomeadamente, loadbalancing
+This is especially bad, since the \textit{Galois} framework uses a sort of work stealing mechanism inside each package. It works by assigning a master thread in each package, then each thread inside a package can steal work from another inside the same package. In case of aborts, the work is pushed to a stack in the master thread, if it aborts when that master thread pops from the stack, then the work is pushed in another packet's stack. In the MIC, since there is only one packet, this means that all 244 threads were stealing work from each other. Hence, worst case scenario, the code is run serially. 
+
+Also, it should be noted that, since \textit{Galois} was not prepared to deal with a processor that supports more than two-way hyperthreading, when using different thread values, some processor cores could have four threads running, while others only one (default mapping).
+
+We changed that, by assigning each hyperthread to its respective core id (which would make a packet).
+Another reason for this change is so that the mapping could be
+the most balanced possible (load balanced mapping)\footnote{Although the Xeon Phi contains 61 cores, it should be noted that the
+operating system also needs to run. Therefore, only 60 cores may be
+available for computations tasks.}, for instance,
+when running the application with 121 threads, with the default mapping,
+the first 20 cores will run with four threads while the others will only
+run with one thread. With the load balance mapping, only the last core
+will run one thread, while the others will run 2 threads. However, this did not achieve any considerable improvements. We also tried assigning each thread to a packet in a round-robin fashion (dense package mapping), but that proved to be ineffective as well.
+
+
+%We did not changed the mapping to run only on 60 cores, but it would be
+%interesting to do it and perform measurements with the operating system
+%noise minimized.
+
+%%TODO: Talvez cagar leis sobre worklists bem como packages e para que
+%%servem, nomeadamente, loadbalancing
 %TODO: Nao se deve correr em 61 cores. Devia-se se calhar mudar outra
 %vez a parte de mapping para ver se faz alguma intreferencia
 
 Unfortunately, Intel VTune only has support for Stampede's hosts, and
-not for the coprocessor. Although, Intel states that profiling and
+not for the co-processor. Although, Intel states that profiling and
 improving an application on the host gives similar improvements on MIC,
-supports for profiling the MIC would be welcome, as there are important
-differences in the architectures.
+profiling support for the MIC architecture on \textit{Stampede} would be
+welcome, as there are key differences in the architectures.
 
-We profiled with the help of simple timers as well as with Papi, and we
-found the most time consuming function, which is findMatching. This
-function iterates through the graph's nodes, trying to match each node
-with one available neighbor.
+Thereby, we profiled the application with the help of simple timers as
+well as PAPI, and we found the most time consuming function, which is
+findMatching. This function iterates through the graph's nodes, trying
+to match each node with one available neighbor.
+
+This function is part of the \textit{Coarsening} phase, together with
+the \textit{CreateCorseEdge}.
+The coarsening phase as the objective of coarsening a graph so it can be
+more easily partitioned. This is done mainly in two phases. The first,
+findMatching, matches nodes that have not been matched yet, and creates
+a "supernode" for each pair of matched nodes. The
+\textit{CreateCorseEdge} creates the edges between "supernodes", merging
+edges that are shared between the two nodes of the supernode and their
+common neighbors.
 
 %TODO: Falar um pouco mais sobre isso, dizer que depois ficam matched, e
 %que por isso, alguns nós podem ficar sozinhos (pk nao têm nodos livres
-%para fazer match)
+%para fazer match).
 
 There are different ways to match the graph's nodes. The ones used are
 "Heavy Weight Match" and "Random Match". The first iterates through each
-node and match them with the neighbor whose shared edge has the most
+node and matches them with the neighbor whose shared edge has the most
 weight. The second matches each node with the first neighbor node that
 has not been matched yet.
 
 Previously, these were used separately, i.e., only one of them was
 used in the application. Using the two combined proved to be a better
-solution, as the performance improved, and the edgecut remained the
+solution, as the performance improved, and the edge-cut remained the
 same. Random Match is used in the first two iterations of the coarsening
 phase. This improved runtime because, RM computes faster, as it does not
 need to iterate through all neighbors when there is a node that has not
 been matched. The algorithm is used only on the first two iterations
 because the graph is larger on these iterations, and using RM instead of
-HEM on small graphs does not proves to be faster and can actually worsen
-edgecut.
+HEM on small graphs did not prove to be any faster and can actually worsen
+edge-cut.
 
+%Due to incompatibilities of some C++11 functions, we tried to compile
+%the code with x86\_64-k1om-linux-gcc, which is gcc with MIC support.
 %TODO: Falar do gcc e do icc
 A deeper look into the assembly code generated by the two compilers
 shows that gcc does not introduce prefetch instructions (even when using
-\_\_builtin\_prefetch) as oposed to icc that prefetches. The results,
-however do not differences on runtime.
+\_\_builtin\_prefetch) as opposed to icc that prefetches. The results,
+however, runtime differences are minimal.
 
 We also did some tests with different worklist schedulers provided by
-Galois. AltChunkedLIFO<8> was the fastest and it is actually the more
+Galois. AltChunkedLIFO<8> was the fastest and it is actually the most
 scalable one.
-
-
-%-----------------------------------------------------------------------------
-% Metis comparison
-%-----------------------------------------------------------------------------
-
 
 Some extra measurements allowed us to find that with 45-50 partitions
 , GMetis start to run faster than mt-metis.
 
+
 %-----------------------------------------------------------------------------
-% Edgecut
+% Final results
 %-----------------------------------------------------------------------------
 
+The following figure compares the runtime of each application. Metis was
+executed in one of the Xeon Phi's core, while mt-metis and gmetis were executed
+for each number of threads, for the three partitions number. For those, the best execution time was
+chosen. The time of the sequential metis is included to see how much
+speedup both mt-metis and gmetis obtains for each partition number. 
+We can see that for 16 partitions, mt-metis run faster than gmetis,
+achieving a total speedup of 24x as opposed to the 17x of gmetis.
+For the other partitions, gmetis is actually faster, achieving a total
+speedup of 17x and 11x for 128 and 1024 partitions respectively.
+
+%mt-metis128 com melhor tempo com 28 threads
+%gmetis128 com melhor tempo com 70 threads
+
+
+%FIXME: Dizer com que número de threads se atingiu o melhor tempo?
+%FIXME: Qual das duas imagens se usa??????
+
+\begin{center}
+\begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/comparison3.eps}
+    \caption{Comparison}
+    \label{img:comparison3}
+\end{figure}
+\end{center}
+
+\begin{center}
+\begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/comparison4.eps}
+    \caption{Comparison}
+    \label{img:comparison4}
+\end{figure}
+\end{center}
+
+%TODO: Falar que o metis tenta obter partições o mais balanceadas
+%possiveis na parte da introdução
+As previously stated, the objective of \textit{Metis} is to partition a graph in a way
+that the partitions are balanced and the edgecut between them is the smallest
+possible. For this last metric, GMetis performs worse. According to the
+measurements made on figure~\ref{img:edgecut}, \textit{GMetis} edge-cut is
+always more than two times higher than metis and mt-metis. The openmp
+version of metis performs a little bit worse than its original version.
+
+\begin{center}
+\begin{figure}[htb]
+    \includegraphics[width=\columnwidth]{img/edgecut.eps}
+    \caption{Comparison}
+    \label{img:edgecut}
+\end{figure}
+\end{center}
 
 
 %-----------------------------------------------------------------------------
@@ -414,7 +486,7 @@ Some extra measurements allowed us to find that with 45-50 partitions
 \section{Conclusion}
 \label{sec:conc}
 Results showed that both \textit{Metis} and \textit{Mt-metis} have
-better edgecut than \textit{Gmetis}. However, Gmetis's runtime is lower
+better edge-cut than \textit{Gmetis}. However, Gmetis's runtime is lower
 for a high number of partitions.
 
 %FIXME: Adicionar o número de partições em que o GMetis passa a ser mais
@@ -424,9 +496,6 @@ Xeon Phi provides a theoretical performance of 2112 GFlop/sec for double
 precision arithmetic and 1056 GFlops/sec for single precision
 arithmetic. This values comprises the use of 60 cores since one core is
 necessary to perform operating system operations.
-
-%TODO: Falar sobre o facto do Sampede não ter o VTune com suporte para
-%os MICs?
 
 
 %-----------------------------------------------------------------------------
