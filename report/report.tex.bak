@@ -97,10 +97,22 @@
 %-----------------------------------------------------------------------------
 
 \section{Introduction}
-GMetis is a graph/mesh partitioning tool developed using the Galois framework. The Metis algorithm consists of three major phases: Coarsening, Partitioning and Refinement.
-Our goal was to port GMetis for the Xeon Phi architecture, optimizing its performance, also identifying its limitations and bottlenecks.
-This report is structured as follows:\\
-Section \ref{sec:metis_alg} details the Metis algorithm. Section \ref{sec:sys_char} presents the characteristics of the different system used for testing GMetis. Sections \ref{sec:metis} \ref{sec:mt-metis} present and explain some of the results we got running mt-metis and metis (for comparative purposes), while section \ref{sec:GMetis} details results and some the enhancements made to improve performance on the Xeon Phi. Section \ref{sec:conc} presents our final conclusions.
+
+
+\begin{itemize}
+  \item GMetis is a graph partitioning application which uses the Galois
+    framework
+  \item Consists of three major phases
+    \begin{itemize}
+      \item Coarsening
+      \begin{itemize}
+        \item Find matching nodes
+        \item Create Coarse Edges
+      \end{itemize}
+      \item Initial Partitioning (Clustering)
+      \item Refinement
+    \end{itemize}
+\end{itemize}
 
 
 
@@ -235,15 +247,16 @@ that still fits in memory. This graph contains 6262104 nodes and 15248146 edges.
 %-----------------------------------------------------------------------------
 
 Apart from the characteristics showed in table \ref{tab:mic}, there are
-others that should be mentioned. Each core contains a in-order dual-issue pipeline which can issue two instructions from the same hardware thread
+others that should be mentioned. Each core contains a in-order dual
+pipeline which can issue two instructions from the same hardware thread
 per clock cycle. However, the front-end of the pipeline does not issue
 instructions from the same hardware thread in consecutive cycles.\cite{Cepeda:PhiPerformance}
 
 This means that the maximum issue rate is only attainable with at least
 2 threads per core while the other threads have the purpose of hiding
-pipeline stalls due to memory latency.
+pipeline stalls due to memory latency. %FIXME: Compor esta frase
 
-The fact that the pipeline issues in-order instructions increases
+The fact that the pipeline issue instructions in-order increases
 memory related problems. %FIXME: Pode-se dar o exemplo do andrew
 
 \begin{center}
@@ -272,12 +285,14 @@ The version of Metis we used to perform measurement was 5.1.0
 \section{Mt-metis}
 \label{sec:mt-metis}
 
-The next plot shows the scalability of Mt-metis on Xeon Phi\footnote{All measurements were taken using version 0.1 of mt-metis.}. 
-Despite the large number of measurements taken, results shows spikes when running mt-metis with a certain number of partitions. We can see that
-mt-metis scales up to 28 threads, declining rapidly for more than 60 threads. 
-This is mainly due to the clustering and refinement stages, since, as we can see from the figure, the coarsening stage is relatively well behaved. 
-The behaviour of the refinement phase is somewhat to be expected, since, with the higher number of threads, as conflicts arise, it is expected for its running time to go up.
-The problem here, is the Partitioniong (Clustering) phase, since its behaviour in unpredictable as the number of threads go beyond 60. We believe the explanation for this behaviour lies the Xeon Phi's architecture, since, as explained above, the maximum issue rate is 2. Combining this with a higher number of threads, the ammount of stalls and ensuing context switches is expected to go up. This can be especially bad if the application has a lot of memory random memory accesses, which is the case.  
+We used the 0.1 version of mtmetis.
+%The next figure shows the scalability of Mt-metis on Xeon Phi. Despite
+%the large number of measurements taken, results shows spikes when
+%running mt-metis with a certain number of partitions. We can see that
+%mt-metis scales up to 28 threads, declining rapidly for more than 60
+%threads. %FIXME: Falar do numero de threads entre 28 e 60
+%This is mainly due to the clustering and refinement stages.
+All measurements were taken with the version 0.1 of mt-metis.
 
 \begin{center}
 \begin{figure}[htb]
@@ -293,7 +308,6 @@ The problem here, is the Partitioniong (Clustering) phase, since its behaviour i
 %-----------------------------------------------------------------------------
 
 \section{GMetis and the Galois Framework} %FIXME: Mudar o nome do titulo
-\label{sec:GMetis}
 
 \begin{center}
 \begin{figure}[htb]
@@ -341,6 +355,16 @@ when running the application with 121 threads, with the default mapping,
 the first 20 cores will run with four threads while the others will only
 run with one thread. With the load balance mapping, only the last core
 will run one thread, while the others will run 2 threads. However, this did not achieve any considerable improvements. We also tried assigning each thread to a packet in a round-robin fashion (dense package mapping), but that proved to be ineffective as well.
+
+
+%We did not changed the mapping to run only on 60 cores, but it would be
+%interesting to do it and perform measurements with the operating system
+%noise minimized.
+
+%%TODO: Talvez cagar leis sobre worklists bem como packages e para que
+%%servem, nomeadamente, loadbalancing
+%TODO: Nao se deve correr em 61 cores. Devia-se se calhar mudar outra
+%vez a parte de mapping para ver se faz alguma intreferencia
 
 Unfortunately, Intel VTune only has support for Stampede's hosts, and
 not for the co-processor. Although, Intel states that profiling and
@@ -440,10 +464,10 @@ speedup of 17x and 11x for 128 and 1024 partitions respectively.
 %TODO: Falar que o metis tenta obter partições o mais balanceadas
 %possiveis na parte da introdução
 As previously stated, the objective of \textit{Metis} is to partition a graph in a way
-that the partitions are balanced and the edge-cut between them is the smallest
+that the partitions are balanced and the edgecut between them is the smallest
 possible. For this last metric, GMetis performs worse. According to the
 measurements made on figure~\ref{img:edgecut}, \textit{GMetis} edge-cut is
-always more than two times higher than metis and mt-metis. The openMP
+always more than two times higher than metis and mt-metis. The openmp
 version of metis performs a little bit worse than its original version.
 
 \begin{center}

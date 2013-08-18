@@ -67,13 +67,16 @@
 
 
 %-----------------------------------------------------------------------------
-% Cenas a falar, melhorar ou colocar no relatorio
+% Bibliografias usadas e por usar
 %-----------------------------------------------------------------------------
 
-% Correr o Metis num core do MIC? Em vez de correr no Host?
+%Usadas
+%Karypis95parallelmultilevel
+%Karypis:1998:FHQ:305219.305248
+%Cepeda:PhiPerformance
 
-%TODO: Falar sobre o facto do Sampede não ter o VTune com suporte para
-%os MICs?
+%Por usar
+
 
 %-----------------------------------------------------------------------------
 % Begin Document
@@ -88,7 +91,15 @@
 %-----------------------------------------------------------------------------
 
 \begin{abstract}
-
+In this report, we address GMetis, a graph partitioning application that
+uses the Metis algorithm. This application uses the Galois framework
+and has as objective reducing the total edgecut of a graph and improving
+load balance between partitions. We show scalability measurements of the
+application when running it in the brand new Xeon Phi, the first
+co-processor from the MIC architecture. We also show some modifications
+done in order to reduce the application's runtime. At last, we compare
+GMetis with metis and mt-metis, a parallel version of metis which uses
+OpenMP, both in terms of runtime and edgecut.
 \end{abstract}
 
 
@@ -97,11 +108,30 @@
 %-----------------------------------------------------------------------------
 
 \section{Introduction}
-GMetis is a graph/mesh partitioning tool developed using the Galois framework. The Metis algorithm consists of three major phases: Coarsening, Partitioning and Refinement.
-Our goal was to port GMetis for the Xeon Phi architecture, optimizing its performance, also identifying its limitations and bottlenecks.
-This report is structured as follows:\\
-Section \ref{sec:metis_alg} details the Metis algorithm. Section \ref{sec:sys_char} presents the characteristics of the different system used for testing GMetis. Sections \ref{sec:metis} \ref{sec:mt-metis} present and explain some of the results we got running mt-metis and metis (for comparative purposes), while section \ref{sec:GMetis} details results and some the enhancements made to improve performance on the Xeon Phi. Section \ref{sec:conc} presents our final conclusions.
+Metis is actually the most famous graph partitioning algorithm. It was
+developed by George
+Karypis\footnote{http://glaros.dtc.umn.edu/gkhome/metis/metis/overview}
+and the University of Minnesota, and it has as objective to group
+weighted graph nodes into partitions so that all partitions have similar
+weight (balanced partitions) and to reduce total edgecut, which is the
+total weight of all edges between partitions. This algorithm has three
+major phases: Coarsening, Partitioning and Refinement.
+All phases of this algorithm are explained in
+section~\ref{sec:metis_alg}.
 
+The application addressed in this report is \textit{GMetis}, an
+application that uses the metis algorithm together with the
+\textit{Galois} framework to produce an efficient parallel version of
+\textit{Metis}. Our goal was to port GMetis for the Xeon Phi
+architecture, optimizing its performance, identifying its
+limitations and bottlenecks, and compare its runtime and edgecut with
+Metis and its parallel version, mt-metis.
+
+The rest of this report is structured as follows:\\
+The Xeon Phi architecture and features are explained in section~\ref{sec:sys_char}.
+while section~\ref{sec:enhan} details results and some enhancements made
+to improve performance on the Xeon Phi. Section \ref{sec:conc} presents
+our final conclusions.
 
 
 %-----------------------------------------------------------------------------
@@ -177,33 +207,10 @@ Once again, the goal here, is to minimize the edge-cut, however, a good balance 
 
 \section{System characteristics}
 \label{sec:sys_char}
-
-The measurements were performed in both Stampede's hosts and
-co-processors.
-The hosts are comprised of dual Intel Xeon E5-2680, while the
-co-processors are the new Intel Xeon Phi with 61 cores. Their
-characteristics are presented in the following tables.
-
-\begin{table}[H]
-\centering
-\footnotesize
-\begin{tabular}{| c | c |}\hline
-Manufacturer & Intel\\ \hline
-Model & Xeon E5-2680\\ \hline
-$\mu$Arch & Sandy Bridge\\ \hline
-Clock freq & 2.70 GHz\\ \hline
-\#CPUs (sockets) & 2 \\ \hline
-\#Cores/CPU & 8\\ \hline
-\#Thread/Core & 1\\ \hline
-L1 cache size/core & 32 KB\\ \hline
-L2 cache size/core & 256 KB\\ \hline
-L3 shared cache size/CPU & 20 MB\\ \hline
-Main Memory/CPU & 16 GB\\ \hline
-Vector width & 256 bits (AVX)\\ \hline
-\end{tabular}
-\label{tab:host_stampede}
-\caption{Intel Xeon E5-2680}
-\end{table}
+For the purpose of comparing the different applications, measurements
+were performed in Stampede's co-processors. The co-processors are the
+new Intel Xeon Phi with 61 cores. Its characteristics are presented in
+the following table.
 
 \begin{table}[H]
 \centering
@@ -221,63 +228,111 @@ L2 cache size/core & 512 KB\\ \hline
 Main Memory/CPU & 8 GB\\ \hline
 Vector width & 512 bits\\ \hline
 \end{tabular}
-\label{tab:mic}
 \caption{Intel Xeon Phi}
+\label{fig:mic}
 \end{table}
+
+Each core has support for 4 hyperthreads that shares 512 KB of the
+second cache level. Thus, the total amount of second cache level is more
+than 30 MB for the entire co-processor. The more powerful feature of MIC
+is a vector unit of 512 bits for each core allowing the execution of 8
+double precision or 16 single precision operations in parallel.
+Globally, the floating peak performance of the Xeon Phi is given by:
+
+\begin{itemize}
+\item 16 (SP SIMD) x 2 (FMA) x 1.1 (GHZ) x 60 (\# cores) = 2112
+  GFLOPS/sec for single precision arithmetic 
+\item 8 (DP SIMD) x 2 (FMA) x 1.1 (GHZ) x 60 (\# cores) = 1056
+  GFLOPS/sec for double precision arithmetic 
+\end{itemize}
+
+Each unit has support for fused multiply add operations, and together
+with the vector units, Xeon Phi achieves theoretical peak performance of
+more than 1 teraflop.
 
 As can be seen, the Intel Xeon Phi only has 8 GB of memory, thereby
 limiting large input graphs to run with GMetis. Therefore, all
-measurements were done with the USA-W roadmap, which is the largest graph
-that still fits in memory. This graph contains 6262104 nodes and 15248146 edges.
+measurements were done using the USA-W road-map as input, which is the
+largest graph that still fits in memory. This graph contains 6262104
+nodes and 15248146 edges.
 
-%-----------------------------------------------------------------------------
-% Xeon Phi
-%-----------------------------------------------------------------------------
+Apart from the characteristics showed in table~\ref{fig:mic}, there are
+others that should be mentioned. Image~\ref{img:phi_arch} shows a Xeon
+Phi core were We can see its 4 hardware threads. Each core contains a
+in-order dual pipeline which can issue two instructions from the same
+hardware thread per clock cycle. However, the front-end of the pipeline
+does not issue instructions from the same hardware thread in consecutive
+cycles.\cite{Cepeda:PhiPerformance}
 
-Apart from the characteristics showed in table \ref{tab:mic}, there are
-others that should be mentioned. Each core contains a in-order dual-issue pipeline which can issue two instructions from the same hardware thread
-per clock cycle. However, the front-end of the pipeline does not issue
-instructions from the same hardware thread in consecutive cycles.\cite{Cepeda:PhiPerformance}
+This means that if there is only one thread running on a core, for
+instance T0, this threads may have two instruction issued on the first
+clock cycle, but none on the second cycle. Thus, the maximum issue rate
+is only attainable with at least 2 threads per core, so that in each
+cycle, two instructions may be issued. Generally, the other two threads
+have the purpose of hiding pipeline stalls due to memory latency so that
+the maximum issue rate may be attainable.
 
-This means that the maximum issue rate is only attainable with at least
-2 threads per core while the other threads have the purpose of hiding
-pipeline stalls due to memory latency.
-
-The fact that the pipeline issues in-order instructions increases
-memory related problems. %FIXME: Pode-se dar o exemplo do andrew
+Also, it should be noted that the fact that the pipeline issue
+instructions in-order increases memory related problems. For instance,
+when there is a stall on a hardware thread, this thread needs to wait
+for data to be fetched from memory, which means more than 100 cycles.
+This situation happens every time, which means that only four threads
+per core might no be sufficient to hide such possible latency.
 
 \begin{center}
 \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/phi_arch.jpg}
-    \caption{Xeon Phi $\mu$Arch}
+    \caption{Xeon Phi Coprocessor
+    Core}\footnote{http://software.intel.com/en-us/articles/intel-xeon-phi-coprocessor-codename-knights-corner}
     \label{img:phi_arch}
 \end{figure}
 \end{center}
 
 
 %-----------------------------------------------------------------------------
-% Metis %FIXME: Pôr isto mais acima?
+% Metis and Mt-metis
 %-----------------------------------------------------------------------------
 
-\section{Metis}
+\section{Metis and Mt-metis}
+
+%\section{Metis}
+
+%The next plot shows the scalability of Mt-metis on Xeon Phi\footnote{All measurements were taken using version 0.1 of mt-metis.}. 
+%Despite the large number of measurements taken, results shows spikes when running mt-metis with a certain number of partitions. We can see that
+%mt-metis scales up to 28 threads, declining rapidly for more than 60 threads. 
+%This is mainly due to the clustering and refinement stages, since, as we can see from the figure, the coarsening stage is relatively well behaved. 
+%The behaviour of the refinement phase is somewhat to be expected, since, with the higher number of threads, as conflicts arise, it is expected for its running time to go up.
+%The problem here, is the Partitioning (Clustering) phase, since its behaviour in unpredictable as the number of threads go beyond 60. We believe the explanation for this behaviour lies the Xeon Phi's architecture, since, as explained above, the maximum issue rate is 2. Combining this with a higher number of threads, the amount of stalls and ensuing context switches is expected to go up. This can be especially bad if the application has a lot of memory random memory accesses, which is the case.  
+
+
 \label{sec:metis}
+To compare both applications, their runtime and edgecut, we did some
+scalability measurements. We measured metis time on one core of Xeon Phi, 
+and mt-metis for all possible number of threads.
 
-
-The version of Metis we used to perform measurement was 5.1.0
-
-%-----------------------------------------------------------------------------
-% Mt-metis
-%-----------------------------------------------------------------------------
-
-\section{Mt-metis}
-\label{sec:mt-metis}
-
-The next plot shows the scalability of Mt-metis on Xeon Phi\footnote{All measurements were taken using version 0.1 of mt-metis.}. 
-Despite the large number of measurements taken, results shows spikes when running mt-metis with a certain number of partitions. We can see that
-mt-metis scales up to 28 threads, declining rapidly for more than 60 threads. 
-This is mainly due to the clustering and refinement stages, since, as we can see from the figure, the coarsening stage is relatively well behaved. 
-The behaviour of the refinement phase is somewhat to be expected, since, with the higher number of threads, as conflicts arise, it is expected for its running time to go up.
-The problem here, is the Partitioning (Clustering) phase, since its behaviour in unpredictable as the number of threads go beyond 60. We believe the explanation for this behaviour lies the Xeon Phi's architecture, since, as explained above, the maximum issue rate is 2. Combining this with a higher number of threads, the amount of stalls and ensuing context switches is expected to go up. This can be especially bad if the application has a lot of memory random memory accesses, which is the case.  
+The next figure shows the scalability of Mt-metis on Xeon
+Phi\footnote{All measurements were taken with the version 5.1.0 and 0.1
+of Metis and Mt-metis respectively}. Despite
+the large number of measurements taken, results shows spikes when
+running mt-metis with a certain number of partitions. The figure also
+shows speedups relative to the runtime of one thread of mt-metis. We can
+see that mt-metis scales up to 28 threads, declining rapidly for more
+than 60 threads. The runtime from 29 up to 59 varies radically. For more
+than 60 threads, the increasing runtime is mostly due to the clustering
+and refinement stages. A similar situation happens with gmetis, but as
+we will see in~\ref{sec:gmetis}, the costly phase with a high number of
+threads is different. 
+We do not understand perfectly the reason why this happens. With one or
+few number of threads, the phase that takes more time is Coarsening,
+followed by Refinement and then Clustering/Partition which is more or
+less what is expected to happen. But with a high number of threads, this
+situation changes with the phase that was taking more time before now
+being the one that takes less time. As we focused only on GMetis, we are
+not able to tell why this happens.
+This example is for 128 partitions, but we did
+measurements for different number of partitions, such as 16 and 1024,
+and all of them shows a similar behavior, reason why only the image
+with 128 partition was presented.
 
 \begin{center}
 \begin{figure}[htb]
@@ -292,8 +347,14 @@ The problem here, is the Partitioning (Clustering) phase, since its behaviour in
 % GMetis and Galois Framework
 %-----------------------------------------------------------------------------
 
-\section{GMetis and the Galois Framework} %FIXME: Mudar o nome do titulo
-\label{sec:GMetis}
+\section{GMetis} 
+\label{sec:gmetis}
+The measurement for GMetis was done in the same way as mt-metis, that
+is, for all possible number of threads. Figure~\ref{gmetis128} shows the
+scalability of gmetis on Xeon Phi for 128 partitions. We can see a
+similar behavior with mt-metis, with the differences that gmetis scales
+for a higher number of threads, it does not have a irregular behavior
+and the performance declines less suddenly.
 
 \begin{center}
 \begin{figure}[htb]
@@ -303,45 +364,68 @@ The problem here, is the Partitioning (Clustering) phase, since its behaviour in
 \end{figure}
 \end{center}
 
-This figure shows the scalability of gmetis on Xeon Phi over the runtime
-with one thread. This example is for 128 partition, but we did
-measurements for different number of partitions, such as 16 and 1024. All
-of them have a similar behaviour.
-
+As with mt-metis, the speedup presented in the figure is relative to the
+runtime of one thread of gmetis when ran on one core of Xeon Phi. Gmetis
+scales to 70 threads were it attains its maximum peak performance, and
+decreases linearly with more threads. With more than 70 threads, the
+global time is more affected by the Coarsening phase. This behavior is
+different from mt-metis were the Clustering phase was the heavier.
+Although gmetis scales better than mt-metis, the latter proves to be
+really fast for one or few threads as opposed to the former. For
+instance, if Xeon Phi only provided 28 threads, mt-metis would
+surely run faster than gmetis.
 
 %-----------------------------------------------------------------------------
 % Enhancements
 %-----------------------------------------------------------------------------
 \subsection{Enhancements}
-
+\label{sec:enhan}
 Throughout this month, we did some modifications to improve
-\textit{GMetis}' performance. We started by experimenting with how the package mapping
-is done internally by the \textit{Galois} framework.
+\textit{GMetis}' performance. We started by experimenting how the
+package mapping is done internally by the \textit{Galois} framework.
 
-\textit{Galois} has support for \textit{NUMA} systems, thus, this means that
-it take advantage of different sockets (packets in Galois terminology) simultaneously.
+\textit{Galois} has support for \textit{NUMA} systems, thus, this means
+that it takes advantage of different sockets (packets in Galois
+terminology) simultaneously.
 
-Before an application starts running, \textit{Galois} parses the
-cpuinfo file located in "/proc/cpuinfo" to create its mapping, which means that each socket
-corresponds to a package, or rather, all the cores in a socket belong to the same package.
-This means that \textit{Galois} was assigning a package to the entire MIC co-processor, since it has 60 usable cores in the same "package".
+Before an application starts running, \textit{Galois} parses the cpuinfo
+file located in "/proc/cpuinfo" to create its mapping, which means that
+each socket corresponds to a package, or rather, all the cores in a
+socket belong to the same package.  This means that \textit{Galois} was
+assigning a package to the entire MIC co-processor, since it has 60
+usable cores in the same "package".
 
-%TODO: Talvez cagar leis sobre worklists bem como packages e para que
-%servem, nomeadamente, loadbalancing
-This is especially bad, since the \textit{Galois} framework uses a sort of work stealing mechanism inside each package. It works by assigning a master thread in each package, then each thread inside a package can steal work from another inside the same package. In case of aborts, the work is pushed to a stack in the master thread, if it aborts when that master thread pops from the stack, then the work is pushed in another packet's stack. In the MIC, since there is only one packet, this means that all 244 threads were stealing work from each other. Hence, worst case scenario, the code is run serially. 
+This is especially bad, since the \textit{Galois} framework uses a sort
+of work stealing mechanism inside each package, to provide good load
+balance. It works by assigning a master thread in each package, then
+each thread inside a package can steal work from another inside the same
+package. In case of aborts, the work is pushed to a stack in the master
+thread, if it aborts when that master thread pops from the stack, then
+the work is pushed in another packet's stack. In the MIC, since there is
+only one packet, this means that all 244 threads were stealing work from
+each other. Hence, worst case scenario, the code is run serially. 
 
-Also, it should be noted that, since \textit{Galois} was not prepared to deal with a processor that supports more than two-way hyperthreading, when using different thread values, some processor cores could have four threads running, while others only one (default mapping).
+Also, it should be noted that, since \textit{Galois} was not prepared to
+deal with a processor that supports more than two-way hyperthreading,
+when using different thread values, some processor cores could have four
+threads running, while others only one (default mapping).
 
-We changed that, by assigning each hyperthread to its respective core id (which would make a packet).
-Another reason for this change is so that the mapping could be
-the most balanced possible (load balanced mapping)\footnote{Although the Xeon Phi contains 61 cores, it should be noted that the
-operating system also needs to run. Therefore, only 60 cores may be
-available for computations tasks.}, for instance,
-when running the application with 121 threads, with the default mapping,
-the first 20 cores will run with four threads while the others will only
-run with one thread. With the load balance mapping, only the last core
-will run one thread, while the others will run 2 threads. However, this did not achieve any considerable improvements. We also tried assigning each thread to a packet in a round-robin fashion (dense package mapping), but that proved to be ineffective as well.
+We changed that, by assigning each hyperthread to its respective core id
+(which would make a packet).  Another reason for this change is so that
+the mapping could be the most balanced possible (load balanced
+mapping)\footnote{Although the Xeon Phi contains 61 cores, it should be
+  noted that the operating system also needs to run. Therefore, only 60
+cores may be available for computations tasks. With 61, an application
+can be affected by the operating system noise}, for instance, when
+running the application with 121 threads, with the default mapping, the
+first 20 cores will run with four threads while the others will only run
+with one thread. With the load balance mapping, only the last core will
+run one thread, while the others will run 2 threads. However, this did
+not achieve any considerable improvements. We also tried assigning each
+thread to a packet in a round-robin fashion (dense package mapping), but
+that proved to be ineffective as well (as expected).
 
+To improve gmetis performance, we profiled the application.
 Unfortunately, Intel VTune only has support for Stampede's hosts, and
 not for the co-processor. Although, Intel states that profiling and
 improving an application on the host gives similar improvements on MIC,
@@ -350,8 +434,8 @@ welcome, as there are key differences in the architectures.
 
 Thereby, we profiled the application with the help of simple timers as
 well as PAPI, and we found the most time consuming function, which is
-findMatching. This function iterates through the graph's nodes, trying
-to match each node with one available neighbor.
+\textit{findMatching}. This function iterates through the graph's nodes,
+trying to match each node with one available neighbor.
 
 This function is part of the \textit{Coarsening} phase, together with
 the \textit{CreateCorseEdge}.
@@ -361,65 +445,61 @@ findMatching, matches nodes that have not been matched yet, and creates
 a "supernode" for each pair of matched nodes. The
 \textit{CreateCorseEdge} creates the edges between "supernodes", merging
 edges that are shared between the two nodes of the supernode and their
-common neighbors.
-
-%TODO: Falar um pouco mais sobre isso, dizer que depois ficam matched, e
-%que por isso, alguns nós podem ficar sozinhos (pk nao têm nodos livres
-%para fazer match).
+common neighbors. The merging operation implies the sum of the weights
+of these shared edges.
 
 There are different ways to match the graph's nodes. The ones used are
 "Heavy Weight Match" and "Random Match". The first iterates through each
 node and matches them with the neighbor whose shared edge has the most
 weight. The second matches each node with the first neighbor node that
-has not been matched yet.
+has not been matched yet. Nodes that cannot be matched with any other
+node are not merged. Supernodes are created from these single nodes.
 
-Previously, these were used separately, i.e., only one of them was
-used in the application. Using the two combined proved to be a better
-solution, as the performance improved, and the edge-cut remained the
-same. Random Match is used in the first two iterations of the coarsening
-phase. This improved runtime because, RM computes faster, as it does not
-need to iterate through all neighbors when there is a node that has not
-been matched. The algorithm is used only on the first two iterations
-because the graph is larger on these iterations, and using RM instead of
-HEM on small graphs did not prove to be any faster and can actually worsen
-edge-cut.
+Previously, these two algorithms were used separately, i.e., only one of
+them was used in the application. Using the two combined proved to be a
+better solution, as the performance improved, and the edge-cut remained
+the same. Random Match is used in the first two iterations of the
+coarsening phase. This improved runtime because, RM computes faster, as
+it does not need to iterate through all neighbors when there is a node
+that has not been matched. The algorithm is used only on the first two
+iterations because the graph is larger on these iterations, and using RM
+instead of HEM on small graphs did not prove to be any faster and can
+actually worsen edge-cut.
 
-%Due to incompatibilities of some C++11 functions, we tried to compile
-%the code with x86\_64-k1om-linux-gcc, which is gcc with MIC support.
-%TODO: Falar do gcc e do icc
-A deeper look into the assembly code generated by the two compilers
-shows that gcc does not introduce prefetch instructions (even when using
-\_\_builtin\_prefetch) as opposed to icc that prefetches. The results,
-however, runtime differences are minimal.
+Has the timers and PAPI were not giving helpful information, we tried to
+manually fetch some information based on a guess that findmatchting
+would incur in many misses (mainly because of in-order pipeline). On
+previous processors that did not contained out-of-order pipelines,
+software prefetching was almost always useful. 
+We prefetch neighbor nodes, as these were given by an array whose
+indexes were also given by another array. In this type of situations,
+prefetch is almost always impossible to happen. 
+However, prefetching did result in improvements.
+A deeper look into the assembly code generated by the gcc compiler 
+showed that it does not introduce prefetch instructions (even when using
+\_\_builtin\_prefetch). On the other hand, icc does some prefetch. The results,
+however are quite similar to the gcc ones.
 
-We also did some tests with different worklist schedulers provided by
-Galois. AltChunkedLIFO<8> was the fastest and it is actually the most
-scalable one.
-
-Some extra measurements allowed us to find that with 45-50 partitions
-, GMetis start to run faster than mt-metis.
-
+Finally, we also did some tests with different worklist schedulers provided by
+Galois. AltChunkedLIFO was the fastest and it is actually the most
+scalable one, which improved a little application's runtime.
 
 %-----------------------------------------------------------------------------
 % Final results
 %-----------------------------------------------------------------------------
 
 The following figure compares the runtime of each application. Metis was
-executed in one of the Xeon Phi's core, while mt-metis and gmetis were executed
-for each number of threads, for the three partitions number. For those, the best execution time was
-chosen. The time of the sequential metis is included to see how much
-speedup both mt-metis and gmetis obtains for each partition number. 
-We can see that for 16 partitions, mt-metis run faster than gmetis,
-achieving a total speedup of 24x as opposed to the 17x of gmetis.
-For the other partitions, gmetis is actually faster, achieving a total
-speedup of 17x and 11x for 128 and 1024 partitions respectively.
-
-%mt-metis128 com melhor tempo com 28 threads
-%gmetis128 com melhor tempo com 70 threads
-
-
-%FIXME: Dizer com que número de threads se atingiu o melhor tempo?
-%FIXME: Qual das duas imagens se usa??????
+executed in one of the Xeon Phi's core, while mt-metis and gmetis were
+executed for each number of threads, for the three partitions number.
+For those, the best execution time was chosen. The time of the
+sequential metis is included to see how much speedup both mt-metis and
+gmetis obtains for each partition number. We can see that for 16
+partitions, mt-metis run faster than gmetis, achieving a total speedup
+of 24x as opposed to the 17x of gmetis. For the other number of partitions,
+gmetis is actually faster, achieving a total speedup of 17x and 11x for
+128 and 1024 partitions respectively. For the three number of partitions, mt-metis
+achieves its maximum performance with more or less 30 threads whereas
+gmetis achieves it with 70 threads.
 
 \begin{center}
 \begin{figure}[htb]
@@ -429,22 +509,26 @@ speedup of 17x and 11x for 128 and 1024 partitions respectively.
 \end{figure}
 \end{center}
 
-\begin{center}
-\begin{figure}[htb]
-    \includegraphics[width=\columnwidth]{img/comparison4.eps}
-    \caption{Comparison}
-    \label{img:comparison4}
-\end{figure}
-\end{center}
+We made some extra measurements that allowed us to find that with 45-50
+partitions, GMetis start to run faster than mt-metis.
+
+%\begin{center}
+%\begin{figure}[htb]
+    %\includegraphics[width=\columnwidth]{img/comparison4.eps}
+    %\caption{Comparison}
+    %\label{img:comparison4}
+%\end{figure}
+%\end{center}
 
 %TODO: Falar que o metis tenta obter partições o mais balanceadas
 %possiveis na parte da introdução
-As previously stated, the objective of \textit{Metis} is to partition a graph in a way
-that the partitions are balanced and the edge-cut between them is the smallest
-possible. For this last metric, GMetis performs worse. According to the
-measurements made on figure~\ref{img:edgecut}, \textit{GMetis} edge-cut is
-always more than two times higher than metis and mt-metis. The openMP
-version of metis performs a little bit worse than its original version.
+As previously stated, the objective of \textit{Metis} is to partition a
+graph in a way that the partitions are balanced and the edge-cut between
+them is the smallest possible. For this last metric, GMetis performs
+worse. According to the measurements made and that are showed on figure~\ref{img:edgecut},
+\textit{GMetis} edge-cut is always more than two times higher than metis
+and mt-metis. The openMP version of metis performs a little bit worse
+than its original version.
 
 \begin{center}
 \begin{figure}[htb]
@@ -462,17 +546,20 @@ version of metis performs a little bit worse than its original version.
 \section{Conclusion}
 \label{sec:conc}
 Results showed that both \textit{Metis} and \textit{Mt-metis} have
-better edge-cut than \textit{Gmetis}. However, Gmetis's runtime is lower
-for a high number of partitions.
+better edge-cut than \textit{Gmetis} for all number of partitions tested. 
+These two application also run faster than GMetis, for 16 partitions.
+However, Gmetis's runtime is lower for a high number of partitions, i.e.
+128 and 1024 partitions.
 
-%FIXME: Adicionar o número de partições em que o GMetis passa a ser mais
-%rápido
-
-Xeon Phi provides a theoretical performance of 2112 GFlop/sec for double
-precision arithmetic and 1056 GFlops/sec for single precision
-arithmetic. This values comprises the use of 60 cores since one core is
-necessary to perform operating system operations.
-
+Further analysis showed that GMetis start to run faster than mt-metis
+with more or less 45-50 partitions. However, both metis and mt-metis provides
+better edgecut.
+Although the difference of the edgecut between the applications may seem
+high, it may be not relevant for an higher number of partitions if
+GMetis computes the partitions much faster than mt-metis. For real
+applications that uses the metis algorithm, the time consumed
+calculating the partitions may be more important than a difference of
+two time for the edgecut.
 
 %-----------------------------------------------------------------------------
 % Bibliography
