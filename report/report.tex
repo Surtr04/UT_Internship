@@ -93,11 +93,11 @@
 \begin{abstract}
 In this report, we address GMetis, a graph partitioning application that
 uses the Metis algorithm. This application uses the Galois framework
-and has as objective reducing the total edgecut of a graph and improving
-load balance between partitions. We show scalability measurements of the
+and has as its goal reducing the total edgecut of a graph partition while keeping
+the number of vertices balanced between partitions. We show scalability measurements of the
 application when running it in the brand new Xeon Phi, the first
-co-processor from the MIC architecture. We also show some modifications
-done in order to reduce the application's runtime. At last, we compare
+co-processor from the MIC micro-architecture. We also show some modifications
+done in order to reduce the application's runtime. Last, but not least, we compare
 GMetis with metis and mt-metis, a parallel version of metis which uses
 OpenMP, both in terms of runtime and edgecut.
 \end{abstract}
@@ -109,13 +109,12 @@ OpenMP, both in terms of runtime and edgecut.
 
 \section{Introduction}
 Metis is actually the most famous graph partitioning algorithm. It was
-developed by George
-Karypis\footnote{http://glaros.dtc.umn.edu/gkhome/metis/metis/overview}
-and the University of Minnesota, and it has as objective to group
+developed by George Karypis\footnote{http://glaros.dtc.umn.edu/gkhome/metis/metis/overview}
+at the University of Minnesota, and its goal is to group
 weighted graph nodes into partitions so that all partitions have similar
 weight (balanced partitions) and to reduce total edgecut, which is the
 total weight of all edges between partitions. This algorithm has three
-major phases: Coarsening, Partitioning and Refinement.
+major phases: Coarsening, Partitioning  and Refinement.
 All phases of this algorithm are explained in
 section~\ref{sec:metis_alg}.
 
@@ -210,7 +209,7 @@ Once again, the goal here, is to minimize the edge-cut, however, a good balance 
 For the purpose of comparing the different applications, measurements
 were performed in Stampede's co-processors. The co-processors are the
 new Intel Xeon Phi with 61 cores. Its characteristics are presented in
-the following table.
+the following table:
 
 \begin{table}[H]
 \centering
@@ -233,39 +232,39 @@ Vector width & 512 bits\\ \hline
 \end{table}
 
 Each core has support for 4 hyperthreads that shares 512 KB of the
-second cache level. Thus, the total amount of second cache level is more
-than 30 MB for the entire co-processor. The more powerful feature of MIC
+second cache level. Thus, the total amount of second level cache memory is more
+than 30 MB for the entire co-processor. The more powerful feature on the MIC
 is a vector unit of 512 bits for each core allowing the execution of 8
 double precision or 16 single precision operations in parallel.
 Globally, the floating peak performance of the Xeon Phi is given by:
 
 \begin{itemize}
 \item 16 (SP SIMD) x 2 (FMA) x 1.1 (GHZ) x 60 (\# cores) = 2112
-  GFLOPS/sec for single precision arithmetic 
+  GFLOPS for single precision arithmetic 
 \item 8 (DP SIMD) x 2 (FMA) x 1.1 (GHZ) x 60 (\# cores) = 1056
-  GFLOPS/sec for double precision arithmetic 
+  GFLOPS for double precision arithmetic 
 \end{itemize}
 
-Each unit has support for fused multiply add operations, and together
-with the vector units, Xeon Phi achieves theoretical peak performance of
+Each unit has support for fused multiply add operations (FMA), and together
+with the vector units, the Xeon Phi achieves theoretical peak performance of
 more than 1 teraflop.
 
 As can be seen, the Intel Xeon Phi only has 8 GB of memory, thereby
 limiting large input graphs to run with GMetis. Therefore, all
-measurements were done using the USA-W road-map as input, which is the
+measurements were done using the Western USA road-map (USA-W) as input, which is the
 largest graph that still fits in memory. This graph contains 6262104
 nodes and 15248146 edges.
 
 Apart from the characteristics showed in table~\ref{fig:mic}, there are
-others that should be mentioned. Image~\ref{img:phi_arch} shows a Xeon
-Phi core were We can see its 4 hardware threads. Each core contains a
+others that should be mentioned. Figure~\ref{img:phi_arch} shows a Xeon
+Phi core architecture were we can clearly see its 4 hardware threads. Each core contains an
 in-order dual pipeline which can issue two instructions from the same
 hardware thread per clock cycle. However, the front-end of the pipeline
 does not issue instructions from the same hardware thread in consecutive
 cycles.\cite{Cepeda:PhiPerformance}
 
 This means that if there is only one thread running on a core, for
-instance T0, this threads may have two instruction issued on the first
+instance T0, this thread may have two instruction issued on the first
 clock cycle, but none on the second cycle. Thus, the maximum issue rate
 is only attainable with at least 2 threads per core, so that in each
 cycle, two instructions may be issued. Generally, the other two threads
@@ -277,12 +276,12 @@ instructions in-order increases memory related problems. For instance,
 when there is a stall on a hardware thread, this thread needs to wait
 for data to be fetched from memory, which means more than 100 cycles.
 This situation happens every time, which means that only four threads
-per core might no be sufficient to hide such possible latency.
+per core might not be sufficient to hide such latency.
 
 \begin{center}
 \begin{figure}[htb]
     \includegraphics[width=\columnwidth]{img/phi_arch.jpg}
-    \caption{Xeon Phi Coprocessor
+    \caption{Xeon Phi Co-Processor
     Core}\footnote{http://software.intel.com/en-us/articles/intel-xeon-phi-coprocessor-codename-knights-corner}
     \label{img:phi_arch}
 \end{figure}
@@ -307,31 +306,31 @@ per core might no be sufficient to hide such possible latency.
 
 \label{sec:metis}
 To compare both applications, their runtime and edgecut, we did some
-scalability measurements. We measured metis time on one core of Xeon Phi, 
+scalability measurements. We measured metis runtime on one core of Xeon Phi, 
 and mt-metis for all possible number of threads.
 
 The next figure shows the scalability of Mt-metis on Xeon
-Phi\footnote{All measurements were taken with the version 5.1.0 and 0.1
+Phi\footnote{All measurements were taken with version 5.1.0 and 0.1
 of Metis and Mt-metis respectively}. Despite
-the large number of measurements taken, results shows spikes when
+the large number of measurements taken, results show a highly irregular plot, with spikes when
 running mt-metis with a certain number of partitions. The figure also
 shows speedups relative to the runtime of one thread of mt-metis. We can
 see that mt-metis scales up to 28 threads, declining rapidly for more
 than 60 threads. The runtime from 29 up to 59 varies radically. For more
 than 60 threads, the increasing runtime is mostly due to the clustering
 and refinement stages. A similar situation happens with gmetis, but as
-we will see in~\ref{sec:gmetis}, the costly phase with a high number of
+we will see in~\ref{sec:gmetis}, the costliest phase with a high number of
 threads is different. 
-We do not understand perfectly the reason why this happens. With one or
+We do not fully understand the reason why this happens. With one or
 few number of threads, the phase that takes more time is Coarsening,
 followed by Refinement and then Clustering/Partition which is more or
 less what is expected to happen. But with a high number of threads, this
 situation changes with the phase that was taking more time before now
-being the one that takes less time. As we focused only on GMetis, we are
+being the one that takes less time. As we focused only on GMetis, we were
 not able to tell why this happens.
 This example is for 128 partitions, but we did
-measurements for different number of partitions, such as 16 and 1024,
-and all of them shows a similar behavior, reason why only the image
+measurements for different numbers of partitions, such as 16 and 1024,
+and all of them shows a similar behavior, reason why only the figure
 with 128 partition was presented.
 
 \begin{center}
@@ -354,7 +353,7 @@ is, for all possible number of threads. Figure~\ref{gmetis128} shows the
 scalability of gmetis on Xeon Phi for 128 partitions. We can see a
 similar behavior with mt-metis, with the differences that gmetis scales
 for a higher number of threads, it does not have a irregular behavior
-and the performance declines less suddenly.
+and the performance declines is not so abrupt.
 
 \begin{center}
 \begin{figure}[htb]
@@ -369,7 +368,7 @@ runtime of one thread of gmetis when ran on one core of Xeon Phi. Gmetis
 scales to 70 threads were it attains its maximum peak performance, and
 decreases linearly with more threads. With more than 70 threads, the
 global time is more affected by the Coarsening phase. This behavior is
-different from mt-metis were the Clustering phase was the heavier.
+different from mt-metis where the Clustering phase was the heaviest.
 Although gmetis scales better than mt-metis, the latter proves to be
 really fast for one or few threads as opposed to the former. For
 instance, if Xeon Phi only provided 28 threads, mt-metis would
@@ -509,8 +508,8 @@ gmetis achieves it with 70 threads.
 \end{figure}
 \end{center}
 
-We made some extra measurements that allowed us to find that with 45-50
-partitions, GMetis start to run faster than mt-metis.
+We did some extra measurements that allowed us to find that between 45 and 50
+partitions, GMetis begins to run faster than mt-metis.
 
 %\begin{center}
 %\begin{figure}[htb]
@@ -522,12 +521,12 @@ partitions, GMetis start to run faster than mt-metis.
 
 %TODO: Falar que o metis tenta obter partições o mais balanceadas
 %possiveis na parte da introdução
-As previously stated, the objective of \textit{Metis} is to partition a
+As previously stated, the goal of \textit{Metis} is to partition a
 graph in a way that the partitions are balanced and the edge-cut between
-them is the smallest possible. For this last metric, GMetis performs
-worse. According to the measurements made and that are showed on figure~\ref{img:edgecut},
+them is the minimized. For this last metric, GMetis performs
+worse. According to the measurements made and shown on figure~\ref{img:edgecut},
 \textit{GMetis} edge-cut is always more than two times higher than metis
-and mt-metis. The openMP version of metis performs a little bit worse
+and mt-metis. The OpenMP version of metis performs a little bit worse
 than its original version.
 
 \begin{center}
